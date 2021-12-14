@@ -59,6 +59,51 @@ const nextTime = (time, period, offset) => {
   return time - remainder + offset + period;
 };
 
+function eventCard(name, start, stop) {
+  let time = new Date(start).getTime();
+  let open_string = "In ";
+  let now_time = Date.now();
+  if (stop !== undefined) {
+    let stop_time = new Date(stop).getTime();
+    if (stop_time < now_time) {
+      return;
+    }
+    open_string = "Starts in ";
+    if (time <= now_time) {
+      open_string = "Ends in ";
+      time = new Date(stop).getTime();
+    }
+  } else if (time <= now_time + day) {
+    return;
+  }
+
+  let time_string;
+  if (time - now_time < day) {
+    time_string = "on " + formatDate(time);
+  } else {
+    time_string = "at " + formatTime(time);
+  }
+
+  return {
+    jsx: (
+      <div className="card">
+        <h2>{name}</h2>
+        <p>
+          <div>
+            {open_string}
+            <Countdown
+              date={time}
+              renderer={(props) => renderCountdown(props.total)}
+            />
+            , {time_string}
+          </div>
+        </p>
+      </div>
+    ),
+    sort: time,
+  };
+}
+
 const resetCard = (name, time, period, offset) => {
   let next_time = nextTime(time, period, offset);
   let next_time_string;
@@ -93,6 +138,17 @@ function App() {
     setTimeout(() => setNow((c) => Date.now()), second - (now % second));
   }, [now]);
 
+  let events = [
+    eventCard(
+      "Starlight Celebration",
+      "16 December 2021 08:00 GMT",
+      "31 December 2021 15:00 GMT"
+    ),
+    eventCard("Patch 6.01: Pandæmonium (Normal)", "21 December 2021"),
+    eventCard("Patch 6.05: Pandæmonium (Savage)", "4 January 2022"),
+  ];
+  events.sort((a, b) => a.sort - b.sort);
+
   let resets = [
     resetCard("Daily Reset", now, day, daily_reset_offset),
     resetCard("Weekly Reset", now, week, weekly_reset_offset),
@@ -100,6 +156,8 @@ function App() {
     resetCard("Grand Company Reset", now, day, grand_company_reset_offset),
   ];
   resets.sort((a, b) => a.sort - b.sort);
+
+  let cards = [events.map((a) => a.jsx), resets.map((a) => a.jsx)];
 
   return (
     <div className="App">
@@ -116,7 +174,7 @@ function App() {
 
       <main className="main">
         <div className="container">
-          <div className="grid">{resets.map((a) => a.jsx)}</div>
+          <div className="grid">{cards}</div>
         </div>
       </main>
 
