@@ -67,16 +67,7 @@ const nextTime = (time, period, offset) => {
 function App() {
   const [now, setNow] = React.useState(Date.now());
   React.useEffect(() => {
-    let timer;
-    if (now > 0) {
-      timer = setTimeout(() => setNow((c) => c - 1), second);
-    }
-
-    return () => {
-      if (timer) {
-        clearTimeout(timer);
-      }
-    };
+    setTimeout(() => setNow((c) => c + second), second);
   }, [now]);
 
   const next_daily_reset = () => {
