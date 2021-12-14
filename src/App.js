@@ -65,27 +65,31 @@ const nextTime = (time, period, offset) => {
   return time - remainder + offset + period;
 };
 
+const resetCard = (name, time, period, offset) => {
+  let next_time = nextTime(time, period, offset);
+  let next_time_string;
+  if (period > day) {
+    next_time_string = "on " + formatDate(next_time);
+  } else {
+    next_time_string = "at " + formatTime(next_time);
+  }
+  return (
+    <div className="card">
+      <h2>{name}</h2>
+      <p>
+        <div>
+          In {formatCountdown(next_time - time)}, {next_time_string}
+        </div>
+      </p>
+    </div>
+  );
+};
+
 function App() {
   const [now, setNow] = React.useState(Date.now());
   React.useEffect(() => {
     setTimeout(() => setNow((c) => c + second), second);
   }, [now]);
-
-  const next_daily_reset = () => {
-    return nextTime(now, day, daily_reset_offset);
-  };
-
-  const next_weekly_reset = () => {
-    return nextTime(now, week, weekly_reset_offset);
-  };
-
-  const next_gc_reset = () => {
-    return nextTime(now, day, grand_company_reset_offset);
-  };
-
-  const next_leve_refresh = () => {
-    return nextTime(now, day / 2, leve_refresh_offset);
-  };
 
   return (
     <div className="App">
@@ -102,51 +106,15 @@ function App() {
 
       <main className="main">
         <div className="grid">
-          <div className="card">
-            <h2>Daily Reset</h2>
-            <p>
-              <div>
-                In {formatCountdown(next_daily_reset() - now)}, at{" "}
-                {formatTime(next_daily_reset())}
-              </div>
-            </p>
-          </div>
-        </div>
-
-        <div className="grid">
-          <div className="card">
-            <h2>Weekly Reset</h2>
-            <p>
-              <div>
-                In {formatCountdown(next_weekly_reset() - now)}, on{" "}
-                {formatDate(next_weekly_reset())}
-              </div>
-            </p>
-          </div>
-        </div>
-
-        <div className="grid">
-          <div className="card">
-            <h2>Leve Refresh</h2>
-            <p>
-              <div>
-                In {formatCountdown(next_leve_refresh() - now)}, at{" "}
-                {formatTime(next_leve_refresh())}
-              </div>
-            </p>
-          </div>
-        </div>
-
-        <div className="grid">
-          <div className="card">
-            <h2>Grand Company Reset</h2>
-            <p>
-              <div>
-                In {formatCountdown(next_gc_reset() - now)}, at{" "}
-                {formatTime(next_gc_reset())}
-              </div>
-            </p>
-          </div>
+          {resetCard("Daily Reset", now, day, daily_reset_offset)}
+          {resetCard("Weekly Reset", now, week, weekly_reset_offset)}
+          {resetCard("Leve Refresh", now, day / 2, leve_refresh_offset)}
+          {resetCard(
+            "Grand Company Reset",
+            now,
+            day,
+            grand_company_reset_offset
+          )}
         </div>
       </main>
 
