@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  /* padding: 0 1rem;
+  background: #383838;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 58rem;
+  margin: 2rem auto 4rem;
+  border-radius: 6px; */
 }
 
 .App-logo {
@@ -14,8 +22,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #383838;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,3 +44,104 @@
     transform: rotate(360deg);
   }
 }
+
+.main {
+  min-height: 80vh;
+  padding: 1rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  /* margin: 1rem 0 2rem; */
+  line-height: 1.2;
+  font-size: 1.125rem;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 800px;
+  width: 100%;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  padding-right: auto;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 100%;
+  background: #262626;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #5990ff;
+  border-color: #5990ff;
+  text-decoration: none;
+}
+
+.card h2 {
+  width: 100%;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  line-height: 1.2;
+  font-size: 1.125rem;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
