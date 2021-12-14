@@ -1,5 +1,6 @@
 import "./App.css";
 
+import { FaGithub } from "react-icons/fa";
 import React from "react";
 import logo from "./logo.png";
 
@@ -150,7 +151,12 @@ function App() {
       </main>
 
       <footer className="footer">
-        <a href="https://github.com/CostasAK">By CostasAK</a>
+        By&nbsp;<a href="https://github.com/CostasAK">CostasAK</a>
+        &#8193;&bull;&#8193;
+        <a href="https://github.com/CostasAK/ffxiv-timers">
+          <FaGithub />
+          &nbsp;Source
+        </a>
       </footer>
     </div>
   );
