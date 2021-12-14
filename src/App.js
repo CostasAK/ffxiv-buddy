@@ -1,5 +1,6 @@
 import "./App.css";
 
+import Countdown from "react-countdown";
 import { FaGithub } from "react-icons/fa";
 import React from "react";
 import dayjs from "dayjs";
@@ -17,38 +18,27 @@ const weekly_reset_offset = 8 * hour + 5 * day;
 const leve_refresh_offset = 0;
 const grand_company_reset_offset = 20 * hour;
 
-const formatCountdown = (time) => {
-  let days = Math.floor(time / day);
+const renderCountdown = (delta) => {
+  let days = Math.floor(delta / day);
   if (days > 0) {
-    days = Math.round(time / day);
-    let string = days + " day";
-    if (days > 1) {
-      return string + "s";
-    }
-    return string;
+    days = Math.round(delta / day);
+    return days + " day" + (days === 1 ? "" : "s");
   }
 
-  let hours = Math.floor(time / hour);
+  let hours = Math.floor(delta / hour);
   if (hours > 0) {
-    hours = Math.round(time / hour);
-    let string = hours + " hour";
-    if (hours > 1) {
-      return string + "s";
-    }
-    return string;
+    hours = Math.round(delta / hour);
+    return hours + " hour" + (hours === 1 ? "" : "s");
   }
 
-  let minutes = Math.floor(time / minute);
+  let minutes = Math.floor(delta / minute);
   if (minutes > 0) {
-    minutes = Math.round(time / minute);
-    let string = minutes + " minute";
-    if (minutes > 1) {
-      return string + "s";
-    }
-    return string;
+    minutes = Math.round(delta / minute);
+    return minutes + " minute" + (minutes === 1 ? "" : "s");
   }
 
-  return Math.round(time / second) + " seconds";
+  let seconds = Math.round(delta / second);
+  return seconds + " second" + (seconds === 1 ? "" : "s");
 };
 
 const formatTime = (time) => {
@@ -83,7 +73,12 @@ const resetCard = (name, time, period, offset) => {
         <h2>{name}</h2>
         <p>
           <div>
-            In {formatCountdown(next_time - time)}, {next_time_string}
+            In{" "}
+            <Countdown
+              date={next_time}
+              renderer={(props) => renderCountdown(props.total)}
+            />
+            , {next_time_string}
           </div>
         </p>
       </div>
@@ -95,7 +90,7 @@ const resetCard = (name, time, period, offset) => {
 function App() {
   const [now, setNow] = React.useState(Date.now());
   React.useEffect(() => {
-    setTimeout(() => setNow((c) => c + second), second);
+    setTimeout(() => setNow((c) => Date.now()), second - (now % second));
   }, [now]);
 
   let resets = [
