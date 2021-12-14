@@ -3,18 +3,19 @@
 }
 
 .App-header {
-  background-color: #383838;
-  min-height: 20vh;
+  background-color: #1b1b1b;
+  min-height: 152px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: #E5E5E5;
 }
 
 .main {
-  min-height: 80vh;
-  padding: 1rem 0;
+  min-height: calc(100vh - 152px - 40px);
+  padding: 20px 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -26,7 +27,7 @@
   display: flex;
   flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid #3d5a99;
   justify-content: center;
   align-items: center;
 }
@@ -54,12 +55,23 @@
   font-size: 1.125rem;
 }
 
+.container {
+  background: #383838;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  border-radius: 6px;
+  min-height: inherit;
+}
+
 .grid {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
   align-items: stretch;
-  max-width: 800px;
+  max-width: inherit;
   width: 100%;
 }
 
@@ -67,13 +79,10 @@
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
-  /* display: flex; */
   flex: 1 1 auto;
-  /* flex-flow: row wrap; */
-  /* justify-content: flex-start; */
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
+  border: 2px solid #3d5a99;
   border-radius: 6px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 100%;
@@ -84,8 +93,7 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #5990ff;
-  border-color: #5990ff;
+  background: #333333;
   text-decoration: none;
 }
 

@@ -115,7 +115,9 @@ function App() {
       </header>
 
       <main className="main">
-        <div className="grid">{resets.map((a) => a.jsx)}</div>
+        <div className="container">
+          <div className="grid">{resets.map((a) => a.jsx)}</div>
+        </div>
       </main>
 
       <footer className="footer">
