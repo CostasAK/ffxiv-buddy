@@ -15,16 +15,34 @@ const leve_refresh_offset = 0;
 const grand_company_reset_offset = 20 * hour;
 
 const formatCountdown = (time) => {
+  let days = Math.floor(time / day);
+  if (days > 0) {
+    days = Math.round(time / day);
+    let string = days + " day";
+    if (days > 1) {
+      return string + "s";
+    }
+    return string;
+  }
+
   let hours = Math.floor(time / hour);
   if (hours > 0) {
     hours = Math.round(time / hour);
-    return hours + " hours";
+    let string = hours + " hour";
+    if (hours > 1) {
+      return string + "s";
+    }
+    return string;
   }
 
   let minutes = Math.floor(time / minute);
   if (minutes > 0) {
     minutes = Math.round(time / minute);
-    return minutes + " minutes";
+    let string = minutes + " minute";
+    if (minutes > 1) {
+      return string + "s";
+    }
+    return string;
   }
 
   return Math.round(time / second) + " seconds";
