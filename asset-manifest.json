@@ -1,22 +1,15 @@
 {
   "files": {
-    "main.css": "/ffxiv-timers/static/css/main.427e3180.chunk.css",
-    "main.js": "/ffxiv-timers/static/js/main.bf96ce34.chunk.js",
-    "main.js.map": "/ffxiv-timers/static/js/main.bf96ce34.chunk.js.map",
-    "runtime-main.js": "/ffxiv-timers/static/js/runtime-main.7cc3f180.js",
-    "runtime-main.js.map": "/ffxiv-timers/static/js/runtime-main.7cc3f180.js.map",
-    "static/js/2.872aa004.chunk.js": "/ffxiv-timers/static/js/2.872aa004.chunk.js",
-    "static/js/2.872aa004.chunk.js.map": "/ffxiv-timers/static/js/2.872aa004.chunk.js.map",
-    "static/js/3.b23abd56.chunk.js": "/ffxiv-timers/static/js/3.b23abd56.chunk.js",
-    "static/js/3.b23abd56.chunk.js.map": "/ffxiv-timers/static/js/3.b23abd56.chunk.js.map",
+    "main.css": "/ffxiv-timers/static/css/main.fcc09120.css",
+    "main.js": "/ffxiv-timers/static/js/main.45895a69.js",
+    "static/js/787.9fc00a80.chunk.js": "/ffxiv-timers/static/js/787.9fc00a80.chunk.js",
     "index.html": "/ffxiv-timers/index.html",
-    "static/css/main.427e3180.chunk.css.map": "/ffxiv-timers/static/css/main.427e3180.chunk.css.map",
-    "static/js/2.872aa004.chunk.js.LICENSE.txt": "/ffxiv-timers/static/js/2.872aa004.chunk.js.LICENSE.txt"
+    "main.fcc09120.css.map": "/ffxiv-timers/static/css/main.fcc09120.css.map",
+    "main.45895a69.js.map": "/ffxiv-timers/static/js/main.45895a69.js.map",
+    "787.9fc00a80.chunk.js.map": "/ffxiv-timers/static/js/787.9fc00a80.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.7cc3f180.js",
-    "static/js/2.872aa004.chunk.js",
-    "static/css/main.427e3180.chunk.css",
-    "static/js/main.bf96ce34.chunk.js"
+    "static/css/main.fcc09120.css",
+    "static/js/main.45895a69.js"
   ]
 }
