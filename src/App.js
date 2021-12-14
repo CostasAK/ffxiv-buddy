@@ -98,7 +98,7 @@ function App() {
     setTimeout(() => setNow((c) => c + second), second);
   }, [now]);
 
-  var resets = [
+  let resets = [
     resetCard("Daily Reset", now, day, daily_reset_offset),
     resetCard("Weekly Reset", now, week, weekly_reset_offset),
     resetCard("Leve Refresh", now, day / 2, leve_refresh_offset),
