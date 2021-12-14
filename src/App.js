@@ -77,16 +77,19 @@ const resetCard = (name, time, period, offset) => {
   } else {
     next_time_string = "at " + formatTime(next_time);
   }
-  return (
-    <div className="card">
-      <h2>{name}</h2>
-      <p>
-        <div>
-          In {formatCountdown(next_time - time)}, {next_time_string}
-        </div>
-      </p>
-    </div>
-  );
+  return {
+    jsx: (
+      <div className="card">
+        <h2>{name}</h2>
+        <p>
+          <div>
+            In {formatCountdown(next_time - time)}, {next_time_string}
+          </div>
+        </p>
+      </div>
+    ),
+    sort: next_time,
+  };
 };
 
 function App() {
@@ -94,6 +97,14 @@ function App() {
   React.useEffect(() => {
     setTimeout(() => setNow((c) => c + second), second);
   }, [now]);
+
+  var resets = [
+    resetCard("Daily Reset", now, day, daily_reset_offset),
+    resetCard("Weekly Reset", now, week, weekly_reset_offset),
+    resetCard("Leve Refresh", now, day / 2, leve_refresh_offset),
+    resetCard("Grand Company Reset", now, day, grand_company_reset_offset),
+  ];
+  resets.sort((a, b) => a.sort - b.sort);
 
   return (
     <div className="App">
@@ -109,17 +120,7 @@ function App() {
       </header>
 
       <main className="main">
-        <div className="grid">
-          {resetCard("Daily Reset", now, day, daily_reset_offset)}
-          {resetCard("Weekly Reset", now, week, weekly_reset_offset)}
-          {resetCard("Leve Refresh", now, day / 2, leve_refresh_offset)}
-          {resetCard(
-            "Grand Company Reset",
-            now,
-            day,
-            grand_company_reset_offset
-          )}
-        </div>
+        <div className="grid">{resets.map((a) => a.jsx)}</div>
       </main>
 
       <footer className="footer">
