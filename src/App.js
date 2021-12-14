@@ -2,6 +2,8 @@ import "./App.css";
 
 import { FaGithub } from "react-icons/fa";
 import React from "react";
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
 import logo from "./logo.png";
 
 const second = 1000;
@@ -50,11 +52,13 @@ const formatCountdown = (time) => {
 };
 
 const formatTime = (time) => {
-  return new Date(time).toLocaleTimeString();
+  dayjs.extend(localizedFormat);
+  return dayjs(time).format("LT");
 };
 
 const formatDate = (time) => {
-  return new Date(time).toLocaleString();
+  dayjs.extend(localizedFormat);
+  return dayjs(time).format("LLLL");
 };
 
 const nextTime = (time, period, offset) => {
