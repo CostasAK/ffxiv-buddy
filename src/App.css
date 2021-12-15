@@ -128,9 +128,15 @@
 
 .footer a {
   color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer div {
   line-height: 1.2;
   margin: 0 calc(var(--column-gap));
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
