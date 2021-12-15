@@ -11,6 +11,25 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #E5E5E5;
+  padding: 0.5rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.description {
+  margin-bottom: 5px;
+  line-height: 1.2;
+  font-size: 1.125rem;
 }
 
 .main {
@@ -36,23 +55,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  line-height: 1.2;
-  font-size: 1.125rem;
 }
 
 .container {
