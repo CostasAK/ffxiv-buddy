@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "FFXIV Timers",
+  "name": "FFXIV Timers",
   "icons": [
     {
       "src": "MainIcon47.png",
@@ -9,6 +9,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#e5e5e5",
+  "background_color": "#333333"
 }
