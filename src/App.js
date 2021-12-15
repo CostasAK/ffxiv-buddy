@@ -4,7 +4,7 @@ import Countdown from "react-countdown";
 import { FaGithub } from "react-icons/fa";
 import React from "react";
 import dayjs from "dayjs";
-import logo from "./logo.png";
+import logo from "./MainIcon47.png";
 
 const second = 1000;
 const minute = 60 * second;
@@ -169,7 +169,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1 className="title">
-          <img alt="" src={logo} />
+          <img alt="" src={logo} height="40px" />
           &nbsp;FFXIV Timers
         </h1>
 
