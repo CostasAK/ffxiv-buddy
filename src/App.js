@@ -182,6 +182,7 @@ function App() {
         <div className="container">
           <div className="grid">{cards}</div>
         </div>
+        <div className="invisible"></div>
       </main>
 
       <footer className="footer">
@@ -191,6 +192,8 @@ function App() {
           <FaGithub />
           &nbsp;Source
         </a>
+        &#8193;&bull;&#8193;FINAL FANTASY XIV Copyright © 2010-2021 SQUARE ENIX
+        CO., LTD.
       </footer>
     </div>
   );
