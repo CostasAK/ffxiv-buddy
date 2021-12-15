@@ -4,7 +4,6 @@ import Countdown from "react-countdown";
 import { FaGithub } from "react-icons/fa";
 import React from "react";
 import dayjs from "dayjs";
-import localizedFormat from "dayjs/plugin/localizedFormat";
 import logo from "./logo.png";
 
 const second = 1000;
@@ -42,13 +41,20 @@ const renderCountdown = (delta) => {
 };
 
 const formatTime = (time) => {
-  dayjs.extend(localizedFormat);
-  return dayjs(time).format("LT");
+  const hourParts = new Intl.DateTimeFormat(undefined, {
+    hour: "numeric",
+  }).formatToParts(new Date(time));
+  if (hourParts.dayPeriod !== undefined) {
+    return dayjs(time).format("h:mm A");
+  }
+  return dayjs(time).format("H:mm");
 };
 
 const formatDate = (time) => {
-  dayjs.extend(localizedFormat);
-  return dayjs(time).format("LLLL");
+  return (
+    dayjs(time).format("ddd, D MMM YYYY") +
+    (time % day !== 0 ? " " + formatTime(time) : "")
+  );
 };
 
 const nextTime = (time, period, offset) => {
@@ -78,10 +84,6 @@ function eventCard(name, start, stop) {
   }
 
   let time_string;
-  console.log(`time = ${time}`);
-  console.log(`now_time = ${now_time}`);
-  console.log(`delta = ${time - now_time}`);
-  console.log(`day = ${day}`);
   if (time - now_time < day) {
     time_string = "at " + formatTime(time);
   } else {
@@ -148,8 +150,8 @@ function App() {
       "16 December 2021 08:00 GMT",
       "31 December 2021 15:00 GMT"
     ),
-    eventCard("Patch 6.01: Pandæmonium (Normal)", "21 December 2021"),
-    eventCard("Patch 6.05: Pandæmonium (Savage)", "4 January 2022"),
+    eventCard("Patch 6.01: Pandæmonium (Normal)", "21 December 2021 UTC"),
+    eventCard("Patch 6.05: Pandæmonium (Savage)", "4 January 2022 UTC"),
   ];
   events.sort((a, b) => a.sort - b.sort);
 
