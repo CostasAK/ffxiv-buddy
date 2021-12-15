@@ -1,4 +1,4 @@
-# FFXIV Timers <img src="src/logo.png" alt="" align="right" width="40px">
+# FFXIV Timers <img src="public/apple-touch-icon.png" alt="" align="right">
 
 [![Stars](https://img.shields.io/github/stars/costasak/ffxiv-timers)](https://github.com/CostasAK/ffxiv-timers)
 [![Ko-fi](https://img.shields.io/badge/ko--fi-CostasAK-F16061?logo=ko-fi)](https://ko-fi.com/CostasAK)
