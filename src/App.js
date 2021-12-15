@@ -169,7 +169,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1 className="title">
-          <img alt="" src={logo} /> FFXIV Timers
+          <img alt="" src={logo} />
+          &nbsp;FFXIV Timers
         </h1>
 
         <p className="description">
@@ -186,14 +187,16 @@ function App() {
       </main>
 
       <footer className="footer">
-        By&nbsp;<a href="https://github.com/CostasAK">CostasAK</a>
-        &#8193;&bull;&#8193;
-        <a href="https://github.com/CostasAK/ffxiv-timers">
-          <FaGithub />
-          &nbsp;Source
-        </a>
-        &#8193;&bull;&#8193;FINAL FANTASY XIV Copyright © 2010-2021 SQUARE ENIX
-        CO., LTD.
+        <div>
+          By&nbsp;<a href="https://github.com/CostasAK">CostasAK</a>
+        </div>
+        <div>
+          <a href="https://github.com/CostasAK/ffxiv-timers">
+            <FaGithub />
+            &nbsp;Source
+          </a>
+        </div>
+        <div>FINAL FANTASY XIV Copyright © 2010-2021 SQUARE ENIX CO., LTD.</div>
       </footer>
     </div>
   );
