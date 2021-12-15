@@ -78,10 +78,14 @@ function eventCard(name, start, stop) {
   }
 
   let time_string;
+  console.log(`time = ${time}`);
+  console.log(`now_time = ${now_time}`);
+  console.log(`delta = ${time - now_time}`);
+  console.log(`day = ${day}`);
   if (time - now_time < day) {
-    time_string = "on " + formatDate(time);
-  } else {
     time_string = "at " + formatTime(time);
+  } else {
+    time_string = "on " + formatDate(time);
   }
 
   return {
