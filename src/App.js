@@ -99,6 +99,7 @@ function eventCard(name, start, stop) {
             {open_string}
             <Countdown
               date={time}
+              overtime={true}
               renderer={(props) => renderCountdown(props.total)}
             />
             , {time_string}
@@ -127,6 +128,7 @@ const resetCard = (name, time, period, offset) => {
             In{" "}
             <Countdown
               date={next_time}
+              overtime={true}
               renderer={(props) => renderCountdown(props.total)}
             />
             , {next_time_string}
