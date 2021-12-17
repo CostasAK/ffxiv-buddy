@@ -92,7 +92,11 @@ function eventCard(name, start, stop) {
 
   return {
     jsx: (
-      <div className="card">
+      <div
+        className={
+          "card" + (open_string.includes("Ends in ", 0) ? " ongoing" : "")
+        }
+      >
         <h2>{name}</h2>
         <p>
           <div>

@@ -99,6 +99,18 @@
   text-decoration: none;
 }
 
+.ongoing {
+  border: 2px solid #39548E;
+  background: #3d5a99;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  background: #333333;
+  text-decoration: none;
+}
+
 .card h2 {
   width: 100%;
   margin: 0 0 1rem 0;
