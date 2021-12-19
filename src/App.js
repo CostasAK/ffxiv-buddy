@@ -18,6 +18,9 @@ const leve_refresh_offset = 0;
 const grand_company_reset_offset = 20 * hour;
 
 const renderCountdown = (delta) => {
+  if (delta < 0) {
+    return "";
+  }
   let days = Math.floor(delta / day);
   if (days > 0) {
     days = Math.round(delta / day);
@@ -79,12 +82,15 @@ function eventCard(name, start, stop) {
       open_string = "Ends in ";
       time = new Date(stop).getTime();
     }
-  } else if (time <= now_time + day) {
+  } else if (time <= now_time - day) {
     return;
   }
 
   let time_string;
-  if (time - now_time < day) {
+  if (time < now_time) {
+    time_string = "On " + formatDate(time);
+    open_string = "";
+  } else if (time - now_time < day) {
     time_string = "at " + formatTime(time);
   } else {
     time_string = "on " + formatDate(time);
@@ -94,7 +100,10 @@ function eventCard(name, start, stop) {
     jsx: (
       <div
         className={
-          "card" + (open_string.includes("Ends in ", 0) ? " ongoing" : "")
+          "card" +
+          (open_string.includes("Ends in ", 0) || time < now_time
+            ? " ongoing"
+            : "")
         }
       >
         <h2>{name}</h2>
@@ -106,7 +115,8 @@ function eventCard(name, start, stop) {
               overtime={true}
               renderer={(props) => renderCountdown(props.total)}
             />
-            , {time_string}
+            {time < now_time ? "" : ", "}
+            {time_string}
           </div>
         </p>
       </div>
@@ -158,7 +168,7 @@ function App() {
     ),
     eventCard("Patch 6.01: Pandæmonium (Normal)", "21 December 2021 10:00 GMT"),
     eventCard("Patch 6.05: Pandæmonium (Savage)", "4 January 2022 UTC"),
-  ];
+  ].filter((a) => a !== undefined);
   events.sort((a, b) => a.sort - b.sort);
 
   let resets = [
