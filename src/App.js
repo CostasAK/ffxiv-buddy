@@ -156,7 +156,7 @@ function App() {
       "16 December 2021 08:00 GMT",
       "31 December 2021 15:00 GMT"
     ),
-    eventCard("Patch 6.01: Pandæmonium (Normal)", "21 December 2021 UTC"),
+    eventCard("Patch 6.01: Pandæmonium (Normal)", "21 December 2021 10:00 GMT"),
     eventCard("Patch 6.05: Pandæmonium (Savage)", "4 January 2022 UTC"),
   ];
   events.sort((a, b) => a.sort - b.sort);
