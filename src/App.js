@@ -4,7 +4,7 @@ import Countdown from "react-countdown";
 import { FaGithub } from "react-icons/fa";
 import React from "react";
 import dayjs from "dayjs";
-import logo from "./MainIcon47.png";
+import logo from "./assets/MainIcon47.png";
 
 const second = 1000;
 const minute = 60 * second;
