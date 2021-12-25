@@ -1,10 +1,13 @@
 import "./App.css";
 
+import { formatDate, formatTime } from "./functions/formatDateTime";
+
 import Countdown from "react-countdown";
 import { FaGithub } from "react-icons/fa";
 import React from "react";
-import dayjs from "dayjs";
 import logo from "./assets/MainIcon47.png";
+import { nextTime } from "./functions/nextTime";
+import { toNaturalLanguageTime } from "./functions/toNaturalLanguageTime";
 
 const second = 1000;
 const minute = 60 * second;
@@ -16,57 +19,6 @@ const daily_reset_offset = 15 * hour;
 const weekly_reset_offset = 8 * hour + 5 * day;
 const leve_refresh_offset = 0;
 const grand_company_reset_offset = 20 * hour;
-
-const renderCountdown = (delta) => {
-  if (delta < 0) {
-    return "";
-  }
-  let days = Math.floor(delta / day);
-  if (days > 0) {
-    days = Math.round(delta / day);
-    return days + " day" + (days === 1 ? "" : "s");
-  }
-
-  let hours = Math.floor(delta / hour);
-  if (hours > 0) {
-    hours = Math.round(delta / hour);
-    return hours + " hour" + (hours === 1 ? "" : "s");
-  }
-
-  let minutes = Math.floor(delta / minute);
-  if (minutes > 0) {
-    minutes = Math.round(delta / minute);
-    return minutes + " minute" + (minutes === 1 ? "" : "s");
-  }
-
-  let seconds = Math.round(delta / second);
-  return seconds + " second" + (seconds === 1 ? "" : "s");
-};
-
-const formatTime = (time) => {
-  const hourParts = new Intl.DateTimeFormat(undefined, {
-    hour: "numeric",
-  }).formatToParts(new Date(time));
-  if (hourParts.dayPeriod !== undefined) {
-    return dayjs(time).format("h:mm A");
-  }
-  return dayjs(time).format("H:mm");
-};
-
-const formatDate = (time) => {
-  return (
-    dayjs(time).format("ddd, D MMM YYYY") +
-    (time % day !== 0 ? " " + formatTime(time) : "")
-  );
-};
-
-const nextTime = (time, period, offset) => {
-  let remainder = time % period || 0;
-  if (remainder < offset) {
-    return time - remainder + offset;
-  }
-  return time - remainder + offset + period;
-};
 
 function eventCard(name, start, stop) {
   let time = new Date(start).getTime();
@@ -113,7 +65,7 @@ function eventCard(name, start, stop) {
             <Countdown
               date={time}
               overtime={true}
-              renderer={(props) => renderCountdown(props.total)}
+              renderer={(props) => toNaturalLanguageTime(props.total)}
             />
             {time < now_time ? "" : ", "}
             {time_string}
@@ -143,7 +95,7 @@ const resetCard = (name, time, period, offset) => {
             <Countdown
               date={next_time}
               overtime={true}
-              renderer={(props) => renderCountdown(props.total)}
+              renderer={(props) => toNaturalLanguageTime(props.total)}
             />
             , {next_time_string}
           </div>
