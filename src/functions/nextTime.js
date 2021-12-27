@@ -1,7 +1,8 @@
-export function nextTime(time, period, offset) {
-  let remainder = time % period || 0;
+export function nextTime(now, period, time) {
+  let offset = time % period;
+  let remainder = now % period || 0;
   if (remainder < offset) {
-    return time - remainder + offset;
+    return now - remainder + offset;
   }
-  return time - remainder + offset + period;
+  return now - remainder + offset + period;
 }
