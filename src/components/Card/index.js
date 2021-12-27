@@ -96,7 +96,7 @@ export class Card extends React.Component {
     if (this.state.started && !end) {
       absolute_time_string =
         "On " + formatDate(target_time, this.props.hasTime);
-    } else if (this.props.period > day) {
+    } else if (this.props.period > day || !is_recurring) {
       absolute_time_string =
         "on " + formatDate(target_time, this.props.hasTime);
     } else {
