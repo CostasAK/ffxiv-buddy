@@ -43,33 +43,3 @@
   width: 100%;
   padding: 10px;
 }
-
-.footer {
-  padding: 1.125rem 0;
-  border-top: 3px solid #484C4E;
-  background: #3f4345;
-  max-width: 100vw;
-  color: #999;
-  --divider: 1px;
-  --column-gap: 20px;
-  --border: 1px;
-  align-items: center;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-
-.footer a {
-  color: #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer div {
-  line-height: 1.2;
-  margin: 0 calc(var(--column-gap));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}

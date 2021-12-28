@@ -1,7 +1,7 @@
 import "./App.css";
 
 import { Card } from "./components/Card";
-import { FaGithub } from "react-icons/fa";
+import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import React from "react";
 
@@ -77,18 +77,7 @@ function App() {
         <div className="invisible"></div>
       </main>
 
-      <footer className="footer">
-        <div>
-          By&nbsp;<a href="https://github.com/CostasAK">CostasAK</a>
-        </div>
-        <div>
-          <a href="https://github.com/CostasAK/ffxiv-timers">
-            <FaGithub />
-            &nbsp;Source
-          </a>
-        </div>
-        <div>FINAL FANTASY XIV Copyright © 2010-2021 SQUARE ENIX CO., LTD.</div>
-      </footer>
+      <Footer />
     </div>
   );
 }
