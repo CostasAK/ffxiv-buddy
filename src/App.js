@@ -2,8 +2,8 @@ import "./App.css";
 
 import { Card } from "./components/Card";
 import { FaGithub } from "react-icons/fa";
+import { Header } from "./components/Header";
 import React from "react";
-import logo from "./assets/MainIcon47.png";
 
 const second = 1000;
 const minute = 60 * second;
@@ -50,17 +50,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1 className="title">
-          <img alt="" src={logo} height="40px" />
-          &nbsp;FFXIV Timers
-        </h1>
-
-        <p className="description">
-          Reset Timers and other Countdowns for Final Fantasy XIV, in your local
-          time with countdowns.
-        </p>
-      </header>
+      <Header />
 
       <main className="main">
         <div className="container">
