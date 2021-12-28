@@ -2,6 +2,7 @@
 
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/costasak/ffxiv-timers/Node.js%20CI/main)](https://github.com/CostasAK/ffxiv-timers/actions/workflows/node.js.yml)
 [![GitHub watchers](https://img.shields.io/github/watchers/costasak/ffxiv-timers)](https://github.com/CostasAK/ffxiv-timers)
+[![GitHub forks](https://img.shields.io/github/forks/costasak/ffxiv-timers)](https://github.com/CostasAK/ffxiv-timers/network/members)
 [![Stars](https://img.shields.io/github/stars/costasak/ffxiv-timers)](https://github.com/CostasAK/ffxiv-timers)
 [![Ko-fi](https://img.shields.io/badge/ko--fi-CostasAK-F16061?logo=ko-fi)](https://ko-fi.com/CostasAK)
 
