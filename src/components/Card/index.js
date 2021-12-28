@@ -28,7 +28,7 @@ export class Card extends React.Component {
 
     this.state = {
       started: !this.props.period && start <= Date.now(),
-      ended: (end && end <= now) || (!end && start + day < now),
+      ended: !this.props.period && ((end && end <= now) || (!end && start + day < now)),
       next_time: next_time,
     };
 
@@ -61,12 +61,13 @@ export class Card extends React.Component {
     let start = new Date(this.props.start).getTime();
     let end = this.props.end && new Date(this.props.end).getTime();
     let now = Date.now();
-    if ((end && end <= now) || (!end && start + day < now)) {
+    let is_recurring = !!this.props.period;
+
+    if (!is_recurring && ((end && end <= now) || (!end && start + day < now))) {
       this.setState({ ended: true });
       return null;
     }
 
-    let is_recurring = !!this.props.period;
     let target_time = start;
     if (is_recurring) {
       target_time = this.state.next_time;

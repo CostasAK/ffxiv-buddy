@@ -11,7 +11,7 @@ const hour = 60 * minute;
 const day = 24 * hour;
 const week = 7 * day;
 
-const daily_reset_time = new Date("27 December 2021 15:00 GMT").getTime();
+const daily_reset_time = new Date("28 December 2021 15:00 GMT").getTime();
 const weekly_reset_time = new Date("28 December 2021 8:00 GMT").getTime();
 const leve_refresh_time = new Date("27 December 2021 12:00 GMT").getTime();
 const grand_company_reset_time = new Date(
