@@ -18,35 +18,28 @@ const grand_company_reset_time = new Date(
   "27 December 2021 20:00 GMT"
 ).getTime();
 
-function App() {
-  const events = [
-    {
-      name: "Starlight Celebration",
-      start: "16 December 2021 08:00 GMT",
-      end: "31 December 2021 15:00 GMT",
-    },
-    {
-      name: "Heavensturn",
-      start: "5 January 2022  8:00 GMT",
-      end: "19 January 2022 15:00 GMT",
-    },
-    {
-      name: "Patch 6.05: Pandæmonium (Savage)",
-      start: "4 January 2022 10:00 UTC",
-      hasTime: false,
-    },
-  ];
+const resets = [
+  { name: "Weekly Reset", period: week, start: weekly_reset_time },
+  { name: "Daily Reset", period: day, start: daily_reset_time },
+  { name: "Leve Refresh", period: day / 2, start: leve_refresh_time },
+  {
+    name: "Grand Company Reset",
+    period: day,
+    start: grand_company_reset_time,
+  },
+];
 
-  const resets = [
-    { name: "Weekly Reset", period: week, start: weekly_reset_time },
-    { name: "Daily Reset", period: day, start: daily_reset_time },
-    { name: "Leve Refresh", period: day / 2, start: leve_refresh_time },
-    {
-      name: "Grand Company Reset",
-      period: day,
-      start: grand_company_reset_time,
-    },
-  ];
+async function load(url) {
+  let obj = await (await fetch(url)).json();
+  return obj;
+}
+const event_promise = load(
+  "https://raw.githubusercontent.com/CostasAK/ffxiv-timers/events/event.json"
+);
+
+function App() {
+  const [events, setEvents] = React.useState([]);
+  event_promise.then((result) => setEvents(result));
 
   return (
     <div className="App">
