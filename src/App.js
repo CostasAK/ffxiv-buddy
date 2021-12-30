@@ -11,21 +11,31 @@ const hour = 60 * minute;
 const day = 24 * hour;
 const week = 7 * day;
 
-const daily_reset_time = new Date("28 December 2021 15:00 GMT").getTime();
-const weekly_reset_time = new Date("28 December 2021 8:00 GMT").getTime();
-const leve_refresh_time = new Date("27 December 2021 12:00 GMT").getTime();
-const grand_company_reset_time = new Date(
-  "27 December 2021 20:00 GMT"
-).getTime();
-
 const resets = [
-  { name: "Weekly Reset", period: week, start: weekly_reset_time },
-  { name: "Daily Reset", period: day, start: daily_reset_time },
-  { name: "Leve Refresh", period: day / 2, start: leve_refresh_time },
+  {
+    name: "Weekly Reset",
+    period: week,
+    start: new Date("28 December 2021 8:00 GMT").getTime(),
+  },
+  {
+    name: "Daily Reset",
+    period: day,
+    start: new Date("28 December 2021 15:00 GMT").getTime(),
+  },
+  {
+    name: "Leve Refresh",
+    period: day / 2,
+    start: new Date("27 December 2021 12:00 GMT").getTime(),
+  },
   {
     name: "Grand Company Reset",
     period: day,
-    start: grand_company_reset_time,
+    start: new Date("27 December 2021 20:00 GMT").getTime(),
+  },
+  {
+    name: "Jumbo Cactpot",
+    period: week,
+    start: new Date("1 January 2022 19:00 GMT").getTime(),
   },
 ];
 
@@ -47,25 +57,23 @@ function App() {
 
       <main className="main">
         <div className="container">
-          <div className="grid">
-            {events.map((event) => (
-              <Card
-                key={[event.name, event.start].join(",")}
-                name={event.name}
-                start={event.start}
-                end={event.end}
-                hasTime={event.hasTime}
-              />
-            ))}
-            {resets.map((reset) => (
-              <Card
-                key={[reset.name, reset.start].join(",")}
-                name={reset.name}
-                period={reset.period}
-                start={reset.start}
-              />
-            ))}
-          </div>
+          {events.map((event) => (
+            <Card
+              key={[event.name, event.start].join(",")}
+              name={event.name}
+              start={event.start}
+              end={event.end}
+              hasTime={event.hasTime}
+            />
+          ))}
+          {resets.map((reset) => (
+            <Card
+              key={[reset.name, reset.start].join(",")}
+              name={reset.name}
+              period={reset.period}
+              start={reset.start}
+            />
+          ))}
         </div>
         <div className="invisible"></div>
       </main>

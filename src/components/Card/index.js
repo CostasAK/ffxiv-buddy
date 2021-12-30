@@ -6,6 +6,7 @@ import Countdown from "react-countdown";
 import React from "react";
 import { nextTime } from "../../functions/nextTime";
 import { toNaturalLanguageTime } from "../../functions/toNaturalLanguageTime";
+import { toTime } from "../../functions/toTime";
 
 const second = 1000;
 const minute = 60 * second;
@@ -17,18 +18,16 @@ export class Card extends React.Component {
   constructor(props) {
     super(props);
 
-    let start = new Date(this.props.start).getTime();
-    let end = this.props.end && new Date(this.props.end).getTime();
+    let start = toTime(this.props.start);
+    let end = toTime(this.props.end);
     let now = Date.now();
-    let next_time = nextTime(
-      Date.now(),
-      this.props.period,
-      new Date(start).getTime()
-    );
+    let next_time = nextTime(Date.now(), this.props.period, start);
 
     this.state = {
       started: !this.props.period && start <= Date.now(),
-      ended: !this.props.period && ((end && end <= now) || (!end && start + day < now)),
+      ended:
+        !this.props.period &&
+        ((end && end <= now) || (!end && start + day < now)),
       next_time: next_time,
     };
 

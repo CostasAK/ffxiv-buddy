@@ -1,12 +1,10 @@
 .footer {
-  padding: 1.125rem 0;
+  padding: calc(var(--margins) / 3);
+  font-size: 0.75rem;
   border-top: 3px solid #484C4E;
   background: #3f4345;
   max-width: 100vw;
   color: #999;
-  --divider: 1px;
-  --column-gap: 20px;
-  --border: 1px;
   align-items: center;
   display: flex;
   flex-flow: row wrap;
@@ -21,8 +19,7 @@
 }
 
 .footer div {
-  line-height: 1.2;
-  margin: 0 calc(var(--column-gap));
+  margin: calc(var(--margins) / 3) var(--margins);
   display: flex;
   align-items: center;
   justify-content: center;
