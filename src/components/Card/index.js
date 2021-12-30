@@ -14,6 +14,15 @@ const hour = 60 * minute;
 const day = 24 * hour;
 const year = 365.25 * day;
 
+const icons = {
+  maintenance:
+    "https://raw.githubusercontent.com/mattantonelli/lodestone/b31f7058c4ec34c5983c51ca9c4ba247c5d20d53/public/images/maintenance.png",
+  event:
+    "https://raw.githubusercontent.com/mattantonelli/lodestone/b31f7058c4ec34c5983c51ca9c4ba247c5d20d53/public/images/topics.png",
+  reset:
+    "https://raw.githubusercontent.com/mattantonelli/lodestone/b31f7058c4ec34c5983c51ca9c4ba247c5d20d53/public/images/updates.png",
+};
+
 export class Card extends React.Component {
   constructor(props) {
     super(props);
@@ -114,7 +123,14 @@ export class Card extends React.Component {
         className={"card" + (this.state.started ? " ongoing" : "")}
         style={{ order: flex_order }}
       >
-        <h2>{this.props.name}</h2>
+        <h2>
+          <img
+            src={icons[this.props.type]}
+            alt={this.props.type}
+            width="22px"
+          />
+           {this.props.name}
+        </h2>
         <p>
           {is_recurring || !(this.state.started && !end) ? countdown : ""}
           {absolute_time_string}

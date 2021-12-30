@@ -16,26 +16,31 @@ const resets = [
     name: "Weekly Reset",
     period: week,
     start: new Date("28 December 2021 8:00 GMT").getTime(),
+    type: "reset",
   },
   {
     name: "Daily Reset",
     period: day,
     start: new Date("28 December 2021 15:00 GMT").getTime(),
+    type: "reset",
   },
   {
     name: "Leve Refresh",
     period: day / 2,
     start: new Date("27 December 2021 12:00 GMT").getTime(),
+    type: "reset",
   },
   {
     name: "Grand Company Reset",
     period: day,
     start: new Date("27 December 2021 20:00 GMT").getTime(),
+    type: "reset",
   },
   {
     name: "Jumbo Cactpot",
     period: week,
     start: new Date("1 January 2022 19:00 GMT").getTime(),
+    type: "reset",
   },
 ];
 
@@ -64,6 +69,7 @@ function App() {
               start={event.start}
               end={event.end}
               hasTime={event.hasTime}
+              type={event.type}
             />
           ))}
           {resets.map((reset) => (
@@ -72,6 +78,7 @@ function App() {
               name={reset.name}
               period={reset.period}
               start={reset.start}
+              type={reset.type}
             />
           ))}
         </div>
