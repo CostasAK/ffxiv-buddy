@@ -129,7 +129,7 @@ export class Card extends React.Component {
             alt={this.props.type}
             width="22px"
           />
-           {this.props.name}
+          {this.props.name}
         </h2>
         <p>
           {is_recurring || !(this.state.started && !end) ? countdown : ""}

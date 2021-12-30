@@ -28,11 +28,15 @@
 }
 
 .card h2 {
-  width: 100%;
+  width: fit-content;
   margin: 0 0 1rem calc(var(--margins) / -2);
   font-size: 1.125rem;
   display: flex;
   align-items: center;
+}
+
+.card h2 img {
+  margin-right: calc(var(--margins) / 5);
 }
 
 .card p {
