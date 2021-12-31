@@ -4,9 +4,12 @@ import { formatDate, formatTime } from "../../functions/formatDateTime";
 
 import Countdown from "react-countdown";
 import React from "react";
+import maintenance_icon from "../../assets/maintenance.png";
 import { nextTime } from "../../functions/nextTime";
 import { toNaturalLanguageTime } from "../../functions/toNaturalLanguageTime";
 import { toTime } from "../../functions/toTime";
+import topics_icon from "../../assets/topics.png";
+import updates_icon from "../../assets/updates.png";
 
 const second = 1000;
 const minute = 60 * second;
@@ -15,12 +18,9 @@ const day = 24 * hour;
 const year = 365.25 * day;
 
 const icons = {
-  maintenance:
-    "https://raw.githubusercontent.com/mattantonelli/lodestone/b31f7058c4ec34c5983c51ca9c4ba247c5d20d53/public/images/maintenance.png",
-  event:
-    "https://raw.githubusercontent.com/mattantonelli/lodestone/b31f7058c4ec34c5983c51ca9c4ba247c5d20d53/public/images/topics.png",
-  reset:
-    "https://raw.githubusercontent.com/mattantonelli/lodestone/b31f7058c4ec34c5983c51ca9c4ba247c5d20d53/public/images/updates.png",
+  maintenance: maintenance_icon,
+  event: topics_icon,
+  reset: updates_icon,
 };
 
 export class Card extends React.Component {
