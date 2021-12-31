@@ -38,6 +38,7 @@ export class Card extends React.Component {
         !this.props.period &&
         ((end && end <= now) || (!end && start + day < now)),
       next_time: next_time,
+      expanded: false,
     };
 
     this.onCompleteCountdown = this.onCompleteCountdown.bind(this);
@@ -120,8 +121,9 @@ export class Card extends React.Component {
 
     return (
       <div
-        className={"card" + (this.state.started ? " ongoing" : "")}
+        className={"card" + (this.state.started ? " ongoing" : "") + (this.state.expanded ? " expanded" : "")}
         style={{ order: flex_order }}
+        onClick={() => this.setState({expanded: !this.state.expanded})}
       >
         <h2>
           <img
