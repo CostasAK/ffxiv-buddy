@@ -1,4 +1,8 @@
-export function nextTime(now, period, time) {
+export function nextTime(period, time) {
+  if (!period || !time) {
+    return time;
+  }
+  let now = Date.now();
   let offset = time % period;
   let remainder = now % period || 0;
   if (remainder < offset) {

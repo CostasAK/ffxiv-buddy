@@ -4,6 +4,7 @@ import { formatDate, formatTime } from "../../functions/formatDateTime";
 
 import Countdown from "react-countdown";
 import React from "react";
+import { isPast } from "../../functions/isPast";
 import maintenance_icon from "../../assets/maintenance.png";
 import { nextTime } from "../../functions/nextTime";
 import { toNaturalLanguageTime } from "../../functions/toNaturalLanguageTime";
@@ -27,17 +28,18 @@ export class Card extends React.Component {
   constructor(props) {
     super(props);
 
-    let start = toTime(this.props.start);
-    let end = toTime(this.props.end);
-    let now = Date.now();
-    let next_time = nextTime(Date.now(), this.props.period, start);
+    let start = nextTime(this.props.period, toTime(this.props.start));
+    let end = nextTime(this.props.period, toTime(this.props.end));
+
+    while (this.props.period && end && start > end) {
+      start -= this.props.period;
+    }
 
     this.state = {
-      started: !this.props.period && start <= Date.now(),
-      ended:
-        !this.props.period &&
-        ((end && end <= now) || (!end && start + day < now)),
-      next_time: next_time,
+      start: start,
+      end: end,
+      started: isPast(start),
+      ended: isPast(end) || (!end && isPast(start + day)),
       expanded: false,
     };
 
@@ -45,20 +47,24 @@ export class Card extends React.Component {
   }
 
   onCompleteCountdown() {
-    let now = Date.now() + second;
-    let start = new Date(this.props.start).getTime();
     if (this.props.period) {
+      let start = nextTime(this.props.period, toTime(this.state.start));
+      let end = nextTime(this.props.period, toTime(this.state.end));
+
+      while (this.props.period && end && start > end) {
+        start -= this.props.period;
+      }
+
       this.setState({
-        next_time: nextTime(now, this.props.period, start),
+        start: start,
+        end: end,
       });
-    } else {
-      if (start <= now) {
-        this.setState({ started: true });
-      }
-      let end = this.props.end && new Date(this.props.end).getTime();
-      if (end && end <= now) {
-        this.setState({ ended: true });
-      }
+    }
+    if (isPast(this.state.start)) {
+      this.setState({ started: true });
+    }
+    if (isPast(this.state.end)) {
+      this.setState({ ended: true });
     }
   }
 
@@ -67,30 +73,23 @@ export class Card extends React.Component {
       return null;
     }
 
-    let start = new Date(this.props.start).getTime();
-    let end = this.props.end && new Date(this.props.end).getTime();
-    let now = Date.now();
+    let start = this.state.start;
+    let end = this.state.end;
     let is_recurring = !!this.props.period;
 
-    if (!is_recurring && ((end && end <= now) || (!end && start + day < now))) {
+    if (!is_recurring && (isPast(end) || (!end && isPast(start + day)))) {
       this.setState({ ended: true });
       return null;
     }
 
     let target_time = start;
-    if (is_recurring) {
-      target_time = this.state.next_time;
-    } else if (this.state.started && end) {
+    if (this.state.started && end) {
       target_time = end;
     }
 
     let countdown = (
       <span>
-        {is_recurring || !end
-          ? "In "
-          : this.state.started
-          ? "Ends in "
-          : "Starts in "}
+        {!end ? "In " : this.state.started ? "Ends in " : "Starts in "}
         <Countdown
           date={target_time}
           key={[this.props.name, this.props.period, target_time].join(",")}

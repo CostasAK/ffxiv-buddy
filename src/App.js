@@ -64,29 +64,23 @@ function App() {
   const [events, setEvents] = React.useState([]);
   event_promise.then((result) => setEvents(result));
 
+  let cards = [...events, ...resets];
+
   return (
     <div className="App">
       <Header />
 
       <main className="main">
         <div className="container">
-          {events.map((event) => (
+          {cards.map((card) => (
             <Card
-              key={[event.name, event.start].join(",")}
-              name={event.name}
-              start={event.start}
-              end={event.end}
-              hasTime={event.hasTime}
-              type={event.type}
-            />
-          ))}
-          {resets.map((reset) => (
-            <Card
-              key={[reset.name, reset.start].join(",")}
-              name={reset.name}
-              period={reset.period}
-              start={reset.start}
-              type={reset.type}
+              key={[card.name, card.start].join(",")}
+              name={card.name}
+              start={card.start}
+              end={card.end}
+              period={card.period}
+              hasTime={card.hasTime}
+              type={card.type}
             />
           ))}
         </div>
