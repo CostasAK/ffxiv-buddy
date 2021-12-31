@@ -4,20 +4,20 @@
   flex: 1 1 auto;
   color: inherit;
   text-decoration: none;
-  border-top: 1px solid #484848;
-  border-right: 1px solid #2E2E2E;
-  border-bottom: 1px solid #2E2E2E;
-  border-left: 1px solid #484848;
   border-radius: var(--border-radius);
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 100%;
   width: auto;
   background: #262626;
+  box-shadow: 0px 1px 0px 0px rgba(255,255,255,0.1) inset,1px 0px 0px 0px rgba(255,255,255,0.1) inset,-1px 0px 0px 0px rgba(0,0,0,0.1) inset;
 }
 
 .ongoing {
-  border-color: #39548E;
   background: #3d5a99;
+}
+
+.ongoing.maintenance {
+  background: #964040;
 }
 
 .card:hover,

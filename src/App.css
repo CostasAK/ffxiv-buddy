@@ -16,7 +16,6 @@
 
 .container {
   margin: var(--margins) 0;
-  background: #383838;
   width: var(--main-width);
   max-width: calc(100% - var(--margins));
   border-radius: var(--border-radius);
