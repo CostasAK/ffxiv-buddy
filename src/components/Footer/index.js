@@ -2,6 +2,7 @@ import "./style.css";
 
 import { Component } from "react";
 import { FaGithub } from "react-icons/fa";
+import avatar from "../../assets/initialen.svg";
 
 export class Footer extends Component {
   render() {
@@ -11,11 +12,8 @@ export class Footer extends Component {
           <div>
             Made by  
             <a href="https://github.com/CostasAK">
-              <img
-                alt=""
-                src="https://avatars.githubusercontent.com/u/23523864?v=4"
-              />
-               <span>CostasAK</span>
+              <img alt="" src={avatar} className="avatar" /> 
+              <span>CostasAK</span>
             </a>
           </div>
           <div>
