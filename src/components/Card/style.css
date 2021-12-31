@@ -1,9 +1,13 @@
 .card {
-  padding: calc(var(--margins));
+  padding: var(--margins);
+  padding-bottom: calc(var(--margins) + (var(--border-radius) / 2));
   text-align: left;
   flex: 1 1 auto;
   color: inherit;
   border-radius: var(--border-radius);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: calc(-1 * var(--border-radius));
   max-width: 100%;
   width: auto;
   background: #262626;

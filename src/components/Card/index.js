@@ -121,9 +121,15 @@ export class Card extends React.Component {
 
     return (
       <div
-        className={"card" + (this.state.started ? " ongoing" : "") + (this.state.expanded ? " expanded" : "")}
+        className={
+          "card" +
+          (this.state.started ? " ongoing" : "") +
+          (this.state.expanded ? " expanded" : "") +
+          " " +
+          this.props.type
+        }
         style={{ order: flex_order }}
-        onClick={() => this.setState({expanded: !this.state.expanded})}
+        onClick={() => this.setState({ expanded: !this.state.expanded })}
       >
         <h2>
           <img
