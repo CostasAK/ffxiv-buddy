@@ -105,12 +105,12 @@ export class Card extends React.Component {
     if (this.state.started && !end) {
       absolute_time_string =
         "On " + formatDate(target_time, this.props.hasTime);
-    } else if (this.props.period > day || !is_recurring) {
-      absolute_time_string =
-        "on " + formatDate(target_time, this.props.hasTime);
-    } else {
+    } else if (isPast(target_time - day)) {
       absolute_time_string =
         "at " + formatTime(target_time, this.props.hasTime);
+    } else {
+      absolute_time_string =
+        "on " + formatDate(target_time, this.props.hasTime);
     }
 
     let flex_order = target_time / minute;
