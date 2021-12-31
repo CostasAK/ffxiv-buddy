@@ -23,6 +23,10 @@
   justify-content: center;
 }
 
+.title img {
+  border-radius: var(--border-radius);
+}
+
 .description {
   font-size: 0.875rem;
 }

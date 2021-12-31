@@ -40,6 +40,14 @@ const resets = [
     name: "Jumbo Cactpot",
     period: week,
     start: new Date("1 January 2022 19:00 GMT").getTime(),
+    end: new Date("1 January 2022 20:00 GMT").getTime(),
+    type: "reset",
+  },
+  {
+    name: "Fashion Report",
+    period: week,
+    start: new Date("31 December 2021 8:00 GMT").getTime(),
+    end: new Date("4 January 2022 8:00 GMT").getTime(),
     type: "reset",
   },
 ];
