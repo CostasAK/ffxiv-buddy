@@ -7,16 +7,31 @@ export class Footer extends Component {
   render() {
     return (
       <footer className="footer">
-        <div>
-          By&nbsp;<a href="https://github.com/CostasAK">CostasAK</a>
+        <div className="footer-credits">
+          <div>
+            Made by  
+            <a href="https://github.com/CostasAK">
+              <img
+                alt=""
+                src="https://avatars.githubusercontent.com/u/23523864?v=4"
+              />
+               <span>CostasAK</span>
+            </a>
+          </div>
+          <div>
+            <a href="https://github.com/CostasAK/ffxiv-timers">
+              <FaGithub /> <span>Source</span>
+            </a>
+          </div>
         </div>
-        <div>
-          <a href="https://github.com/CostasAK/ffxiv-timers">
-            <FaGithub />
-            &nbsp;Source
-          </a>
+        <div className="footer-legal">
+          <div>© SQUARE ENIX CO., LTD. All Rights Reserved.</div>
+          <div>
+            FINAL FANTASY is a registered trademark of Square Enix Holdings Co.,
+            Ltd.
+          </div>
+          <div>All material used under license.</div>
         </div>
-        <div>FINAL FANTASY XIV Copyright © 2010-2021 SQUARE ENIX CO., LTD.</div>
       </footer>
     );
   }

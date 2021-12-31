@@ -22,9 +22,9 @@ a {
   text-decoration: none;
 }
 
-a:hover,
-a:focus,
-a:active {
+a:hover span,
+a:focus span,
+a:active span {
   text-decoration: underline;
 }
 

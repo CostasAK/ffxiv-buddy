@@ -82,7 +82,6 @@ function App() {
             />
           ))}
         </div>
-        <div className="invisible"></div>
       </main>
 
       <Footer />
