@@ -1,4 +1,4 @@
-.card {
+.Card {
   padding: var(--margins);
   padding-bottom: calc(var(--margins) + (var(--border-radius) / 2));
   text-align: left;
@@ -23,13 +23,13 @@
   background: #964040;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
+.Card:hover,
+.Card:focus,
+.Card:active {
   background: #333333;
 }
 
-.card h2 {
+.Card h2 {
   width: fit-content;
   margin: 0 0 calc(var(--margins) / 2) calc(var(--margins) / -2);
   font-size: 1.125rem;
@@ -37,11 +37,27 @@
   align-items: center;
 }
 
-.card h2 img {
+.Card h2 img {
   margin-right: calc(var(--margins) / 5);
 }
 
-.card p {
+.Card p {
   margin: 0;
   font-size: 1rem;
+}
+
+.Card .description {
+  padding: 0;
+  margin: 0;
+  padding-top: 0.4375rem;
+  font-size: 0.875rem;
+  text-align: left;
+  transition: all 0.15s;
+}
+
+.Card .description.collapsed {
+  padding: 0;
+  margin: 0;
+  font-size: 0rem;
+  opacity: 0;
 }

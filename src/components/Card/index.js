@@ -7,6 +7,7 @@ import React from "react";
 import { isPast } from "../../functions/isPast";
 import maintenance_icon from "../../assets/maintenance.png";
 import { nextTime } from "../../functions/nextTime";
+import parse from "html-react-parser";
 import { toNaturalLanguageTime } from "../../functions/toNaturalLanguageTime";
 import { toTime } from "../../functions/toTime";
 import topics_icon from "../../assets/topics.png";
@@ -40,7 +41,7 @@ export class Card extends React.Component {
       end: end,
       started: isPast(start),
       ended: isPast(end) || (!end && isPast(start + day)),
-      expanded: false,
+      collapsed: true,
     };
 
     this.onCompleteCountdown = this.onCompleteCountdown.bind(this);
@@ -113,6 +114,12 @@ export class Card extends React.Component {
         "on " + formatDate(target_time, this.props.hasTime);
     }
 
+    let description =
+      typeof this.props.description === "string" ||
+      this.props.description instanceof String
+        ? parse(this.props.description)
+        : this.props.description;
+
     let flex_order = target_time / minute;
     if (!is_recurring) {
       flex_order -= (10 * year) / minute;
@@ -121,14 +128,14 @@ export class Card extends React.Component {
     return (
       <div
         className={
-          "card" +
+          "Card" +
           (this.state.started ? " ongoing" : "") +
-          (this.state.expanded ? " expanded" : "") +
+          (this.state.collapsed ? " collapsed" : "") +
           " " +
           this.props.type
         }
         style={{ order: flex_order }}
-        onClick={() => this.setState({ expanded: !this.state.expanded })}
+        onClick={() => this.setState({ collapsed: !this.state.collapsed })}
       >
         <h2>
           <img
@@ -142,6 +149,16 @@ export class Card extends React.Component {
           {is_recurring || !(this.state.started && !end) ? countdown : ""}
           {absolute_time_string}
         </p>
+        <div
+          className={
+            "description" +
+            (this.state.collapsed || !this.props.description
+              ? " collapsed"
+              : "")
+          }
+        >
+          {description}
+        </div>
       </div>
     );
   }
@@ -151,4 +168,5 @@ Card.defaultProps = {
   end: false,
   period: false,
   hasTime: true,
+  description: false,
 };
