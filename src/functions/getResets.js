@@ -33,7 +33,7 @@ export function getResets() {
     {
       name: "Grand Company Reset",
       description:
-        "The following things reset at this time:<ul><li>Grand Company Turn-ins are available.</li><li>Squadron Training Allowances.</li></ul>",
+        "Every day.<br/>The following things reset at this time:<ul><li>Grand Company Turn-ins are available.</li><li>Squadron Training Allowances.</li></ul>",
       period: day,
       start: new Date("27 December 2021 20:00 GMT").getTime(),
       type: "reset",
@@ -50,7 +50,7 @@ export function getResets() {
     {
       name: "Fashion Report",
       description:
-        'During this time you can present yourself for judging at the Gold Saucer for the Fashion Report Challenge.<br /><a href="https://www.reddit.com/r/ffxiv/search?q=fashion%20report%20week%20full%20report&restrict_sr=1&t=week&sort=new" target="_blank">Click here for detailed reports</a>.',
+        'Every week.<br/>During this time you can present yourself for judging at the Gold Saucer for the Fashion Report Challenge.<br /><a href="https://www.reddit.com/r/ffxiv/search?q=fashion%20report%20week%20full%20report&restrict_sr=1&t=week&sort=new" target="_blank">Click here for detailed reports</a>.',
       period: week,
       start: new Date("31 December 2021 8:00 GMT").getTime(),
       end: new Date("4 January 2022 8:00 GMT").getTime(),
