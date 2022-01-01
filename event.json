@@ -1,18 +1,14 @@
 [
   {
-    "name": "Starlight Celebration",
-    "start": "16 December 2021 08:00 GMT",
-    "end": "31 December 2021 15:00 GMT",
-    "type": "event"
-  },
-  {
     "name": "Heavensturn",
+    "description": "The Heavensturn festival is upon us once again, and delegates from the Far East have arrived to spread word of their customary celebration. To this end, the tora bugyo would enlist your aid in spreading word across Eorzea to ensure the success of the festivities. Join the celebration and earn fun new rewards!<br/><a href=\"https://sqex.to/ilR6c\">Read on<a> for details.",
     "start": "5 January 2022  8:00 GMT",
     "end": "19 January 2022 15:00 GMT",
     "type": "event"
   },
   {
     "name": "Patch 6.05: Pandæmonium (Savage)",
+    "description": "The following additional features will be implemented:<ul><li>Pandæmonium (Savage).</li><li>Treasure hunt dungeon the Excitatron 6000.</li></ul>",
     "start": "4 January 2022 5:00 UTC",
     "end": "4 January 2022 10:00 UTC",
     "type": "maintenance"
