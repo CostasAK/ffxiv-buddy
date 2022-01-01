@@ -61,11 +61,17 @@ export class Card extends React.Component {
         end: end,
       });
     }
+
     if (isPast(this.state.start)) {
       this.setState({ started: true });
+    } else {
+      this.setState({ started: false });
     }
+
     if (isPast(this.state.end)) {
       this.setState({ ended: true });
+    } else {
+      this.setState({ ended: false });
     }
   }
 
