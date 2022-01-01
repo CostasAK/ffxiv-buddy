@@ -30,7 +30,7 @@ function App() {
         <div className="container">
           {cards.map((card) => (
             <Card
-              key={[card.name, card.start].join(",")}
+              key={[card.name, card.start, card.end].join(",")}
               name={card.name}
               description={card.description}
               start={card.start}
