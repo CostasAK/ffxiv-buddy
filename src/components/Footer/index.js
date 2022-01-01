@@ -9,8 +9,8 @@ export class Footer extends Component {
     return (
       <footer className="footer">
         <div className="footer-credits">
-          <div style={{ marginRight: 0 }}>Made by</div>
           <div>
+            <span>Made by</span>  
             <a href="https://github.com/CostasAK">
               <img alt="" src={avatar} className="avatar" /> 
               <span>CostasAK</span>
