@@ -9,7 +9,7 @@ export function getResets() {
     {
       name: "Weekly Reset",
       description:
-        "The following things reset at this time:<ul><li>Weekly repeatable quests.</li><li>Weekly tomestone cap.</li><li>Masked Carnival targets.</li><li>Challenge Log.</li><li>Wondrous Tails.</li><li>Faux Hollows.</li><li>Custom Delivery allowances.</li><li>Doman Enclave Reconstruction Effort donations.</li><li>Squadron Priority Mission.</li></ul>",
+        "The following things reset at this time:<ul><li>Weekly repeatable quests.</li><li>Weekly tomestone cap.</li><li>Elite mark bills.</li><li>Masked Carnivale.</li><li>Challenge Log.</li><li>Wondrous Tails.</li><li>Faux Hollows.</li><li>Custom Deliveries.</li><li>Doman Enclave Reconstruction Effort.</li><li>Squadron Priority Mission.</li></ul>",
       period: week,
       start: new Date("28 December 2021 8:00 GMT").getTime(),
       type: "reset",
@@ -17,7 +17,7 @@ export function getResets() {
     {
       name: "Daily Reset",
       description:
-        "The following things reset at this time:<ul><li>Duty Roulette bonuses.</li><li>Daily repeatable quests.</li><li>Beastmen quest allowances.</li></ul>",
+        "The following things reset at this time:<ul><li>Duty Roulette bonuses.</li><li>Beast Tribe Quests.</li><li>Regular mark bills.</li></ul>",
       period: day,
       start: new Date("28 December 2021 15:00 GMT").getTime(),
       type: "reset",
