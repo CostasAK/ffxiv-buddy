@@ -39,8 +39,6 @@ export class Card extends React.Component {
     this.state = {
       start: start,
       end: end,
-      started: isPast(start),
-      ended: isPast(end) || (!end && isPast(start + day)),
       collapsed: true,
     };
 
@@ -52,7 +50,7 @@ export class Card extends React.Component {
       let start = nextTime(this.props.period, toTime(this.state.start));
       let end = nextTime(this.props.period, toTime(this.state.end));
 
-      while (this.props.period && end && start > end) {
+      while (this.props.period && end && start >= end) {
         start -= this.props.period;
       }
 
@@ -61,28 +59,25 @@ export class Card extends React.Component {
         end: end,
       });
     }
-
-    if (isPast(this.state.start)) {
-      this.setState({ started: true });
-    } else {
-      this.setState({ started: false });
-    }
-
-    if (isPast(this.state.end)) {
-      this.setState({ ended: true });
-    } else {
-      this.setState({ ended: false });
-    }
   }
 
   render() {
-    if (this.state.ended) {
-      return null;
-    }
-
     let start = this.state.start;
     let end = this.state.end;
     let is_recurring = !!this.props.period;
+
+    let ended = false;
+    if (isPast(end) || (!end && isPast(start + day))) {
+      ended = true;
+    }
+    if (ended) {
+      return null;
+    }
+
+    let started = false;
+    if (isPast(start)) {
+      started = true;
+    }
 
     if (!is_recurring && (isPast(end) || (!end && isPast(start + day)))) {
       this.setState({ ended: true });
@@ -90,13 +85,13 @@ export class Card extends React.Component {
     }
 
     let target_time = start;
-    if (this.state.started && end) {
+    if (started && end) {
       target_time = end;
     }
 
     let countdown = (
       <span>
-        {!end ? "In " : this.state.started ? "Ends in " : "Starts in "}
+        {!end ? "In " : started ? "Ends in " : "Starts in "}
         <Countdown
           date={target_time}
           key={[this.props.name, this.props.period, target_time].join(",")}
@@ -109,7 +104,7 @@ export class Card extends React.Component {
     );
 
     let absolute_time_string;
-    if (this.state.started && !end) {
+    if (started && !end) {
       absolute_time_string =
         "On " + formatDate(target_time, this.props.hasTime);
     } else if (isPast(target_time - day)) {
@@ -135,7 +130,7 @@ export class Card extends React.Component {
       <div
         className={
           "Card" +
-          (this.state.started ? " ongoing" : "") +
+          (started ? " ongoing" : "") +
           (this.state.collapsed ? " collapsed" : "") +
           " " +
           this.props.type
@@ -152,7 +147,7 @@ export class Card extends React.Component {
           {this.props.name}
         </h2>
         <p>
-          {is_recurring || !(this.state.started && !end) ? countdown : ""}
+          {is_recurring || !(started && !end) ? countdown : ""}
           {absolute_time_string}
         </p>
         <div
