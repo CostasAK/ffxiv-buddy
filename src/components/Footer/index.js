@@ -2,6 +2,7 @@ import "./style.css";
 
 import { Component } from "react";
 import { FaGithub } from "react-icons/fa";
+import { SiKofi } from "react-icons/si";
 import avatar from "../../assets/initialen.svg";
 
 export class Footer extends Component {
@@ -19,6 +20,21 @@ export class Footer extends Component {
           <div>
             <a href="https://github.com/CostasAK/ffxiv-timers">
               <FaGithub /> <span>Source</span>
+            </a>
+          </div>
+          <div
+            style={{
+              background: "#00B9FE",
+              padding: "calc(var(--margins) / 8) calc(var(--margins) / 2)",
+            }}
+          >
+            <a
+              href="https://ko-fi.com/costasak"
+              style={{ color: "#FFFFFF", fontWeight: "bold" }}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <SiKofi /> <span>Support me</span>
             </a>
           </div>
         </div>

@@ -33,7 +33,9 @@
 
 .footer-credits div,
 .footer-legal div {
-  margin: calc(var(--margins) / 4) calc(var(--margins));
+  padding: calc(var(--margins) / 8);
+  margin: calc(var(--margins) / 8) var(--margins);
+  border-radius: var(--border-radius);
   display: flex;
   align-items: center;
   justify-content: center;
