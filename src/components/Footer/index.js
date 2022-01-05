@@ -17,11 +17,6 @@ export class Footer extends Component {
               <span>CostasAK</span>
             </a>
           </div>
-          <div>
-            <a href="https://github.com/CostasAK/ffxiv-timers">
-              <FaGithub /> <span>Source</span>
-            </a>
-          </div>
           <div
             style={{
               background: "#00B9FE",
@@ -35,6 +30,11 @@ export class Footer extends Component {
               rel="noreferrer"
             >
               <SiKofi /> <span>Support me</span>
+            </a>
+          </div>
+          <div>
+            <a href="https://github.com/CostasAK/ffxiv-timers">
+              <FaGithub /> <span>Source</span>
             </a>
           </div>
         </div>
