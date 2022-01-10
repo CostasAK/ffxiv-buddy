@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
-    "react-scripts": "^5.0.0"
+    "react-scripts": "^5.0.0",
+    "node-forge": ">=1.0.0"
   }
 }
