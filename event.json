@@ -5,5 +5,12 @@
     "start": "5 January 2022  8:00 GMT",
     "end": "19 January 2022 15:00 GMT",
     "type": "event"
+  },
+  {
+    "name": "Heavensturn",
+    "description": "All Saints' Wake will soon begin in Eorzea! To celebrate the festivities, the city-states and residential districts will be decorated for the occasion and the Continental Circus will be making their appearance once more!<br/><a href=\"https://sqex.to/chpgL\" target=\"_blank\" rel=\"noreferrer\">Read on</a> for details.",
+    "start": "20 January 2022  8:00 GMT",
+    "end": "2 February 2022 15:00 GMT",
+    "type": "event"
   }
 ]
