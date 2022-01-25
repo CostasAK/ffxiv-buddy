@@ -10,11 +10,6 @@ export class Header extends Component {
         <h1 className="title">
           <img alt="" src={logo} height="40px" /> <span>FFXIV Timers</span>
         </h1>
-
-        <p className="description">
-          Reset Timers and other Countdowns for Final Fantasy XIV, in your local
-          time with countdowns.
-        </p>
       </header>
     );
   }

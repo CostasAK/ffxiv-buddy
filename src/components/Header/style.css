@@ -1,21 +1,20 @@
 .App-header {
   background-color: #1b1b1b;
   height: fit-content;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #E5E5E5;
-  padding: var(--margins);
-}
-
-.title,
-.description {
-  text-align: center;
+  padding: 0;
 }
 
 .title {
+  text-align: center;
+  width: calc(100% - var(--margins));
   margin: 0;
+  padding: calc(var(--margins) / 2) calc(var(--margins) / 2);
   font-size: 2.5rem;
   font-weight: bold;
   display: flex;
@@ -25,8 +24,4 @@
 
 .title img {
   border-radius: var(--border-radius);
-}
-
-.description {
-  font-size: 0.875rem;
 }
