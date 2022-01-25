@@ -1,0 +1,37 @@
+.Navigation {
+  background: #1B1B1B;
+  color: #E5E5E5;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --nav-item-width: 160px;
+  font-weight: bold;
+}
+
+.Navigation nav {
+  width: calc(var(--nav-item-width) * 2);
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-item {
+  min-height: 48px;
+  width: var(--nav-item-width);
+  flex: 1 1 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.navigation-item:hover {
+  background: #EEEEEE;
+  color: #4769B3;
+}
+
+.navigation-item.active {
+  background: #2C2C2C;
+}
