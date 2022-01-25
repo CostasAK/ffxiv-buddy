@@ -27,11 +27,11 @@
   transition: all 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
+.navigation-item.active {
+  background: #2C2C2C;
+}
+
 .navigation-item:hover {
   background: #EEEEEE;
   color: #4769B3;
-}
-
-.navigation-item.active {
-  background: #2C2C2C;
 }
