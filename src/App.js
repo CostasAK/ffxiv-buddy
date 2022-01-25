@@ -1,5 +1,6 @@
 import "./App.css";
 
+import { Checklist } from "./components/Checklist";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Navigation } from "./components/Navigation";
@@ -7,14 +8,18 @@ import React from "react";
 import { Timers } from "./components/Timers";
 
 function App() {
+  const all_pages = ["Timers", "Checklist"];
   const [page, setPage] = React.useState(
     localStorage.getItem("page") || "Timers"
   );
-  const all_pages = ["Timers", "Checklist"];
+
+  React.useEffect(() => {
+    localStorage.setItem("page", page);
+  }, [page]);
 
   const Page = (props) => {
     if (props.page === "Checklist") {
-      return null;
+      return <Checklist />;
     }
     return <Timers />;
   };

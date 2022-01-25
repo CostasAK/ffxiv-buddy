@@ -31,7 +31,9 @@
   background: #2C2C2C;
 }
 
-.navigation-item:hover {
+.navigation-item:hover,
+.navigation-item:focus,
+.navigation-item:active {
   background: #EEEEEE;
   color: #4769B3;
 }

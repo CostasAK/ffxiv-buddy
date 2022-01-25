@@ -1,0 +1,14 @@
+.Checklist {
+  width: var(--main-width);
+  max-width: calc(100% - var(--margins));
+  margin: var(--margins) 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media only screen and (min-width: 480px) {
+  .Checklist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

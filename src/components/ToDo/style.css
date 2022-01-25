@@ -1,0 +1,28 @@
+.ToDo {
+  padding: calc(var(--margins) / 2);
+  padding-bottom: calc(var(--margins) / 2 + (var(--border-radius) / 2));
+  text-align: left;
+  flex: 1;
+  color: inherit;
+  border-radius: var(--border-radius);
+  margin: 0;
+  margin-bottom: calc(-1 * var(--border-radius));
+  width: auto;
+  background: #262626;
+  box-shadow: 0px 1px 0px 0px rgba(255,255,255,0.1) inset,1px 0px 0px 0px rgba(255,255,255,0.1) inset,-1px 0px 0px 0px rgba(0,0,0,0.1) inset;
+  transition: all 0.15s;
+  display: flex;
+  flex-flow: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.ToDo:hover,
+.ToDo:focus,
+.ToDo:active {
+  background: #333333;
+}
+
+.ToDo > input {
+  margin-right: calc(var(--margins) / 2);
+}
