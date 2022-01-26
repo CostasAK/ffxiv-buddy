@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ffxiv-timers/static/css/main.d7b4b002.css",
-    "main.js": "/ffxiv-timers/static/js/main.7e9041d9.js",
+    "main.css": "/ffxiv-timers/static/css/main.5ef0a820.css",
+    "main.js": "/ffxiv-timers/static/js/main.f87c05b9.js",
     "static/js/787.0cf276b1.chunk.js": "/ffxiv-timers/static/js/787.0cf276b1.chunk.js",
     "static/media/initialen.svg": "/ffxiv-timers/static/media/initialen.ba661f33d1d8251b0d31f9497d0ee882.svg",
     "index.html": "/ffxiv-timers/index.html",
-    "main.d7b4b002.css.map": "/ffxiv-timers/static/css/main.d7b4b002.css.map",
-    "main.7e9041d9.js.map": "/ffxiv-timers/static/js/main.7e9041d9.js.map",
+    "main.5ef0a820.css.map": "/ffxiv-timers/static/css/main.5ef0a820.css.map",
+    "main.f87c05b9.js.map": "/ffxiv-timers/static/js/main.f87c05b9.js.map",
     "787.0cf276b1.chunk.js.map": "/ffxiv-timers/static/js/787.0cf276b1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7b4b002.css",
-    "static/js/main.7e9041d9.js"
+    "static/css/main.5ef0a820.css",
+    "static/js/main.f87c05b9.js"
   ]
 }
