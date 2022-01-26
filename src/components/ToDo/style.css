@@ -26,3 +26,10 @@
 .ToDo > input {
   margin-right: calc(var(--margins) / 2);
 }
+
+.ToDo .duration {
+  flex: 1;
+  align-self: flex-end;
+  text-align: right;
+  font-size: 0.75rem;
+}
