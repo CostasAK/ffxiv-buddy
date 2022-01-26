@@ -3,6 +3,7 @@
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fffxiv-timers.kokke.eu)](https://ffxiv-timers.kokke.eu/)
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/costasak/ffxiv-timers/Node.js%20CI/main)](https://github.com/CostasAK/ffxiv-timers/actions/workflows/node.js.yml)
 [![GitHub](https://img.shields.io/github/license/costasak/ffxiv-timers)](https://github.com/CostasAK/ffxiv-timers/blob/main/LICENSE)
+[![Project Board](https://img.shields.io/badge/project-board-316DCA)](https://github.com/CostasAK/ffxiv-timers/projects/2)
 [![GitHub watchers](https://img.shields.io/github/watchers/costasak/ffxiv-timers)](https://github.com/CostasAK/ffxiv-timers)
 [![GitHub forks](https://img.shields.io/github/forks/costasak/ffxiv-timers)](https://github.com/CostasAK/ffxiv-timers/network/members)
 [![Stars](https://img.shields.io/github/stars/costasak/ffxiv-timers)](https://github.com/CostasAK/ffxiv-timers)
