@@ -1,6 +1,7 @@
 import "./style.css";
 
 import React from "react";
+import { formatDuration } from "../../functions/formatDuration";
 import { nextTime } from "../../functions/nextTime";
 
 const second = 1000;
@@ -98,6 +99,7 @@ export function ToDo(props) {
       <span style={{ fontStyle: completion ? "italic" : "" }}>
         {props.name}
       </span>
+      <span className="duration">{formatDuration(next_time - now)}</span>
     </label>
   );
 }

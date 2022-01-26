@@ -7,7 +7,7 @@
   grid-template-columns: repeat(1, 1fr);
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 920px) {
   .Checklist {
     grid-template-columns: repeat(2, 1fr);
   }
