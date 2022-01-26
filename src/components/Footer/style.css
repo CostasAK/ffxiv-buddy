@@ -21,7 +21,6 @@
 }
 
 .footer-time {
-  padding: calc(var(--margins) / 6);
   background: #4D5153;
   color: #cccccc;
 }
@@ -33,7 +32,6 @@
 }
 
 .footer-legal {
-  padding: calc(var(--margins) / 6);
   font-size: 10pt;
   background: #3F4345;
   color: #999;
