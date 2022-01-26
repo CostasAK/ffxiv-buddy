@@ -7,5 +7,8 @@ var relativeTime = require("dayjs/plugin/relativeTime");
 dayjs.extend(relativeTime);
 
 export function formatDuration(duration) {
-  return dayjs.duration(duration).humanize(true); //.format("Dd Hh m′s″");
+  if (duration < 1000) {
+    return "now";
+  }
+  return dayjs.duration(Math.max(0, duration)).humanize(true);
 }
