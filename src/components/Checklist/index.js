@@ -31,7 +31,7 @@ export function Checklist() {
   return (
     <div className="Checklist">
       {todos.map((t) => (
-        <ToDo name={t.name} reset={t.reset} period={t.period} />
+        <ToDo name={t.name} reset={t.reset} period={t.period} key={t.name} />
       ))}
     </div>
   );
