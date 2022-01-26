@@ -1,3 +1,5 @@
+@import url(//fonts.googleapis.com/css?family=Droid+Sans+Mono);
+
 .footer {
   font-size: 0.75rem;
   max-width: 100%;
@@ -53,18 +55,13 @@
 }
 
 .footer-time {
-  font-family: Consolas, monospace;
+  font-family: "Droid Sans Mono", source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 0.875rem;
 }
 
 .footer-legal div {
   margin-top: calc(var(--margins) / 6);
   margin-bottom: calc(var(--margins) / 6);
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 .footer a {
