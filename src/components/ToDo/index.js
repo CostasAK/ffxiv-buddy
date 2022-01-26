@@ -36,7 +36,6 @@ const resets = {
 
 export function ToDo(props) {
   const todo_name = "ToDo - " + props.name;
-  const nexttime_name = "NextTime - " + props.name;
 
   const [completion, setCompletion] = React.useState(
     parseInt(localStorage.getItem(todo_name)) || 0
@@ -46,13 +45,7 @@ export function ToDo(props) {
     localStorage.setItem(todo_name, completion);
   }, [todo_name, completion]);
 
-  const [next_time, setNextTime] = React.useState(
-    parseInt(localStorage.getItem(nexttime_name)) || 0
-  );
-
-  React.useEffect(() => {
-    localStorage.setItem(nexttime_name, next_time);
-  }, [nexttime_name, next_time]);
+  const [next_time, setNextTime] = React.useState(0);
 
   const [now, setNow] = React.useState(Date.now());
 
@@ -60,15 +53,29 @@ export function ToDo(props) {
     const timer = setTimeout(() => setNow(() => Date.now()), 1000);
 
     if (now >= next_time && completion < next_time) {
+      console.log("it should reset");
       setCompletion(0);
     }
 
     if (props.reset) {
-      setNextTime(
-        nextTime(resets[props.reset].period, resets[props.reset].start)
+      let next_time_after_completion = nextTime(
+        resets[props.reset].period,
+        resets[props.reset].start,
+        completion
       );
+      let next_time_after_now = nextTime(
+        resets[props.reset].period,
+        resets[props.reset].start
+      );
+      if (next_time_after_completion !== next_time_after_now) {
+        setCompletion(0);
+      }
+      setNextTime(next_time_after_now);
     } else if (completion) {
       setNextTime(completion + props.period);
+      if (next_time && next_time <= now) {
+        setCompletion(0);
+      }
     } else {
       setNextTime(0);
     }
