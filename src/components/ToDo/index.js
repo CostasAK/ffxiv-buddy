@@ -54,26 +54,32 @@ export function ToDo(props) {
   }, [nexttime_name, next_time]);
 
   const [now, setNow] = React.useState(Date.now());
-  setTimeout(() => setNow(Date.now()), 1000);
 
   React.useEffect(() => {
-    if (now >= next_time) {
+    const timer = setTimeout(() => setNow(() => Date.now()), 1000);
+
+    if (now >= next_time && completion < next_time) {
       setCompletion(0);
-      if (props.reset) {
-        setNextTime(
-          nextTime(resets[props.reset].period, resets[props.reset].start)
-        );
-      } else {
-        setNextTime(now + props.period);
-      }
     }
-  }, [now, next_time, props.period, props.reset]);
+
+    if (props.reset) {
+      setNextTime(
+        nextTime(resets[props.reset].period, resets[props.reset].start)
+      );
+    } else if (completion) {
+      setNextTime(completion + props.period);
+    } else {
+      setNextTime(0);
+    }
+
+    return () => clearTimeout(timer);
+  }, [now, completion, next_time, props.period, props.reset]);
 
   const handleChange = () => {
     if (completion) {
       setCompletion(0);
     } else {
-      setCompletion(Math.floor(Date.now() / 1000));
+      setCompletion(Date.now());
     }
   };
 
