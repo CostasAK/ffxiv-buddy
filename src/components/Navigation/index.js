@@ -22,6 +22,7 @@ export function Navigation(props) {
             name={t}
             onClick={props.setPage}
             active={props.getPage === t}
+            key={t}
           />
         ))}
       </nav>

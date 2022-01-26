@@ -5,7 +5,7 @@ import App from './App';
 test("renders description", () => {
   render(<App />);
   const linkElement = screen.getByText(
-    /Reset Timers and other Countdowns for Final Fantasy XIV, in your local time with countdowns/i
+    /FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd./i
   );
   expect(linkElement).toBeInTheDocument();
 });
