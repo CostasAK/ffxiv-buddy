@@ -14,13 +14,18 @@
 }
 
 .category-header {
-  padding: 22px 8px 6px 10px;
+  padding: 12px 8px 6px 10px;
 }
 
 .category-header > span {
   line-height: 1.5;
   font-weight: bold;
   font-size: 0.875rem;
+}
+
+.category-header > img {
+  height: calc(0.875rem / 1.5 + 16px);
+  width: calc(0.875rem / 1.5 + 16px);
 }
 
 .todos {
