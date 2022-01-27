@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.627ec2a2.css",
-    "main.js": "/static/js/main.5603814a.js",
+    "main.css": "/static/css/main.01dd8c5b.css",
+    "main.js": "/static/js/main.7bc6470e.js",
     "static/js/787.0cf276b1.chunk.js": "/static/js/787.0cf276b1.chunk.js",
     "static/media/chat_messengericon_thehunt.png": "/static/media/chat_messengericon_thehunt.4763e2e67f36f2adef7f.png",
     "static/media/chat_messengericon_raids.png": "/static/media/chat_messengericon_raids.f79386464c166b1f1ad4.png",
@@ -11,12 +11,12 @@
     "static/media/chat_messengericon_goldsaucer.png": "/static/media/chat_messengericon_goldsaucer.1b30957beff54bd9e14d.png",
     "static/media/initialen.svg": "/static/media/initialen.ba661f33d1d8251b0d31f9497d0ee882.svg",
     "index.html": "/index.html",
-    "main.627ec2a2.css.map": "/static/css/main.627ec2a2.css.map",
-    "main.5603814a.js.map": "/static/js/main.5603814a.js.map",
+    "main.01dd8c5b.css.map": "/static/css/main.01dd8c5b.css.map",
+    "main.7bc6470e.js.map": "/static/js/main.7bc6470e.js.map",
     "787.0cf276b1.chunk.js.map": "/static/js/787.0cf276b1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.627ec2a2.css",
-    "static/js/main.5603814a.js"
+    "static/css/main.01dd8c5b.css",
+    "static/js/main.7bc6470e.js"
   ]
 }
