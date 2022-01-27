@@ -181,7 +181,7 @@ export function Checklist() {
       {todos.map((c) => (
         <div className="todo-category">
           <div className="category-header">
-            {c.icon && <img alt="" src={c.icon} />}
+            <img alt="" src={c.icon} />
             <span> {c.category}</span>
           </div>
           <div className="todos">
