@@ -157,14 +157,11 @@ const todos = [
 ];
 
 export function Checklist() {
-  const [columns, setColumns] = React.useState(
-    Math.floor(window.innerWidth / 470)
-  );
+  const getColumns = () => Math.min(Math.floor(window.innerWidth / 470), 4);
+  const [columns, setColumns] = React.useState(getColumns());
 
   React.useEffect(() => {
-    window.addEventListener("resize", () => {
-      setColumns(Math.floor(window.innerWidth / 470));
-    });
+    window.addEventListener("resize", () => setColumns(getColumns()));
   }, []);
 
   return (
