@@ -25,6 +25,10 @@ a:active span {
   text-decoration: underline;
 }
 
+img[src$=".gif"], img[src$=".png"] {
+    image-rendering: -webkit-optimize-contrast;
+}
+
 * {
   box-sizing: border-box;
 }
