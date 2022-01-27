@@ -53,7 +53,6 @@ export function ToDo(props) {
     const timer = setTimeout(() => setNow(() => Date.now()), 1000);
 
     if (now >= next_time && completion < next_time) {
-      console.log("it should reset");
       setCompletion(0);
     }
 
