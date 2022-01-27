@@ -1,14 +1,29 @@
 .Checklist {
-  width: var(--main-width);
+  width: 100%;
   max-width: calc(100% - var(--margins));
   margin: var(--margins) 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  column-gap: var(--margins);
 }
 
-@media only screen and (min-width: 920px) {
-  .Checklist {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.todo-category {
+  width: 100%;
+  height: fit-content;
+  text-align: left;
+  display: inline-block;
+}
+
+.category-header {
+  padding: 22px 8px 6px 10px;
+}
+
+.category-header > span {
+  line-height: 1.5;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.todos {
+  display: flex;
+  flex-flow: column;
 }

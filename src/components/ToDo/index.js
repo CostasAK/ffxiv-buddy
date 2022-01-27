@@ -95,7 +95,10 @@ export function ToDo(props) {
     <label
       htmlFor={props.name}
       className="ToDo"
-      style={{ order: next_time / minute + (completion ? 10 * year : 0) }}
+      style={{
+        order: next_time / minute + (completion ? 10 * year : 0),
+        opacity: completion ? 0.5 : 1,
+      }}
     >
       <input
         type="checkbox"
