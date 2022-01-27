@@ -99,7 +99,7 @@ const todos = [
         period: 18 * hour,
       },
       {
-        name: "Elite mark bills",
+        name: "Elite Mark Bills",
         reset: "weekly",
       },
       {
