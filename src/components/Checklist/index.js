@@ -170,7 +170,7 @@ const todos = [
 
 export function Checklist() {
   const getColumns = () =>
-    Math.max(Math.min(Math.floor(window.innerWidth / 470), 4), 1);
+    Math.max(Math.min(Math.floor(window.innerWidth / 480), 3), 1);
   const [columns, setColumns] = React.useState(getColumns());
 
   React.useEffect(() => {

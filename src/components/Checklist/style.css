@@ -1,6 +1,6 @@
 .Checklist {
-  width: 100%;
-  max-width: calc(100% - var(--margins));
+  width: calc(100% - var(--margins));
+  max-width: calc((3.5 * 480px) - var(--margins));
   margin: var(--margins) 0;
   padding: 0;
   column-gap: var(--margins);
