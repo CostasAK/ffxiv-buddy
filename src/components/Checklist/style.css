@@ -25,7 +25,6 @@
 
 .category-header > img {
   height: calc(0.875rem / 1.5 + 16px);
-  width: calc(0.875rem / 1.5 + 16px);
 }
 
 .todos {
