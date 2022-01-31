@@ -11,6 +11,8 @@
   flex-flow: row;
   justify-content: left;
   align-items: center;
+  user-select: none;
+  cursor: pointer;
 }
 
 .ToDo:hover,
