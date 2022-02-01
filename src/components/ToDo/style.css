@@ -6,7 +6,7 @@
   width: auto;
   background: #262626;
   border: 1pt solid #2A2A2A;
-  transition: all 0.15s;
+  transition: all 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   display: flex;
   flex-flow: row;
   justify-content: left;
