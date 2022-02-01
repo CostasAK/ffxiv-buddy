@@ -4,6 +4,11 @@
   margin: var(--margins) 0;
   padding: 0;
   column-gap: var(--margins);
+  display: grid;
+  grid-gap: var(--margins);
+  grid-row-gap: 0px;
+  grid-template-columns: repeat(auto-fill, minmax(480px,1fr));
+  grid-auto-rows: 1px;
 }
 
 .todo-category {
