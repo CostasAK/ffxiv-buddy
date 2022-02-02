@@ -1,7 +1,8 @@
 import "./style.css";
 
+import React, { useState } from "react";
+
 import { Card } from "../Card";
-import React from "react";
 import { getResets } from "../../functions/getResets";
 
 const resets = getResets();
@@ -15,7 +16,7 @@ const event_promise = load(
 );
 
 export function Timers() {
-  const [events, setEvents] = React.useState([]);
+  const [events, setEvents] = useState([]);
   event_promise.then((result) => setEvents(result));
 
   let cards = [...events, ...resets];

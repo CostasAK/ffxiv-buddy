@@ -1,7 +1,6 @@
 .Timers {
   width: var(--main-width);
   max-width: calc(100% - var(--margins));
-  min-height: inherit;
   margin: var(--margins) 0;
   padding: 0;
   border-bottom: solid var(--border-radius) #3d5a99;
