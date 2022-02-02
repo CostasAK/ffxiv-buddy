@@ -1,12 +1,5 @@
 [
   {
-    "name": "Maintenance",
-    "description": "<ul><li>Patch 6.08</li><li>Oceanian Data Center</li></ul>",
-    "start": "25 January 2022 4:00 GMT",
-    "end": "25 January 2022 10:00 GMT",
-    "type": "event"
-  },
-  {
     "name": "All Saints' Wake",
     "description": "All Saints' Wake will soon begin in Eorzea! To celebrate the festivities, the city-states and residential districts will be decorated for the occasion and the Continental Circus will be making their appearance once more!<br/><a href=\"https://sqex.to/chpgL\" target=\"_blank\" rel=\"noreferrer\">Read on</a> for details.",
     "start": "20 January 2022 8:00 GMT",
