@@ -3,30 +3,20 @@ import "./style.css";
 import React, { useLayoutEffect, useRef, useState } from "react";
 
 import { ToDo } from "../ToDo";
-
-function getSpanHeight(ref) {
-  let rowHeight = parseInt(
-    window
-      .getComputedStyle(ref.current.parentNode)
-      .getPropertyValue("grid-auto-rows")
-  );
-  let rowGap = parseInt(
-    window
-      .getComputedStyle(ref.current.parentNode)
-      .getPropertyValue("grid-row-gap")
-  );
-  return Math.ceil((ref.current.scrollHeight + rowGap) / (rowHeight + rowGap));
-}
+import { getSpanHeight } from "../../functions/getSpanHeight";
 
 function TodoCategory(props) {
   const ref = useRef(null);
   const [height, setHeight] = useState(0);
 
   useLayoutEffect(() => {
-    setHeight(getSpanHeight(ref));
-    window.addEventListener("resize", () => {
-      setHeight(getSpanHeight(ref));
-    });
+    const handleResize = () => setHeight(getSpanHeight(ref));
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, [props.children]);
 
   return (

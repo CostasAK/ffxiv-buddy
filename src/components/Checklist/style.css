@@ -15,6 +15,7 @@
   width: 100%;
   text-align: left;
   display: inline-block;
+  height: max-content;
 }
 
 .category-header {
