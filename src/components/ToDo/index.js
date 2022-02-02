@@ -91,26 +91,25 @@ export function ToDo(props) {
   };
 
   return (
-    <label
-      htmlFor={props.name}
+    <div
       className="ToDo"
       style={{
         order: next_time / minute + (completion ? 10 * year : 0),
         opacity: completion ? 0.5 : 1,
       }}
     >
-      <input
-        type="checkbox"
-        id={props.name}
-        checked={completion}
-        onChange={handleChange}
-      />
-      <div className="todo-text">
+      <label htmlFor={props.name}>
+        <input
+          type="checkbox"
+          id={props.name}
+          checked={completion}
+          onChange={handleChange}
+        />
         <span style={{ fontStyle: completion ? "italic" : "" }}>
           {props.name}
         </span>
-        <span className="duration">{formatDuration(next_time - now)}</span>
-      </div>
-    </label>
+      </label>
+      <span className="duration">{formatDuration(next_time - now)}</span>
+    </div>
   );
 }
