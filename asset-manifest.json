@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.a979a04e.css",
-    "main.js": "/static/js/main.96bb34cc.js",
-    "static/js/787.0cf276b1.chunk.js": "/static/js/787.0cf276b1.chunk.js",
+    "main.css": "/static/css/main.8d376d4f.css",
+    "main.js": "/static/js/main.6ae4c8d9.js",
+    "static/js/787.45959376.chunk.js": "/static/js/787.45959376.chunk.js",
     "static/media/chat_messengericon_thehunt.png": "/static/media/chat_messengericon_thehunt.4763e2e67f36f2adef7f.png",
     "static/media/chat_messengericon_raids.png": "/static/media/chat_messengericon_raids.f79386464c166b1f1ad4.png",
     "static/media/chat_messengericon_weeklybingo.png": "/static/media/chat_messengericon_weeklybingo.1668073112c72acd7a06.png",
@@ -11,12 +11,12 @@
     "static/media/chat_messengericon_goldsaucer.png": "/static/media/chat_messengericon_goldsaucer.1b30957beff54bd9e14d.png",
     "static/media/initialen.svg": "/static/media/initialen.ba661f33d1d8251b0d31f9497d0ee882.svg",
     "index.html": "/index.html",
-    "main.a979a04e.css.map": "/static/css/main.a979a04e.css.map",
-    "main.96bb34cc.js.map": "/static/js/main.96bb34cc.js.map",
-    "787.0cf276b1.chunk.js.map": "/static/js/787.0cf276b1.chunk.js.map"
+    "main.8d376d4f.css.map": "/static/css/main.8d376d4f.css.map",
+    "main.6ae4c8d9.js.map": "/static/js/main.6ae4c8d9.js.map",
+    "787.45959376.chunk.js.map": "/static/js/787.45959376.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a979a04e.css",
-    "static/js/main.96bb34cc.js"
+    "static/css/main.8d376d4f.css",
+    "static/js/main.6ae4c8d9.js"
   ]
 }
