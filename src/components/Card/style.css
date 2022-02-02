@@ -8,7 +8,7 @@
   border-bottom-right-radius: 0;
   margin-bottom: calc(-1 * var(--border-radius));
   max-width: 100%;
-  width: auto;
+  width: min-content;
   background: #262626;
   box-shadow: 0px 1px 0px 0px rgba(255,255,255,0.1) inset,1px 0px 0px 0px rgba(255,255,255,0.1) inset,-1px 0px 0px 0px rgba(0,0,0,0.1) inset;
   transition: all 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -42,7 +42,8 @@
 }
 
 .Card h2 {
-  width: fit-content;
+  width: max-content;
+  max-width: calc(var(--client-width) - 2.5 * var(--margins));
   margin: 0 0 calc(var(--margins) / 2) calc(var(--margins) / -2);
   font-size: 1.125rem;
   display: flex;
@@ -55,6 +56,8 @@
 
 .Card p {
   margin: 0;
+  width: max-content;
+  max-width: calc(var(--client-width) - 3 * var(--margins));
   font-size: 1rem;
 }
 
