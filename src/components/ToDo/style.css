@@ -20,18 +20,19 @@
   background: #333333;
 }
 
-.ToDo > label {
+.ToDo > .label {
   display: flex;
   flex-flow: row;
   justify-content: left;
   align-items: center;
 }
 
-.ToDo > label > input {
+.ToDo > .label > input {
   margin-right: calc(var(--margins) / 2);
 }
 
 .ToDo > .duration {
+  margin-left: calc(var(--margins) / 4);
   align-self: flex-end;
   flex: 1 0 fit-content;
   text-align: right;

@@ -91,14 +91,15 @@ export function ToDo(props) {
   };
 
   return (
-    <div
+    <label
       className="ToDo"
       style={{
         order: next_time / minute + (completion ? 10 * year : 0),
         opacity: completion ? 0.5 : 1,
       }}
+      htmlFor={props.name}
     >
-      <label htmlFor={props.name}>
+      <div className="label">
         <input
           type="checkbox"
           id={props.name}
@@ -108,8 +109,8 @@ export function ToDo(props) {
         <span style={{ fontStyle: completion ? "italic" : "" }}>
           {props.name}
         </span>
-      </label>
+      </div>
       <span className="duration">{formatDuration(next_time - now)}</span>
-    </div>
+    </label>
   );
 }
