@@ -1,10 +1,11 @@
 import "./App.css";
 
+import React, { useEffect } from "react";
+
 import { Checklist } from "./components/Checklist";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Navigation } from "./components/Navigation";
-import React from "react";
 import { Timers } from "./components/Timers";
 import collectables_icon from "./assets/chat_messengericon_treasurehunt.png";
 import goldsaucer_icon from "./assets/chat_messengericon_goldsaucer.png";
@@ -210,7 +211,7 @@ function App() {
     localStorage.getItem("page") || "Timers"
   );
 
-  React.useEffect(() => {
+  useEffect(() => {
     localStorage.setItem("page", page);
   }, [page]);
 

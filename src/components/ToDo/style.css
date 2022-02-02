@@ -24,7 +24,15 @@
   margin-right: calc(var(--margins) / 2);
 }
 
-.ToDo .duration {
+.todo-text {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  align-items: center;
+}
+
+.todo-text .duration {
   flex: 1 0 0;
   align-self: flex-end;
   text-align: right;

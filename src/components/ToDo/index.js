@@ -105,10 +105,12 @@ export function ToDo(props) {
         checked={completion}
         onChange={handleChange}
       />
-      <span style={{ fontStyle: completion ? "italic" : "" }}>
-        {props.name}
-      </span>
-      <span className="duration">{formatDuration(next_time - now)}</span>
+      <div className="todo-text">
+        <span style={{ fontStyle: completion ? "italic" : "" }}>
+          {props.name}
+        </span>
+        <span className="duration">{formatDuration(next_time - now)}</span>
+      </div>
     </label>
   );
 }
