@@ -13,6 +13,7 @@
 
 .todo-category {
   width: 100%;
+  max-width: calc(100vw - var(--margins));
   text-align: left;
   display: inline-block;
   height: max-content;
