@@ -4,7 +4,8 @@
   flex: 1;
   color: #ccc;
   background: #262626;
-  border: 1pt solid #2A2A2A;
+  border: 1pt solid #222222;
+  border-top: 1px solid #3C3C3C;
   transition: all 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   display: flex;
   flex-flow: row wrap;
@@ -15,6 +16,7 @@
 .ToDo:hover,
 .ToDo:focus,
 .ToDo:active {
+  border: 1px solid #2E2E2E;
   background: #333333;
 }
 

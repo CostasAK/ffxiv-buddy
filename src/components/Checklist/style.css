@@ -21,6 +21,7 @@
 
 .category-header {
   padding: 12px 8px 6px 10px;
+  border-bottom: 1px solid #262626;
 }
 
 .category-header > span {
