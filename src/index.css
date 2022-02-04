@@ -12,6 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #333333;
   color: #cccccc;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -29,12 +30,8 @@ img[src$=".gif"], img[src$=".png"] {
     image-rendering: -webkit-optimize-contrast;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
