@@ -55,14 +55,15 @@
 }
 
 .popup-overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.71);
+  animation: fade 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .popup-content {
   margin: auto;
   width: 50%;
   min-width: calc(320px - var(--margins));
-  padding: 5px;
+  animation: anvil 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .CardModal {
@@ -74,7 +75,6 @@
   width: 100%;
   background: #262626;
   box-shadow: 0px 1px 0px 0px rgba(255,255,255,0.1) inset,1px 0px 0px 0px rgba(255,255,255,0.1) inset,-1px 0px 0px 0px rgba(0,0,0,0.1) inset;
-  transition: all 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   h2 {
     width: max-content;
     max-width: calc(var(--client-width) - 2.5 * var(--margins));
@@ -99,10 +99,32 @@
     font-size: 0.875rem;
     line-height: 1.2;
     text-align: left;
-    transition: all 0.15s;
     ul {
       margin: 0.4375rem 0 0 0;
-      transition: all 0.15s;
     }
+  }
+}
+
+@keyframes anvil {
+  0% {
+    transform: scale(1) translateY(0px);
+    opacity: 0;
+  }
+  1% {
+    transform: scale(0.96) translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
