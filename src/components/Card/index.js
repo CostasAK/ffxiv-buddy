@@ -1,8 +1,9 @@
-import "./style.css";
+import "./style.scss";
 
 import React, { useEffect, useState } from "react";
 import { formatDate, formatTime } from "../../functions/formatDateTime";
 
+import Popup from "reactjs-popup";
 import { capitalizeSentence } from "../../functions/capitalizeSentence";
 import { formatDuration } from "../../functions/formatDuration";
 import { isPast } from "../../functions/isPast";
@@ -35,8 +36,6 @@ export function Card(props) {
     return start;
   });
   const [now, setNow] = useState(Date.now());
-
-  const [collapsed, setCollapsed] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -100,36 +99,41 @@ export function Card(props) {
       : props.description;
 
   return (
-    <div
-      className={
-        "Card" +
-        (started ? " ongoing" : "") +
-        (collapsed ? " collapsed" : "") +
-        " " +
-        props.type
+    <Popup
+      trigger={
+        <div
+          className={"Card" + (started ? " ongoing" : "") + " " + props.type}
+          style={{
+            order: flex_order,
+          }}
+        >
+          <h2>
+            <img src={icons[props.type]} alt={props.type} width="22px" />
+            {props.name}
+          </h2>
+          <p>
+            {capitalizeSentence(
+              (is_recurring || !(started && !end) ? countdown + ", " : "") +
+                absolute_time_string
+            )}
+          </p>
+        </div>
       }
-      style={{
-        order: flex_order,
-      }}
-      onClick={() => setCollapsed(!collapsed)}
+      modal
     >
-      <h2>
-        <img src={icons[props.type]} alt={props.type} width="22px" />
-        {props.name}
-      </h2>
-      <p>
-        {capitalizeSentence(
-          (is_recurring || !(started && !end) ? countdown + ", " : "") +
-            absolute_time_string
-        )}
-      </p>
-      <div
-        className={
-          "description" + (collapsed || !props.description ? " collapsed" : "")
-        }
-      >
-        {description}
+      <div className="CardModal">
+        <h2>
+          <img src={icons[props.type]} alt={props.type} width="22px" />
+          {props.name}
+        </h2>
+        <p>
+          {capitalizeSentence(
+            (is_recurring || !(started && !end) ? countdown + ", " : "") +
+              absolute_time_string
+          )}
+        </p>
+        <div className={"description"}>{description}</div>
       </div>
-    </div>
+    </Popup>
   );
 }
