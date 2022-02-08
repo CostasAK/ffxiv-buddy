@@ -98,19 +98,18 @@
   .description {
     padding: 0;
     margin: 0;
-    padding-top: 0.4375rem;
+    padding-top: 0.5rem;
     font-size: 0.875rem;
-    line-height: 1.2;
+    line-height: 1.5;
     text-align: left;
     ul {
-      margin: 0.4375rem 0 0 0;
+      margin: 0.5rem 0 0 0;
     }
   }
 }
 
 @keyframes anvil {
   0% {
-    transform: scale(1) translateY(0px);
     opacity: 0;
   }
   1% {
