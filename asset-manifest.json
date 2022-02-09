@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.82e212d4.css",
-    "main.js": "/static/js/main.844559cd.js",
+    "main.css": "/static/css/main.4ab4d854.css",
+    "main.js": "/static/js/main.db504f65.js",
     "static/js/787.45959376.chunk.js": "/static/js/787.45959376.chunk.js",
     "static/media/chat_messengericon_thehunt.png": "/static/media/chat_messengericon_thehunt.4763e2e67f36f2adef7f.png",
     "static/media/chat_messengericon_raids.png": "/static/media/chat_messengericon_raids.f79386464c166b1f1ad4.png",
@@ -9,14 +9,14 @@
     "static/media/chat_messengericon_treasurehunt.png": "/static/media/chat_messengericon_treasurehunt.a2680e77a1cd9fe6ec02.png",
     "static/media/chat_messengericon_dutyroulette.png": "/static/media/chat_messengericon_dutyroulette.891e95ca4b67f5213ff0.png",
     "static/media/chat_messengericon_goldsaucer.png": "/static/media/chat_messengericon_goldsaucer.1b30957beff54bd9e14d.png",
-    "static/media/initialen.svg": "/static/media/initialen.ba661f33d1d8251b0d31f9497d0ee882.svg",
+    "static/media/initialen.svg": "/static/media/initialen.03daac03d2cb4d0f265222adfa5236e9.svg",
     "index.html": "/index.html",
-    "main.82e212d4.css.map": "/static/css/main.82e212d4.css.map",
-    "main.844559cd.js.map": "/static/js/main.844559cd.js.map",
+    "main.4ab4d854.css.map": "/static/css/main.4ab4d854.css.map",
+    "main.db504f65.js.map": "/static/js/main.db504f65.js.map",
     "787.45959376.chunk.js.map": "/static/js/787.45959376.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.82e212d4.css",
-    "static/js/main.844559cd.js"
+    "static/css/main.4ab4d854.css",
+    "static/js/main.db504f65.js"
   ]
 }
