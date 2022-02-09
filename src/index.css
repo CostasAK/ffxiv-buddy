@@ -18,6 +18,7 @@ body {
 a {
   color: #5990ff;
   text-decoration: none;
+  outline:none;
 }
 
 a:hover span,
