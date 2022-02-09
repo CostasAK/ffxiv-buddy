@@ -68,12 +68,8 @@
   justify-content: center;
 }
 
-.footer a img {
-  height: 0.75rem;
-  width: 0.75rem;
-  border-radius: 50%;
-}
-
 .avatar {
-  filter: invert(88%) sepia(0%) saturate(1560%) hue-rotate(151deg) brightness(96%) contrast(85%);
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
 }

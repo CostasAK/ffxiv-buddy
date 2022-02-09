@@ -2,6 +2,7 @@ import "./style.css";
 
 import { Component } from "react";
 import { FaGithub } from "react-icons/fa";
+import SVG from "react-inlinesvg";
 import { SiKofi } from "react-icons/si";
 import avatar from "../../assets/initialen.svg";
 import { eorzeaTime } from "../../functions/eorzeaTime";
@@ -58,8 +59,7 @@ export class Footer extends Component {
           <div>
             <span>Made by</span>  
             <a href="https://github.com/CostasAK">
-              <img alt="" src={avatar} className="avatar" /> 
-              <span>CostasAK</span>
+              <SVG src={avatar} className="avatar" /> <span>CostasAK</span>
             </a>
           </div>
           <div
