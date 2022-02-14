@@ -8,7 +8,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://ffxiv-gear.kokke.eu",
   "theme_color": "#ac3a3b",
   "background_color": "#ac3a3b",
   "display": "standalone"
