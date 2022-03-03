@@ -1,18 +1,16 @@
-# [FFXIV Timers <img src="public/apple-touch-icon.png" alt="" align="right">](https://ffxiv-timers.kokke.eu/)
+# [FFXIV Buddy <img src="public/apple-touch-icon.png" alt="" align="right">](https://ffxiv.kokke.eu/)
 
-[![Website](https://img.shields.io/website?style=for-the-badge&url=https%3A%2F%2Fffxiv-timers.kokke.eu)](https://ffxiv-timers.kokke.eu/)
-[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/costasak/ffxiv-timers/Node.js%20CI/main?style=for-the-badge&logo=nodedotjs)](https://github.com/CostasAK/ffxiv-timers/actions/workflows/node.js.yml)
+[![Website](https://img.shields.io/website?style=for-the-badge&url=https%3A%2F%2Fffxiv.kokke.eu)](https://ffxiv.kokke.eu/)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/costasak/ffxiv-buddy/Node.js%20CI/main?style=for-the-badge&logo=nodedotjs)](https://github.com/CostasAK/ffxiv-buddy/actions/workflows/node.js.yml)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=for-the-badge)](https://github.com/prettier/prettier)
-[![GitHub](https://img.shields.io/github/license/costasak/ffxiv-timers?style=for-the-badge)](https://github.com/CostasAK/ffxiv-timers/blob/main/LICENSE)
-[![Project Board](https://img.shields.io/badge/project-board-316DCA?style=for-the-badge&logo=github)](https://github.com/CostasAK/ffxiv-timers/projects/2)
-[![GitHub watchers](https://img.shields.io/github/watchers/costasak/ffxiv-timers?style=for-the-badge&logo=github)](https://github.com/CostasAK/ffxiv-timers)
-[![GitHub forks](https://img.shields.io/github/forks/costasak/ffxiv-timers?style=for-the-badge&logo=github)](https://github.com/CostasAK/ffxiv-timers/network/members)
-[![Stars](https://img.shields.io/github/stars/costasak/ffxiv-timers?style=for-the-badge&logo=github)](https://github.com/CostasAK/ffxiv-timers)
+[![GitHub](https://img.shields.io/github/license/costasak/ffxiv-buddy?style=for-the-badge)](https://github.com/CostasAK/ffxiv-buddy/blob/main/LICENSE)
+[![Project Board](https://img.shields.io/badge/project-board-316DCA?style=for-the-badge&logo=github)](https://github.com/CostasAK/ffxiv-buddy/projects/2)
+[![GitHub watchers](https://img.shields.io/github/watchers/costasak/ffxiv-buddy?style=for-the-badge&logo=github)](https://github.com/CostasAK/ffxiv-buddy)
+[![GitHub forks](https://img.shields.io/github/forks/costasak/ffxiv-buddy?style=for-the-badge&logo=github)](https://github.com/CostasAK/ffxiv-buddy/network/members)
+[![Stars](https://img.shields.io/github/stars/costasak/ffxiv-buddy?style=for-the-badge&logo=github)](https://github.com/CostasAK/ffxiv-buddy)
 [![Ko-fi](https://img.shields.io/badge/support_me_on_ko--fi-F16061?style=for-the-badge&logo=kofi&logoColor=f5f5f5)](https://ko-fi.com/CostasAK)
 
-Reset Timers and other Countdowns for Final Fantasy XIV, in your local time with countdowns.
-
-Also offers a To-Do style checklist to keep track of all your routine tasks. Your progress is saved in your browser for later.
+Timers, checklists and other helpers for Final Fantasy XIV, in your local time with countdowns.
 
 ## What it does
 
