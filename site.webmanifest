@@ -1,6 +1,6 @@
 {
-  "short_name": "FFXIV Timers",
-  "name": "FFXIV Timers",
+  "short_name": "FFXIV Buddy",
+  "name": "FFXIV Buddy",
   "icons": [
     {
       "src": "/android-chrome-72x72.png",
@@ -8,7 +8,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://ffxiv-gear.kokke.eu",
+  "start_url": "https://ffxiv.kokke.eu",
   "theme_color": "#ac3a3b",
   "background_color": "#ac3a3b",
   "display": "standalone"
