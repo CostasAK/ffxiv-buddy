@@ -78,7 +78,7 @@ export class Footer extends Component {
             </a>
           </div>
           <div>
-            <a href="https://github.com/CostasAK/ffxiv-timers">
+            <a href="https://github.com/CostasAK/ffxiv-buddy">
               <FaGithub /> <span>Source</span>
             </a>
           </div>
