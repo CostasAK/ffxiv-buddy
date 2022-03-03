@@ -8,7 +8,7 @@ export class Header extends Component {
     return (
       <header className="App-header">
         <h1 className="title">
-          <img alt="" src={logo} height="40px" /> <span>FFXIV Timers</span>
+          <img alt="" src={logo} height="40px" /> <span>FFXIV Buddy</span>
         </h1>
       </header>
     );
