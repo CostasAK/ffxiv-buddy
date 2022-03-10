@@ -1,0 +1,58 @@
+.ToDo {
+  padding: calc(var(--margins) / 2);
+  text-align: left;
+  flex: 1;
+  color: #ccc;
+  background: #262626;
+  border: 1pt solid #222222;
+  border-top: 1px solid #3c3c3c;
+  transition: all 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  user-select: none;
+  > .label {
+    display: flex;
+    flex-flow: row;
+    justify-content: left;
+    align-items: center;
+    > input[type=checkbox] {
+      display: none;
+    }
+    > input[type=checkbox] + .checkbox {
+      width: 0.75em;
+      height: 0.75em;
+      max-width: 24px;
+      max-height: 24px;
+      margin-right: calc(var(--margins) / 2);
+      background: url("./assets/unchecked.png");
+      background-size: contain;
+    }
+    > input[type=checkbox]:checked + .checkbox {
+      background: url("./assets/checked.png");
+      background-size: contain;
+    }
+  }
+  > .duration {
+    margin-left: calc(var(--margins) / 4);
+    align-self: flex-end;
+    flex: 1 0 fit-content;
+    text-align: right;
+    font-size: 0.75rem;
+    color: #999;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid #2e2e2e;
+    background: #333333;
+    > .label > input[type=checkbox] + .checkbox {
+      background: url("./assets/unchecked_hover.png");
+      background-size: contain;
+    }
+    > .label > input[type=checkbox]:checked + .checkbox {
+      background: url("./assets/checked_hover.png");
+      background-size: contain;
+    }
+  }
+}

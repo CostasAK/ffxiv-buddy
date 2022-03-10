@@ -1,8 +1,7 @@
-import "./style.css";
-
 import React from "react";
 import { formatDuration } from "../../functions/formatDuration";
 import { nextTime } from "../../functions/nextTime";
+import "./style.scss";
 
 const second = 1000;
 const minute = 60 * second;
@@ -106,6 +105,7 @@ export function ToDo(props) {
           checked={completion}
           onChange={handleChange}
         />
+        <div className="checkbox" />
         <span style={{ fontStyle: completion ? "italic" : "" }}>
           {props.name}
         </span>
