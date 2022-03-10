@@ -1,16 +1,16 @@
 [
   {
-    "name": "All Saints' Wake",
-    "description": "All Saints' Wake will soon begin in Eorzea! To celebrate the festivities, the city-states and residential districts will be decorated for the occasion and the Continental Circus will be making their appearance once more!<br/><a href=\"https://sqex.to/chpgL\" target=\"_blank\" rel=\"noreferrer\">Read on</a> for details.",
-    "start": "20 January 2022 8:00 GMT",
-    "end": "2 February 2022 15:00 GMT",
+    "name": "Little Ladies' Day",
+    "description": "Every girl deserves to feel like a princess, and so once again Ul’dah is dressed in precious peach-colored décor to celebrate Little Ladies’ Day. So too are the realm’s celebrants dressed in their finest fashion, all hoping to be crowned winner in this year’s Little Ladies’ Day walk-off! If you believe you have what it takes to be a style icon, there may be someone willing to help as you strut your way to victory.<br/><a href=\"https://sqex.to/pd1uw\" target=\"_blank\" rel=\"noreferrer\">Read on</a> for details.",
+    "start": "14 March 2022 8:00 GMT",
+    "end": "31 March 2022 15:00 GMT",
     "type": "event"
   },
   {
-    "name": "Valentione's Day",
-    "description": "'Tis the season to share love of all kinds, and Lisette de Valentione and her associates aim to spread ardour and affection across Eorzea as only they can. As per custom, cities and residential areas the realm over will be bedecked with an impressive array of festive hearts that promise to put you in a rosy mood.<br />See the <a href=\"https://sqex.to/iOFLZ\" target=\"_blank\" rel=\"noreferrer\">special site</a> for details.",
-    "start": "8 February 2022  8:00 GMT",
-    "end": "21 February 2022 15:00 GMT",
+    "name": "Moogle Treasure Trove – The Hunt for Scripture",
+    "description": "It gives us great pleasure to announce the return of the Moogle Treasure Trove! Collect irregular tomestones of scripture by completing specific duties and exchange them with Itinerant Moogles for a host of treasures including accessories and mounts. Seek out those tomestones and reap the rewards!<br />And for all you shiba lovers out there, you won’t want to miss this opportunity to add a mameshiba earring to your trove of accessories!<br /><a href=\"https://sqex.to/Vi4kr\" target=\"_blank\" rel=\"noreferrer\">Read on</a> for details.",
+    "start": "14 March 2022 8:00 GMT",
+    "end": "12 April 2022 8:00 GMT",
     "type": "event"
   }
 ]
