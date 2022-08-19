@@ -1,5 +1,12 @@
 [
   {
+    "name": "The Rising",
+    "description": "On August 27, FINAL FANTASY XIV celebrates its ninth anniversary with the Rising. Be sure to join the rest of Eorzea for this year's festivities!<br/><a href=\"https://sqex.to/fBmWz\" target=\"_blank\" rel=\"noreferrer\">Read on</a> for details.",
+    "start": "27 August 2022 7:00 GMT",
+    "end": "12 September 2022 15:00 GMT",
+    "type": "event"
+  },
+  {
     "name": "Moonfire Faire",
     "description": "As the realm swelters in the summer heat, the decorations lining city streets and fireworks blooming in the night sky make for much more pleasant reminders of the season. Now is the time to escape to Costa del Sol, where tranquil waters and the Moonfire Faire await!<br/><a href=\"https://sqex.to/8Ode2\" target=\"_blank\" rel=\"noreferrer\">Read on</a> for details.",
     "start": "10 August 2022 8:00 GMT",
