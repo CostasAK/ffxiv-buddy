@@ -11,6 +11,7 @@ import collectables_icon from "./assets/chat_messengericon_treasurehunt.png";
 import goldsaucer_icon from "./assets/chat_messengericon_goldsaucer.png";
 import hunts_icon from "./assets/chat_messengericon_thehunt.png";
 import others_icon from "./assets/chat_messengericon_weeklybingo.png";
+import raid_icon from "./assets/chat_messengericon_raids.png";
 import roulette_icon from "./assets/chat_messengericon_dutyroulette.png";
 
 const second = 1000;
@@ -32,52 +33,56 @@ const todos = [
       },
     ],
   },
-  // {
-  //   category: "Raids",
-  //   icon: raid_icon,
-  //   todos: [
-  //     {
-  //       name: "Asphodelos: The First Circle (Normal)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Asphodelos: The Second Circle (Normal)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Asphodelos: The Third Circle (Normal)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Asphodelos: The Fourth Circle (Normal)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Unsung Blade of Asphodelos",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Asphodelos: The First Circle (Savage)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Asphodelos: The Second Circle (Savage)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Asphodelos: The Third Circle (Savage)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Asphodelos: The Fourth Circle (Savage)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Faux Hollows",
-  //       reset: "weekly",
-  //     },
-  //   ],
-  // },
+  {
+    category: "Raids",
+    icon: raid_icon,
+    todos: [
+      {
+        name: "Abyssos: The Fifth Circle (Normal)",
+        reset: "weekly",
+      },
+      {
+        name: "Abyssos: The Sixth Circle (Normal)",
+        reset: "weekly",
+      },
+      {
+        name: "Abyssos: The Seventh Circle (Normal)",
+        reset: "weekly",
+      },
+      {
+        name: "Abyssos: The Eighth Circle (Normal)",
+        reset: "weekly",
+      },
+      {
+        name: "Unsung Blade of Abyssos",
+        reset: "weekly",
+      },
+      {
+        name: "Abyssos: The Fifth Circle (Savage)",
+        reset: "weekly",
+      },
+      {
+        name: "Abyssos: The Sixth Circle (Savage)",
+        reset: "weekly",
+      },
+      {
+        name: "Abyssos: The Seventh Circle (Savage)",
+        reset: "weekly",
+      },
+      {
+        name: "Abyssos: The Eighth Circle (Savage)",
+        reset: "weekly",
+      },
+      {
+        name: "Containment Bay S1T7 (Unreal)",
+        reset: "weekly",
+      },
+      {
+        name: "Alliance Raid: Aglaia",
+        reset: "weekly",
+      },
+    ],
+  },
   {
     category: "Roulettes",
     icon: roulette_icon,
