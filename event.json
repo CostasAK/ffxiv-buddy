@@ -1,23 +1,9 @@
 [
   {
-    "name": "The Rising",
-    "description": "On August 27, FINAL FANTASY XIV celebrates its ninth anniversary with the Rising. Be sure to join the rest of Eorzea for this year's festivities!<br/><a href=\"https://sqex.to/fBmWz\" target=\"_blank\" rel=\"noreferrer\">Read on</a> for details.",
-    "start": "27 August 2022 7:00 GMT",
-    "end": "12 September 2022 15:00 GMT",
-    "type": "event"
-  },
-  {
-    "name": "Moonfire Faire",
-    "description": "As the realm swelters in the summer heat, the decorations lining city streets and fireworks blooming in the night sky make for much more pleasant reminders of the season. Now is the time to escape to Costa del Sol, where tranquil waters and the Moonfire Faire await!<br/><a href=\"https://sqex.to/8Ode2\" target=\"_blank\" rel=\"noreferrer\">Read on</a> for details.",
-    "start": "10 August 2022 8:00 GMT",
-    "end": "26 August 2022 15:00 GMT",
-    "type": "event"
-  },
-  {
-    "name": "Moogle Treasure Trove – The Hunt for Verity",
-    "description": "It gives us great pleasure to announce the return of the Moogle Treasure Trove! Collect irregular tomestones of verity by completing specific duties and exchange them with Itinerant Moogles for a host of treasures including accessories and mounts. Seek out those tomestones and reap the rewards!<br />This time, the demon brick earring is available for exchange, so don’t miss this unique opportunity to further build your fashion arsenal!<br /><a href=\"https://sqex.to/bbIms\" target=\"_blank\" rel=\"noreferrer\">Read on</a> for details.",
-    "start": "25 July 2022 8:00 GMT",
-    "end": "23 August 2022 8:00 GMT",
+    "name": "All Saints’ Wake",
+    "description": "As the days grow shorter and the leaves turn shades of red and gold, the bite of autumn’s chill can be felt throughout the realm. The season of frights has begun at last, and the streets are decked with jolly jack-o’-lanterns and baleful bats. Preparations for a costume cortege proceed apace, but it is anyone's guess what spooky surprises this event holds in store...<br/><a href=\"https://sqex.to/A6Zx3\" target=\"_blank\" rel=\"noreferrer\">Read on</a> for details.",
+    "start": "19 October 2022 8:00 GMT",
+    "end": "1 November 2022 15:00 GMT",
     "type": "event"
   }
 ]
