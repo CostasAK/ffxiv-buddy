@@ -5,5 +5,12 @@
     "start": "15 December 2022 8:00 GMT",
     "end": "31 December 2022 15:00 GMT",
     "type": "event"
+  },
+  {
+    "name": "Heavensturn",
+    "description": "All the realm is abrim with excitement in anticipation of the new year, and indeed, the sounds of merriment can be heard nowhere more strongly than in the streets of Limsa Lominsa, where delegates from the Far East have arrived in hopes of sharing their festive traditions. The usagi bugyo would have your aid in ensuring the celebration of Heavensturn is a success, and has prepared a handsome reward should you be willing to offer it.<br/><a href=\"https://sqex.to/QFE2H\" target=\"_blank\" rel=\"noreferrer\">Read on</a> for details.",
+    "start": "31 December 2022 15:00 GMT",
+    "end": "16 January 2023 15:00 GMT",
+    "type": "event"
   }
 ]
