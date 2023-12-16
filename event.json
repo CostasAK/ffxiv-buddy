@@ -5,5 +5,12 @@
     "start": "31 October 2023 10:00 GMT",
     "end": "31 December 2023 15:00 GMT",
     "type": "event"
+  },
+  {
+    "name": "Starlight Celebration: Ties to Remember",
+    "description": "Wintry weather has settled in across the realm, and the citizens of Eorzea have begun preparing for this year's Starlight Celebration. The time has come to deck the halls with festive decorations and delight others with heartfelt surprises─who will you remember during this season of giving?<br/><a href=\"https://eu.finalfantasyxiv.com/lodestone/special/2023/Starlight_Celebration/1zhfx0729r\" target=\"_blank\" rel=\"noreferrer\">Read on</a> for details.",
+    "start": "15 December 2023 8:00 GMT",
+    "end": "31 December 2023 15:00 GMT",
+    "type": "event"
   }
 ]
