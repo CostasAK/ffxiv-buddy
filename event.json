@@ -12,5 +12,12 @@
     "start": "15 December 2023 8:00 GMT",
     "end": "31 December 2023 15:00 GMT",
     "type": "event"
+  },
+  {
+    "name": "Starlight Celebration: Ties to Remember",
+    "description": "The sun shall soon rise on a new year, and the visiting Far Eastern delegation is most eager to share their Heavensturn traditions with the realm once more. To that end, the ryu metsuke and ryu bugyo have arrived in Limsa Lominsa with a charmingly-costumed chocobo chick to celebrate their draconic guardian...yet the Aftcastle remains notably quiet, and the delegates may require the aid of a capable adventurer to liven up the festivities.<br/><a href=\"https://eu.finalfantasyxiv.com/lodestone/special/2024/Heavensturn/t03u4zqkln\" target=\"_blank\" rel=\"noreferrer\">Read on</a> for details.",
+    "start": "31 December 2023 15:00 GMT",
+    "end": "15 January 2023 15:00 GMT",
+    "type": "event"
   }
 ]
