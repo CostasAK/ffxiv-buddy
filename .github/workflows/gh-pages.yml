@@ -1,0 +1,43 @@
+name: Github Pages Deployment
+
+on:
+  workflow_call:
+
+jobs:
+  deploy:
+    if: ${{!vars.CLOUDFLARE_PROJECTNAME != ''}}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+      - name: pnpm-setup
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: "Setup Node.js"
+        uses: actions/setup-node@v3
+        with:
+          node-version: "current"
+          cache: "pnpm"
+      - name: "Install"
+        run: pnpm install
+      - name: "Build (with Base Path)"
+        run: pnpm run build --base=/${{ github.event.repository.name }}
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: dist
+      - name: Publish (Github Pages)
+        uses: actions/deploy-pages@v2
+        id: deployment

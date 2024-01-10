@@ -1,0 +1,27 @@
+name: Github Labels
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "labels.json"
+      - ".github/workflows/labels.yml"
+  workflow_dispatch:
+
+jobs:
+  labels:
+    name: Github Label Sync
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+    steps:
+      - name: "Checkout labels.json"
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            labels.json
+          sparse-checkout-cone-mode: false
+      - name: "github-label-sync"
+        run: npx github-label-sync --access-token ${{ secrets.GITHUB_TOKEN }} $GITHUB_REPOSITORY

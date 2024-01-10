@@ -1,0 +1,41 @@
+name: Cloudflare Deployment
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_call:
+
+jobs:
+  deploy:
+    if: vars.CLOUDFLARE_PROJECTNAME != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+      - name: pnpm-setup
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: "Setup Node.js"
+        uses: actions/setup-node@v3
+        with:
+          node-version: "current"
+          cache: "pnpm"
+      - name: "Install"
+        run: pnpm install
+      - name: "Build"
+        run: pnpm run build
+      - name: "Cloudflare Config"
+        run: cp ./.cloudflare/* ./dist/
+      - name: Publish (Cloudflare)
+        uses: cloudflare/pages-action@1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ${{ vars.CLOUDFLARE_PROJECTNAME }}
+          directory: dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

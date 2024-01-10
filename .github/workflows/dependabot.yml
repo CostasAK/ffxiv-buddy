@@ -1,0 +1,68 @@
+name: Dependabot
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened, unlocked]
+
+env:
+  PR_URL: ${{github.event.pull_request.html_url}}
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+  format:
+    name: Code Formatting
+    if: ${{ vars.APPROVAL_ACTOR != '' && github.event.pull_request.user.login == 'dependabot[bot]' && github.triggering_actor == 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.APPROVAL_TOKEN }}
+      - name: pnpm-setup
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: "Setup Node.js"
+        uses: actions/setup-node@v3
+        with:
+          node-version: "current"
+          cache: "pnpm"
+      - name: "Install"
+        run: pnpm install
+      - name: "Format Write"
+        run: pnpm run format-write
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "style(format): write prettier formatting"
+  automerge:
+    name: Dependabot Auto-Merge
+    if: ${{ vars.APPROVAL_ACTOR != '' && github.event.pull_request.user.login == 'dependabot[bot]' && (github.actor == 'dependabot[bot]' || github.actor == vars.APPROVAL_ACTOR) }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enable auto-merge for Dependabot PRs
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          GH_TOKEN: ${{ secrets.APPROVAL_TOKEN }}
+  approve:
+    needs: [test]
+    name: Dependabot Auto-Approve
+    if: ${{ vars.APPROVAL_ACTOR != '' && github.event.pull_request.user.login == 'dependabot[bot]' && (github.actor == 'dependabot[bot]' || github.actor == vars.APPROVAL_ACTOR) }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Approve patch and minor updates
+        if: ${{steps.metadata.outputs.update-type == 'version-update:semver-patch' || steps.metadata.outputs.update-type == 'version-update:semver-minor'}}
+        run: gh pr review $PR_URL --approve -b "I'm **approving** this pull request because **it includes a patch or minor update**"
+        env:
+          GH_TOKEN: ${{secrets.APPROVAL_TOKEN}}

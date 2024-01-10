@@ -1,0 +1,41 @@
+<!-- Doctype HTML5 -->
+<!doctype html>
+<html lang="en" dir="ltr" class="dark subpixel-antialiased">
+  <head>
+    <!-- Set character encoding for the document -->
+    <meta charset="utf-8" />
+    <!-- Viewport for responsive web design -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+
+    <!-- HTML Meta -->
+    <!-- Document Title -->
+    <title>%VITE_APP_NAME%</title>
+    <!-- Meta Description -->
+    <meta name="description" content="%VITE_APP_DESCRIPTION%" />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=1" />
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="%VITE_APP_NAME%" />
+    <meta itemprop="description" content="%VITE_APP_DESCRIPTION%" />
+
+    <!-- openGraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="%VITE_APP_NAME%" />
+    <meta property="og:description" content="%VITE_APP_DESCRIPTION%" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary" />
+
+    <!-- oEmbed -->
+    <link type="application/json+oembed" href="/oembed.json?v=1" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

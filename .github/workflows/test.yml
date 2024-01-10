@@ -1,0 +1,70 @@
+name: Continuous Integration
+
+on:
+  pull_request_target:
+    branches:
+      - main
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+      - name: pnpm-setup
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: "Setup Node.js"
+        uses: actions/setup-node@v3
+        with:
+          node-version: "current"
+          cache: "pnpm"
+      - name: "Install"
+        run: pnpm install
+      - name: "Format Check"
+        run: pnpm run format
+  lint:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+      - name: pnpm-setup
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: "Setup Node.js"
+        uses: actions/setup-node@v3
+        with:
+          node-version: "current"
+          cache: "pnpm"
+      - name: "Install"
+        run: pnpm install
+      - name: "Lint Check"
+        run: pnpm run lint
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+      - name: pnpm-setup
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: "Setup Node.js"
+        uses: actions/setup-node@v3
+        with:
+          node-version: "current"
+          cache: "pnpm"
+      - name: "Install"
+        run: pnpm install
+      - name: "Test"
+        run: pnpm test
