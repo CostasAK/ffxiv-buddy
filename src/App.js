@@ -2,17 +2,16 @@ import "./App.css";
 
 import React, { useEffect } from "react";
 
+import roulette_icon from "./assets/chat_messengericon_dutyroulette.png";
+import goldsaucer_icon from "./assets/chat_messengericon_goldsaucer.png";
+import hunts_icon from "./assets/chat_messengericon_thehunt.png";
+import collectables_icon from "./assets/chat_messengericon_treasurehunt.png";
+import others_icon from "./assets/chat_messengericon_weeklybingo.png";
 import { Checklist } from "./components/Checklist";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Navigation } from "./components/Navigation";
 import { Timers } from "./components/Timers";
-import collectables_icon from "./assets/chat_messengericon_treasurehunt.png";
-import goldsaucer_icon from "./assets/chat_messengericon_goldsaucer.png";
-import hunts_icon from "./assets/chat_messengericon_thehunt.png";
-import others_icon from "./assets/chat_messengericon_weeklybingo.png";
-import raid_icon from "./assets/chat_messengericon_raids.png";
-import roulette_icon from "./assets/chat_messengericon_dutyroulette.png";
 
 const second = 1000;
 const minute = 60 * second;
@@ -23,108 +22,108 @@ const todos = [
     category: "Collectables",
     icon: collectables_icon,
     todos: [
-      {
-        name: "Allagan Tomestones of Astronomy",
-        reset: "weekly",
-      },
+      // {
+      //   name: "Allagan Tomestones of Astronomy",
+      //   reset: "weekly",
+      // },
       {
         name: "Treasure Map",
         period: 18 * hour,
       },
     ],
   },
-  {
-    category: "Raids",
-    icon: raid_icon,
-    todos: [
-      {
-        name: "Abyssos: The Fifth Circle (Normal)",
-        reset: "weekly",
-      },
-      {
-        name: "Abyssos: The Sixth Circle (Normal)",
-        reset: "weekly",
-      },
-      {
-        name: "Abyssos: The Seventh Circle (Normal)",
-        reset: "weekly",
-      },
-      {
-        name: "Abyssos: The Eighth Circle (Normal)",
-        reset: "weekly",
-      },
-      {
-        name: "Unsung Blade of Abyssos",
-        reset: "weekly",
-      },
-      {
-        name: "Abyssos: The Fifth Circle (Savage)",
-        reset: "weekly",
-      },
-      {
-        name: "Abyssos: The Sixth Circle (Savage)",
-        reset: "weekly",
-      },
-      {
-        name: "Abyssos: The Seventh Circle (Savage)",
-        reset: "weekly",
-      },
-      {
-        name: "Abyssos: The Eighth Circle (Savage)",
-        reset: "weekly",
-      },
-      {
-        name: "Containment Bay S1T7 (Unreal)",
-        reset: "weekly",
-      },
-      {
-        name: "Alliance Raid: Aglaia",
-        reset: "weekly",
-      },
-    ],
-  },
+  // {
+  //   category: "Raids",
+  //   icon: raid_icon,
+  //   todos: [
+  //     {
+  //       name: "Abyssos: The Fifth Circle (Normal)",
+  //       reset: "weekly",
+  //     },
+  //     {
+  //       name: "Abyssos: The Sixth Circle (Normal)",
+  //       reset: "weekly",
+  //     },
+  //     {
+  //       name: "Abyssos: The Seventh Circle (Normal)",
+  //       reset: "weekly",
+  //     },
+  //     {
+  //       name: "Abyssos: The Eighth Circle (Normal)",
+  //       reset: "weekly",
+  //     },
+  //     {
+  //       name: "Unsung Blade of Abyssos",
+  //       reset: "weekly",
+  //     },
+  //     {
+  //       name: "Abyssos: The Fifth Circle (Savage)",
+  //       reset: "weekly",
+  //     },
+  //     {
+  //       name: "Abyssos: The Sixth Circle (Savage)",
+  //       reset: "weekly",
+  //     },
+  //     {
+  //       name: "Abyssos: The Seventh Circle (Savage)",
+  //       reset: "weekly",
+  //     },
+  //     {
+  //       name: "Abyssos: The Eighth Circle (Savage)",
+  //       reset: "weekly",
+  //     },
+  //     {
+  //       name: "Containment Bay S1T7 (Unreal)",
+  //       reset: "weekly",
+  //     },
+  //     {
+  //       name: "Alliance Raid: Aglaia",
+  //       reset: "weekly",
+  //     },
+  //   ],
+  // },
   {
     category: "Roulettes",
     icon: roulette_icon,
     todos: [
       {
-        name: "Expert Roulette",
+        name: "Expert",
         reset: "daily",
       },
       {
-        name: "Level 50/60/70/80 Dungeons Roulette",
+        name: "High-level Dungeons",
         reset: "daily",
       },
       {
-        name: "Leveling Roulette",
+        name: "Leveling",
         reset: "daily",
       },
       {
-        name: "Trials Roulette",
+        name: "Trials",
         reset: "daily",
       },
       {
-        name: "Main Scenario Roulette",
+        name: "Main Scenario",
         reset: "daily",
       },
       {
-        name: "Guildhests Roulette",
+        name: "Guildhests",
         reset: "daily",
       },
       {
-        name: "Alliance Raids Roulette",
+        name: "Alliance Raids",
         reset: "daily",
       },
       {
-        name: "Normal Raids Roulette",
+        name: "Normal Raids",
         reset: "daily",
       },
       {
-        name: "Mentor Roulette",
+        name: "Mentor",
         reset: "daily",
       },
       {
-        name: "Frontline Roulette",
+        name: "Frontline",
         reset: "daily",
       },
     ],
