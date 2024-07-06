@@ -1,0 +1,15 @@
+{
+  "short_name": "FFXIV Buddy",
+  "name": "FFXIV Buddy",
+  "icons": [
+    {
+      "src": "/android-chrome-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://ffxiv.kokke.eu",
+  "theme_color": "#ac3a3b",
+  "background_color": "#ac3a3b",
+  "display": "standalone"
+}
