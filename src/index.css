@@ -7,6 +7,11 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+img[src$=".gif"],
+img[src$=".png"] {
+  image-rendering: -webkit-optimize-contrast;
+}
+
 @layer base {
   * {
     @apply max-w-full;

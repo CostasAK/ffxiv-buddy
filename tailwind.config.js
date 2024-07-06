@@ -5,6 +5,17 @@ import tailwindcssanimate from "tailwindcss-animate";
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      body: [
+        "Seravek",
+        "Gill Sans Nova",
+        "Ubuntu",
+        "Calibri",
+        "DejaVu Sans",
+        "source-sans-pro",
+        "sans-serif",
+      ],
+    },
     extend: {},
   },
   plugins: [
