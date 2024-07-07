@@ -29,5 +29,6 @@ module.exports = {
       { allowConstantExport: true },
     ],
     "import/named": "off", // throws an error when importing screen from testing-library
+    "react/prop-types": "warn",
   },
 };
