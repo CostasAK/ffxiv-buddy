@@ -1,5 +1,44 @@
 import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
+import { MINUTE } from "../constants/time";
 import { cn } from "../utils/cn";
+import { formatTime } from "../utils/format-time";
+
+function useLocalTime() {
+  const [flipFlop, setFlipFlop] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(
+      () => {
+        setFlipFlop(!flipFlop);
+      },
+      MINUTE - (Date.now() % MINUTE),
+    );
+
+    return () => clearTimeout(timer);
+  }, [flipFlop]);
+
+  return formatTime();
+}
+
+function useEorzeanTime() {
+  const [flipFlop, setFlipFlop] = useState(false);
+
+  const eorzeanFactor = 144 / 7;
+
+  useEffect(() => {
+    const timer = setTimeout(
+      () => {
+        setFlipFlop(!flipFlop);
+      },
+      (MINUTE - ((Date.now() * eorzeanFactor) % MINUTE)) / eorzeanFactor,
+    );
+
+    return () => clearTimeout(timer);
+  }, [flipFlop, eorzeanFactor]);
+
+  return formatTime(Date.now() * eorzeanFactor, true);
+}
 
 function SubFooter({ className, children }) {
   return (
@@ -31,15 +70,51 @@ SubFooter.propTypes = {
   ]),
 };
 
+function LabeledTime({ children, label = "", pad = false }) {
+  const time = String(children);
+
+  if (!/^\d{1,2}:\d{2}$/.test(time)) return null;
+
+  return (
+    <div className="tabular-nums">
+      {label && (
+        <>
+          <b>{label}</b>{" "}
+        </>
+      )}
+      {pad && time.length < 5 && "0"}
+      {children}
+    </div>
+  );
+}
+
+LabeledTime.propTypes = {
+  children: PropTypes.node,
+  label: PropTypes.string,
+  pad: PropTypes.bool,
+};
+
 export default function Footer() {
+  const localTime = useLocalTime();
+  const eorzeanTime = useEorzeanTime();
+
   return (
     <footer className="flex flex-col text-sm">
-      <SubFooter className="bg-zinc-600">
+      <SubFooter className="bg-zinc-600 tabular-nums">
+        <LabeledTime label="ET" pad>
+          {eorzeanTime}
+        </LabeledTime>
+        <LabeledTime label="LT" pad>
+          {localTime}
+        </LabeledTime>
+      </SubFooter>
+      <SubFooter className="bg-zinc-700">
         <div>Made by CostasAK</div>
         <div>Support me</div>
+        <div>Discord</div>
         <div>Source</div>
       </SubFooter>
-      <SubFooter className="bg-zinc-700 text-neutral-400">
+      <SubFooter className="bg-zinc-800 text-neutral-400">
         <div>© SQUARE ENIX CO., LTD. All Rights Reserved.</div>
         <div>
           FINAL FANTASY is a registered trademark of Square Enix Holdings Co.,
