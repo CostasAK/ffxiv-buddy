@@ -24,6 +24,7 @@
     }
   },
   "dependencies": {
+    "@uidotdev/usehooks": "^2.4.1",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.11",
     "eslint-config-prettier": "^9.1.0",

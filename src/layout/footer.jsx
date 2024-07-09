@@ -1,41 +1,42 @@
+import { useToggle } from "@uidotdev/usehooks";
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { MINUTE } from "../constants/time";
 import { cn } from "../utils/cn";
 import { formatTime } from "../utils/format-time";
 
 function useLocalTime() {
-  const [flipFlop, setFlipFlop] = useState(false);
+  const [on, toggle] = useToggle();
 
   useEffect(() => {
     const timer = setTimeout(
       () => {
-        setFlipFlop(!flipFlop);
+        toggle();
       },
       MINUTE - (Date.now() % MINUTE),
     );
 
     return () => clearTimeout(timer);
-  }, [flipFlop]);
+  }, [on, toggle]);
 
   return formatTime();
 }
 
 function useEorzeanTime() {
-  const [flipFlop, setFlipFlop] = useState(false);
+  const [on, toggle] = useToggle();
 
   const eorzeanFactor = 144 / 7;
 
   useEffect(() => {
     const timer = setTimeout(
       () => {
-        setFlipFlop(!flipFlop);
+        toggle();
       },
       (MINUTE - ((Date.now() * eorzeanFactor) % MINUTE)) / eorzeanFactor,
     );
 
     return () => clearTimeout(timer);
-  }, [flipFlop, eorzeanFactor]);
+  }, [on, toggle, eorzeanFactor]);
 
   return formatTime(Date.now() * eorzeanFactor, true);
 }
