@@ -9,12 +9,7 @@ function useLocalTime() {
   const [on, toggle] = useToggle();
 
   useEffect(() => {
-    const timer = setTimeout(
-      () => {
-        toggle();
-      },
-      MINUTE - (Date.now() % MINUTE),
-    );
+    const timer = setTimeout(toggle, MINUTE - (Date.now() % MINUTE));
 
     return () => clearTimeout(timer);
   }, [on, toggle]);
@@ -29,9 +24,7 @@ function useEorzeanTime() {
 
   useEffect(() => {
     const timer = setTimeout(
-      () => {
-        toggle();
-      },
+      toggle,
       (MINUTE - ((Date.now() * eorzeanFactor) % MINUTE)) / eorzeanFactor,
     );
 
