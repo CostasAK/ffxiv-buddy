@@ -30,5 +30,6 @@ module.exports = {
     ],
     "import/named": "off", // throws an error when importing screen from testing-library
     "react/prop-types": "warn",
+    "no-unused-vars": "warn",
   },
 };
