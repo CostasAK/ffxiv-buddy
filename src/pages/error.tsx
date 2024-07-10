@@ -1,7 +1,7 @@
-import { useRouteError } from "react-router-dom";
+import { useRouteErrorMessage } from "../hooks/use-route-error-message";
 
 export default function ErrorPage() {
-  const error = useRouteError();
+  const error = useRouteErrorMessage();
   console.error(error);
 
   return (
@@ -9,7 +9,7 @@ export default function ErrorPage() {
       <h1>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
       <p>
-        <i>{error.statusText || error.message}</i>
+        <i>{error}</i>
       </p>
     </div>
   );

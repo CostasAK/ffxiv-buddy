@@ -5,6 +5,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
     "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
@@ -12,6 +13,7 @@ module.exports = {
     "prettier",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
+  parser: "@typescript-eslint/parser",
   parserOptions: { ecmaVersion: "latest", sourceType: "module" },
   settings: {
     react: { version: "detect" },
@@ -29,7 +31,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
     "import/named": "off", // throws an error when importing screen from testing-library
-    "react/prop-types": "warn",
-    "no-unused-vars": "warn",
+    // "react/prop-types": "warn",
+    // "no-unused-vars": "warn",
   },
 };

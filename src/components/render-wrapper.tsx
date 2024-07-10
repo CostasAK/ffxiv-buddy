@@ -1,7 +1,11 @@
-import PropTypes from "prop-types";
+import { ReactNode } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
-export const RenderWrapper = ({ children }) => (
+interface Props {
+  children: ReactNode;
+}
+
+export const RenderWrapper = ({ children }: Props) => (
   <HelmetProvider>
     <Helmet
       defaultTitle={import.meta.env.VITE_APP_NAME}
@@ -10,10 +14,3 @@ export const RenderWrapper = ({ children }) => (
     {children}
   </HelmetProvider>
 );
-
-RenderWrapper.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-};

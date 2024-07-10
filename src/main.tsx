@@ -7,7 +7,7 @@ import { RenderWrapper } from "./components/render-wrapper";
 import ErrorPage from "./pages/error";
 import Root from "./routes/root";
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById("root")!;
 
 const router = createBrowserRouter([
   {

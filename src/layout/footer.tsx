@@ -1,6 +1,5 @@
 import { useToggle } from "@uidotdev/usehooks";
-import PropTypes from "prop-types";
-import { useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 import { MINUTE } from "../constants/time";
 import { cn } from "../utils/cn";
 import { formatTime } from "../utils/format-time";
@@ -34,7 +33,12 @@ function useEorzeanTime() {
   return formatTime(Date.now() * eorzeanFactor, true);
 }
 
-function SubFooter({ className, children }) {
+type SubFooterProps = {
+  className: string | string[];
+  children: ReactNode;
+};
+
+function SubFooter({ className, children }: SubFooterProps) {
   return (
     <div
       className={cn(
@@ -56,15 +60,13 @@ function SubFooter({ className, children }) {
   );
 }
 
-SubFooter.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.arrayOf(PropTypes.string),
-  ]),
+type LabeledTimeProps = {
+  children: ReactNode;
+  label: string;
+  pad: boolean;
 };
 
-function LabeledTime({ children, label = "", pad = false }) {
+function LabeledTime({ children, label = "", pad = false }: LabeledTimeProps) {
   const time = String(children);
 
   if (!/^\d{1,2}:\d{2}$/.test(time)) return null;
@@ -81,12 +83,6 @@ function LabeledTime({ children, label = "", pad = false }) {
     </div>
   );
 }
-
-LabeledTime.propTypes = {
-  children: PropTypes.node,
-  label: PropTypes.string,
-  pad: PropTypes.bool,
-};
 
 export default function Footer() {
   const localTime = useLocalTime();
