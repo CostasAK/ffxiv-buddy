@@ -4,9 +4,7 @@ import dayjsUtc from "dayjs/plugin/utc";
 export function formatTime(time = Date.now(), utc = false) {
   if (utc) {
     dayjs.extend(dayjsUtc);
+    return dayjs(Math.floor(time)).utc().format("H:mm");
   }
-
-  const timeObject = utc ? dayjs(time).utc() : dayjs(time);
-
-  return timeObject.format("H:mm");
+  return dayjs(Math.floor(time)).format("H:mm");
 }

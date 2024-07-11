@@ -1,37 +1,8 @@
-import { useToggle } from "@uidotdev/usehooks";
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import { MINUTE } from "../constants/time";
+import { useSyncedInterval } from "../hooks/use-synced-interval";
 import { cn } from "../utils/cn";
 import { formatTime } from "../utils/format-time";
-
-function useLocalTime() {
-  const [on, toggle] = useToggle();
-
-  useEffect(() => {
-    const timer = setTimeout(toggle, MINUTE - (Date.now() % MINUTE));
-
-    return () => clearTimeout(timer);
-  }, [on, toggle]);
-
-  return formatTime();
-}
-
-function useEorzeanTime() {
-  const [on, toggle] = useToggle();
-
-  const eorzeanFactor = 144 / 7;
-
-  useEffect(() => {
-    const timer = setTimeout(
-      toggle,
-      (MINUTE - ((Date.now() * eorzeanFactor) % MINUTE)) / eorzeanFactor,
-    );
-
-    return () => clearTimeout(timer);
-  }, [on, toggle, eorzeanFactor]);
-
-  return formatTime(Date.now() * eorzeanFactor, true);
-}
 
 type SubFooterProps = {
   className: string | string[];
@@ -84,19 +55,37 @@ function LabeledTime({ children, label = "", pad = false }: LabeledTimeProps) {
   );
 }
 
-export default function Footer() {
-  const localTime = useLocalTime();
-  const eorzeanTime = useEorzeanTime();
+const EorzeanTime = () => {
+  const eorzeanTimeFactor = 144 / 7;
 
+  const eorzeanTime = formatTime(
+    useSyncedInterval(MINUTE / eorzeanTimeFactor) * eorzeanTimeFactor,
+    true,
+  );
+
+  return (
+    <LabeledTime label="ET" pad>
+      {eorzeanTime}
+    </LabeledTime>
+  );
+};
+
+const LocalTime = () => {
+  const localTime = formatTime(useSyncedInterval(MINUTE));
+
+  return (
+    <LabeledTime label="LT" pad>
+      {localTime}
+    </LabeledTime>
+  );
+};
+
+export default function Footer() {
   return (
     <footer className="flex flex-col text-sm">
       <SubFooter className="bg-zinc-600 tabular-nums">
-        <LabeledTime label="ET" pad>
-          {eorzeanTime}
-        </LabeledTime>
-        <LabeledTime label="LT" pad>
-          {localTime}
-        </LabeledTime>
+        <EorzeanTime />
+        <LocalTime />
       </SubFooter>
       <SubFooter className="bg-zinc-700">
         <div>Made by CostasAK</div>
