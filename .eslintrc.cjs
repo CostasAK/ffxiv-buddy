@@ -33,7 +33,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
     "no-unused-vars": "off",
-    "react/prop-types": "warn",
+    "react/prop-types": "off",
     "@typescript-eslint/no-unused-vars": "warn",
   },
 };
