@@ -5,6 +5,7 @@
 html {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+  text-shadow: 1px 1px #1717177f;
 }
 
 img[src$=".gif"],
