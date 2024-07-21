@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
 
 import react from "@vitejs/plugin-react";
+import path from "path";
 import { defineConfig } from "vite";
 import eslint from "vite-plugin-eslint";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
@@ -15,6 +16,11 @@ export default defineConfig({
     svgrPlugin(),
     ViteImageOptimizer({ test: /\.svg$/i }),
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
   test: {
     globals: true,
     environment: "happy-dom",

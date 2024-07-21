@@ -1,9 +1,10 @@
-import { ReactNode } from "react";
+import { cn } from "@/utils/cn";
+import { PropsWithChildren } from "react";
 
-type PageProps = {
-  children: ReactNode;
-};
+interface PageProps extends PropsWithChildren {
+  className?: string;
+}
 
-export default function Page({ children }: PageProps) {
-  return <main className="grow">{children}</main>;
+export default function Page({ children, className }: PageProps) {
+  return <section className={cn("mx-auto", className)}>{children}</section>;
 }

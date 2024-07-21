@@ -1,9 +1,7 @@
-import { ReactNode } from "react";
+import { PropsWithChildren } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
-interface Props {
-  children: ReactNode;
-}
+interface Props extends PropsWithChildren {}
 
 export const RenderWrapper = ({ children }: Props) => (
   <HelmetProvider>

@@ -1,13 +1,16 @@
-import { ReactNode } from "react";
-import { MINUTE } from "../constants/time";
-import { useSyncedInterval } from "../hooks/use-synced-interval";
-import { cn } from "../utils/cn";
-import { formatTime } from "../utils/format-time";
+import { SimpleIconsDiscord } from "@/assets/icons/discord";
+import { SimpleIconsGithub } from "@/assets/icons/github";
+import { SimpleIconsKofi } from "@/assets/icons/kofi";
+import ButtonLink from "@/components/button-link";
+import { MINUTE } from "@/constants/time";
+import { useSyncedInterval } from "@/hooks/use-synced-interval";
+import { cn } from "@/utils/cn";
+import { formatTime } from "@/utils/format-time";
+import { PropsWithChildren } from "react";
 
-type SubFooterProps = {
+interface SubFooterProps extends PropsWithChildren {
   className: string | string[];
-  children: ReactNode;
-};
+}
 
 function SubFooter({ className, children }: SubFooterProps) {
   return (
@@ -18,9 +21,10 @@ function SubFooter({ className, children }: SubFooterProps) {
           "flex-row",
           "flex-wrap",
           "justify-center",
+          "align-middle",
           "text-center",
           "gap-y-1",
-          "gap-x-8",
+          "gap-x-6",
           "p-2",
         ],
         className,
@@ -31,11 +35,10 @@ function SubFooter({ className, children }: SubFooterProps) {
   );
 }
 
-type LabeledTimeProps = {
-  children: ReactNode;
+interface LabeledTimeProps extends PropsWithChildren {
   label: string;
   pad: boolean;
-};
+}
 
 function LabeledTime({ children, label = "", pad = false }: LabeledTimeProps) {
   const time = String(children);
@@ -82,18 +85,27 @@ const LocalTime = () => {
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col text-sm">
-      <SubFooter className="bg-zinc-600 tabular-nums">
+    <footer className="flex flex-col">
+      <SubFooter className="bg-neutral-600 tabular-nums">
         <EorzeanTime />
         <LocalTime />
       </SubFooter>
-      <SubFooter className="bg-zinc-700">
-        <div>Made by CostasAK</div>
-        <div>Support me</div>
-        <div>Discord</div>
-        <div>Source</div>
+      <SubFooter className="bg-neutral-700">
+        <ButtonLink href="https://costas.kokke.eu">Made by CostasAK</ButtonLink>
+        <ButtonLink href="https://ko-fi.com/costasak">
+          <SimpleIconsKofi />
+          Support me
+        </ButtonLink>
+        <ButtonLink href="https://discord.com/invite/Rs5hdN86wJ">
+          <SimpleIconsDiscord />
+          Discord
+        </ButtonLink>
+        <ButtonLink href="https://github.com/CostasAK/ffxiv-buddy">
+          <SimpleIconsGithub />
+          Source
+        </ButtonLink>
       </SubFooter>
-      <SubFooter className="bg-zinc-800 text-neutral-400">
+      <SubFooter className="bg-neutral-725 text-sm text-neutral-400">
         <div>© SQUARE ENIX CO., LTD. All Rights Reserved.</div>
         <div>
           FINAL FANTASY is a registered trademark of Square Enix Holdings Co.,

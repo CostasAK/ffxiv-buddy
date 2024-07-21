@@ -1,7 +1,7 @@
 import { render, RenderOptions, RenderResult } from "@testing-library/react";
 
+import { RenderWrapper } from "@/components/render-wrapper";
 import { ReactElement } from "react";
-import { RenderWrapper } from "../components/render-wrapper";
 
 const customRender = (
   ui: ReactElement,

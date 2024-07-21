@@ -1,4 +1,4 @@
-import { useRouteErrorMessage } from "../hooks/use-route-error-message";
+import { useRouteErrorMessage } from "@/hooks/use-route-error-message";
 
 export default function ErrorPage() {
   const error = useRouteErrorMessage();

@@ -8,6 +8,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
     "plugin:import/recommended",
+    "plugin:import/typescript",
     "plugin:jsx-a11y/recommended",
     "plugin:testing-library/react",
     "prettier",
@@ -18,6 +19,7 @@ module.exports = {
   settings: {
     react: { version: "detect" },
     "import/resolver": {
+      typescript: true,
       node: {
         paths: ["src"],
         extensions: [".js", ".jsx", ".ts", ".tsx"],
@@ -30,8 +32,8 @@ module.exports = {
       "warn",
       { allowConstantExport: true },
     ],
-    "import/named": "off", // throws an error when importing screen from testing-library
-    "no-unused-vars": "warn",
+    "no-unused-vars": "off",
+    "react/prop-types": "warn",
     "@typescript-eslint/no-unused-vars": "warn",
   },
 };
