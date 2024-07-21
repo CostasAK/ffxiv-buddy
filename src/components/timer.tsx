@@ -1,4 +1,5 @@
-import { MINUTE, SECOND, WEEK } from "@/constants/time";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { MINUTE, WEEK } from "@/constants/time";
 import { useSyncedInterval } from "@/hooks/use-synced-interval";
 import { cn } from "@/utils/cn";
 import { formatDate } from "@/utils/format-time";
@@ -24,6 +25,7 @@ type TimerCountdownConditionWhen = "past" | "future";
 
 type TimerCountdownProps = {
   timestamp: number;
+  now: number;
   prefix?: string | string[];
   conditions?:
     | boolean
@@ -33,10 +35,10 @@ type TimerCountdownProps = {
 
 function TimerCountdown({
   timestamp,
+  now,
   prefix = "",
   conditions = true,
 }: TimerCountdownProps) {
-  const now = useSyncedInterval(SECOND);
   if (conditions) {
     return (
       <>{`${prefix} ${formatDate(timestamp)} (${humanizeDuration(timestamp - now)})`}</>
@@ -72,18 +74,22 @@ export function Timer({
   if (!end && nextStart < now - WEEK) return null;
 
   return (
-    <article
-      className={cn(
-        "mb-[-0.25rem] cursor-pointer select-none rounded-t bg-neutral-800 p-4 shadow-[inset_0_1px_0_0_hsla(0,0%,100%,.1),inset_1px_0_0_0_hsla(0,0%,100%,.1),inset_-1px_0_0_0_rgba(0,0,0,.1)] hover:bg-neutral-775",
-        className,
-      )}
-    >
-      <h3 className="flex flex-row items-center gap-1 text-lg font-bold">
-        <TimerIcon type={type} />
-        {title}
-      </h3>
-      <TimerCountdown timestamp={nextStart} />
-      {description}
-    </article>
+    <Dialog>
+      <DialogTrigger asChild>
+        <article
+          className={cn(
+            "mb-[-0.25rem] cursor-pointer select-none rounded-t bg-neutral-800 p-4 shadow-[inset_0_1px_0_0_hsla(0,0%,100%,.1),inset_1px_0_0_0_hsla(0,0%,100%,.1),inset_-1px_0_0_0_rgba(0,0,0,.1)] hover:bg-neutral-775",
+            className,
+          )}
+        >
+          <h3 className="flex flex-row items-center gap-1 text-lg font-bold">
+            <TimerIcon type={type} />
+            {title}
+          </h3>
+          <TimerCountdown timestamp={nextStart} now={now} />
+        </article>
+      </DialogTrigger>
+      <DialogContent>{description}</DialogContent>
+    </Dialog>
   );
 }
