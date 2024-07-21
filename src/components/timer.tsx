@@ -2,7 +2,7 @@ import { MINUTE, SECOND, WEEK } from "@/constants/time";
 import { useSyncedInterval } from "@/hooks/use-synced-interval";
 import { cn } from "@/utils/cn";
 import { formatDate } from "@/utils/format-time";
-import { humanizeRelativeTime } from "@/utils/humanize-relative-time";
+import { humanizeDuration } from "@/utils/humanize-duration";
 import { nextTime } from "@/utils/next-time";
 import { ClassNameValue } from "tailwind-merge";
 
@@ -39,7 +39,7 @@ function TimerCountdown({
   const now = useSyncedInterval(SECOND);
   if (conditions) {
     return (
-      <>{`${prefix} ${formatDate(timestamp)} (${humanizeRelativeTime(timestamp - now)})`}</>
+      <>{`${prefix} ${formatDate(timestamp)} (${humanizeDuration(timestamp - now)})`}</>
     );
   }
   return null;
