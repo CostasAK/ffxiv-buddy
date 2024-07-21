@@ -105,7 +105,7 @@ export default function Footer() {
           Source
         </ButtonLink>
       </SubFooter>
-      <SubFooter className="bg-neutral-725 text-sm text-neutral-400">
+      <SubFooter className="bg-neutral-725 text-xs text-neutral-400">
         <div>© SQUARE ENIX CO., LTD. All Rights Reserved.</div>
         <div>
           FINAL FANTASY is a registered trademark of Square Enix Holdings Co.,
