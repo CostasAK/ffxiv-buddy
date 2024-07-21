@@ -34,6 +34,7 @@ module.exports = {
     ],
     "no-unused-vars": "off",
     "react/prop-types": "off",
+    "prefer-const": "warn",
     "@typescript-eslint/no-unused-vars": "warn",
   },
 };
