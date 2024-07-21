@@ -86,7 +86,7 @@ const LocalTime = () => {
 export default function Footer() {
   return (
     <footer className="flex flex-col">
-      <SubFooter className="bg-neutral-600 tabular-nums">
+      <SubFooter className="bg-neutral-600">
         <EorzeanTime />
         <LocalTime />
       </SubFooter>
