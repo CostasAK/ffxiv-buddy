@@ -32,56 +32,56 @@ const todos = [
       },
     ],
   },
-  // {
-  //   category: "Raids",
-  //   icon: raid_icon,
-  //   todos: [
-  //     {
-  //       name: "Abyssos: The Fifth Circle (Normal)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Abyssos: The Sixth Circle (Normal)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Abyssos: The Seventh Circle (Normal)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Abyssos: The Eighth Circle (Normal)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Unsung Blade of Abyssos",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Abyssos: The Fifth Circle (Savage)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Abyssos: The Sixth Circle (Savage)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Abyssos: The Seventh Circle (Savage)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Abyssos: The Eighth Circle (Savage)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Containment Bay S1T7 (Unreal)",
-  //       reset: "weekly",
-  //     },
-  //     {
-  //       name: "Alliance Raid: Aglaia",
-  //       reset: "weekly",
-  //     },
-  //   ],
-  // },
+  {
+    category: "Raids",
+    icon: raid_icon,
+    todos: [
+      {
+        name: "AAC Light-heavyweight M1 (Normal)",
+        reset: "weekly",
+      },
+      {
+        name: "AAC Light-heavyweight M2 (Normal)",
+        reset: "weekly",
+      },
+      {
+        name: "AAC Light-heavyweight M3 (Normal)",
+        reset: "weekly",
+      },
+      {
+        name: "AAC Light-heavyweight M4 (Normal)",
+        reset: "weekly",
+      },
+      {
+        name: "Unsung Blade of Abyssos",
+        reset: "weekly",
+      },
+      // {
+      //   name: "Abyssos: The Fifth Circle (Savage)",
+      //   reset: "weekly",
+      // },
+      // {
+      //   name: "Abyssos: The Sixth Circle (Savage)",
+      //   reset: "weekly",
+      // },
+      // {
+      //   name: "Abyssos: The Seventh Circle (Savage)",
+      //   reset: "weekly",
+      // },
+      // {
+      //   name: "Abyssos: The Eighth Circle (Savage)",
+      //   reset: "weekly",
+      // },
+      // {
+      //   name: "Containment Bay S1T7 (Unreal)",
+      //   reset: "weekly",
+      // },
+      // {
+      //   name: "Alliance Raid: Aglaia",
+      //   reset: "weekly",
+      // },
+    ],
+  },
   {
     category: "Roulettes",
     icon: roulette_icon,
