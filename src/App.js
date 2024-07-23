@@ -6,6 +6,7 @@ import roulette_icon from "./assets/chat_messengericon_dutyroulette.png";
 import goldsaucer_icon from "./assets/chat_messengericon_goldsaucer.png";
 import hunts_icon from "./assets/chat_messengericon_thehunt.png";
 import collectables_icon from "./assets/chat_messengericon_treasurehunt.png";
+import raid_icon from "./assets/chat_messengericon_raids.png";
 import others_icon from "./assets/chat_messengericon_weeklybingo.png";
 import { Checklist } from "./components/Checklist";
 import { Footer } from "./components/Footer";
