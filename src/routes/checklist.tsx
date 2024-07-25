@@ -349,9 +349,9 @@ export function Component() {
   }, []);
 
   return (
-    <Page className="columns-md">
+    <Page className="columns-md gap-8">
       {todos.map((category, i) => (
-        <TodoCategory key={i} {...category} className="mb-4" />
+        <TodoCategory key={i} {...category} className="mb-6" />
       ))}
     </Page>
   );
