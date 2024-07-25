@@ -1,0 +1,8 @@
+{
+  "!(*.{js,jsx,ts,tsx})": "prettier --ignore-unknown --write",
+  "*.{js,jsx,ts,tsx}": [
+    "prettier --write",
+    "eslint --report-unused-disable-directives --max-warnings 0 --fix",
+    "vitest related --run"
+  ]
+}

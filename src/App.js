@@ -1,18 +1,18 @@
-import "./App.css";
+import "./App.css"
 
-import React, { useEffect } from "react";
+import React, { useEffect } from "react"
 
-import roulette_icon from "./assets/chat_messengericon_dutyroulette.png";
-import goldsaucer_icon from "./assets/chat_messengericon_goldsaucer.png";
-import hunts_icon from "./assets/chat_messengericon_thehunt.png";
-import collectables_icon from "./assets/chat_messengericon_treasurehunt.png";
-import raid_icon from "./assets/chat_messengericon_raids.png";
-import others_icon from "./assets/chat_messengericon_weeklybingo.png";
-import { Checklist } from "./components/Checklist";
-import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
-import { Navigation } from "./components/Navigation";
-import { Timers } from "./components/Timers";
+import roulette_icon from "./assets/chat_messengericon_dutyroulette.png"
+import goldsaucer_icon from "./assets/chat_messengericon_goldsaucer.png"
+import raid_icon from "./assets/chat_messengericon_raids.png"
+import hunts_icon from "./assets/chat_messengericon_thehunt.png"
+import collectables_icon from "./assets/chat_messengericon_treasurehunt.png"
+import others_icon from "./assets/chat_messengericon_weeklybingo.png"
+import { Checklist } from "./components/Checklist"
+import { Footer } from "./components/Footer"
+import { Header } from "./components/Header"
+import { Navigation } from "./components/Navigation"
+import { Timers } from "./components/Timers"
 
 const second = 1000;
 const minute = 60 * second;
@@ -241,3 +241,4 @@ function App() {
 }
 
 export default App;
+

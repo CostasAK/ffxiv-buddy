@@ -1,0 +1,27 @@
+name: Continuous Deployment
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+  cloudflare:
+    needs: [test]
+    permissions:
+      contents: read
+      deployments: write
+    uses: ./.github/workflows/cloudflare.yml
+    secrets: inherit
+  gh-pages:
+    needs: [test]
+    permissions:
+      contents: read
+      deployments: write
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/gh-pages.yml

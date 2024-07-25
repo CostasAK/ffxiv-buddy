@@ -1,0 +1,147 @@
+[
+  {
+    "name": "good first issue",
+    "color": "bfe5bf",
+    "description": "Good for newcomers",
+    "aliases": [
+      "status: good starter issue",
+      "status::good starter issue",
+      "beginner-friendly",
+      "beginner",
+      "good-starter-issue",
+      "starter-issue"
+    ]
+  },
+  {
+    "name": "status: help wanted",
+    "color": "bfe5bf",
+    "description": "Extra attention is needed",
+    "aliases": ["help wanted", "status::help wanted"]
+  },
+  {
+    "name": "priority: low",
+    "color": "009800",
+    "aliases": ["priority::low"]
+  },
+  {
+    "name": "priority: medium",
+    "color": "fbca04",
+    "aliases": ["priority::medium"]
+  },
+  {
+    "name": "priority: high",
+    "color": "eb6420",
+    "aliases": ["priority::high"]
+  },
+  {
+    "name": "priority: critical",
+    "color": "e11d21",
+    "aliases": ["priority::critical"]
+  },
+  {
+    "name": "status: can't reproduce",
+    "color": "fec1c1",
+    "aliases": ["status::can't reproduce", "can't reproduce"]
+  },
+  {
+    "name": "status: confirmed",
+    "color": "215cea",
+    "aliases": ["status::confirmed", "confirmed"]
+  },
+  {
+    "name": "status: duplicate",
+    "color": "cccccc",
+    "description": "This issue or pull request already exists",
+    "aliases": ["status::duplicate", "duplicate"]
+  },
+  {
+    "name": "status: blocked",
+    "color": "990000",
+    "aliases": ["status::blocked", "blocked"]
+  },
+  {
+    "name": "status: needs information",
+    "color": "fef2c0",
+    "aliases": ["status::needs information", "needs information"]
+  },
+  {
+    "name": "status: wontfix",
+    "color": "cccccc",
+    "description": "This will not be worked on",
+    "aliases": [
+      "status::wontfix",
+      "status::wont do/fix",
+      "status: wont do/fix",
+      "wontfix",
+      "wont-fix"
+    ]
+  },
+  {
+    "name": "type: bug",
+    "color": "e11d21",
+    "description": "Something isn't working",
+    "aliases": ["bug", "type::bug"]
+  },
+  {
+    "name": "type: breaking",
+    "color": "990000",
+    "aliases": ["type::breaking", "breaking", "breaking-change"]
+  },
+  {
+    "name": "type: maintenance",
+    "color": "fbca04",
+    "aliases": [
+      "type::maintenance",
+      "maintenance",
+      "refactor",
+      "testing",
+      "test"
+    ]
+  },
+  {
+    "name": "type: discussion",
+    "color": "cc317c",
+    "aliases": ["type::discussion", "discussion"]
+  },
+  {
+    "name": "type: documentation",
+    "color": "207de5",
+    "aliases": ["type::documentation", "documentation"],
+    "description": "Improvements or additions to documentation"
+  },
+  {
+    "name": "type: design",
+    "color": "eb6420",
+    "aliases": ["type::design", "design"]
+  },
+  {
+    "name": "type: enhancement",
+    "color": "009800",
+    "aliases": ["type::enhancement", "enhancement", "feature"],
+    "description": "New feature or request"
+  },
+  {
+    "name": "type: epic",
+    "color": "3E4B9E",
+    "description": "A theme of work that contain sub-tasks",
+    "aliases": ["type::epic", "epic"]
+  },
+  {
+    "name": "type: feature request",
+    "color": "fbca04",
+    "description": "New feature or request",
+    "aliases": ["type::feature request", "feature request"]
+  },
+  {
+    "name": "type: question",
+    "description": "Further information is requested",
+    "color": "cc317c",
+    "aliases": ["type::question", "question"]
+  },
+  {
+    "name": "type: dependencies",
+    "description": "Pull requests that update a dependency file",
+    "color": "#0366d6",
+    "aliases": ["type::dependencies", "dependencies"]
+  }
+]

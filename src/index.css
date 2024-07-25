@@ -1,38 +1,31 @@
-:root {
-  font-size: 125%;
-  --margins: 20px;
-  --main-width: 960px;
-  --border-radius: 4px;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: Arial, Verdana, sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #333333;
-  color: #cccccc;
+html {
+  font-synthesis: none;
   text-rendering: optimizeLegibility;
+  /* text-shadow: 1px 1px #1717177f; */
 }
 
-a {
-  color: #5990ff;
-  text-decoration: none;
-  outline:none;
+img[src$=".gif"],
+img[src$=".png"] {
+  image-rendering: -webkit-optimize-contrast;
 }
 
-a:hover span,
-a:focus span,
-a:active span {
-  text-decoration: underline;
-}
-
-img[src$=".gif"], img[src$=".png"] {
-    image-rendering: -webkit-optimize-contrast;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+@layer base {
+  * {
+    @apply max-w-full;
+  }
+  *,
+  *::before,
+  *::after {
+    @apply box-content;
+  }
+  ul {
+    @apply list-inside list-disc;
+  }
+  ol {
+    @apply list-inside list-decimal;
+  }
 }
