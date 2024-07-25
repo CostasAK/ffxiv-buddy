@@ -1,8 +1,7 @@
-import plugin from "tailwindcss";
-import tailwindcssanimate from "tailwindcss-animate";
+/* eslint-env node */
 
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   darkMode: ["class"],
   content: [
     "./index.html",
@@ -32,12 +31,24 @@ export default {
       ],
     },
     extend: {
+      boxShadow: {
+        tab: "0px 1px 0px 0px rgba(255,255,255,0.1) inset,1px 0px 0px 0px rgba(255,255,255,0.1) inset,-1px 0px 0px 0px rgba(0,0,0,0.1) inset",
+        card: "0px 0px 0px 1px rgba(0,0,0,0.25) inset,0px 1px 4px 0px rgba(0,0,0,0.25)",
+        button:
+          "0px 1px 0px 0px rgba(255,255,255,0.1) inset,0px -1px 0px 0px rgba(0,0,0,0.1) inset,1px 0px 0px 0px rgba(255,255,255,0.1) inset,-1px 0px 0px 0px rgba(0,0,0,0.1) inset",
+      },
       colors: {
         neutral: {
           725: "#3a3a3a",
           750: "#333333",
           775: "#2c2c2c",
         },
+      },
+      transitionDuration: {
+        DEFAULT: "200ms",
+      },
+      transitionTimingFunction: {
+        DEFAULT: "cubic-bezier(0.55, 0.055, 0.675, 0.19)",
       },
       keyframes: {
         "accordion-down": {
@@ -48,18 +59,17 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        fadein: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "late-fade-in": "fadein 300ms ease 700ms forwards",
       },
     },
   },
-  plugins: [
-    plugin(function ({ addVariant }) {
-      addVariant("child", "& > *");
-      addVariant("all-child", "& *");
-    }),
-    tailwindcssanimate,
-  ],
+  plugins: [require("tailwindcss-animate")],
 };

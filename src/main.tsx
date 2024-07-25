@@ -1,6 +1,7 @@
 import "./index.css";
 
-import Checklist from "@/routes/checklist";
+import { NoMatch } from "@/pages/no-match";
+import { pages } from "@/routes/pages";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import {
@@ -11,11 +12,10 @@ import {
 import { RenderWrapper } from "./components/render-wrapper";
 import ErrorPage from "./pages/error";
 import Root from "./routes/root";
-import Timers from "./routes/timers";
 
 const rootElement = document.getElementById("root")!;
 
-export const routes = [
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
@@ -25,15 +25,13 @@ export const routes = [
         errorElement: <ErrorPage />,
         children: [
           { index: true, element: <Navigate to="/Timers" /> },
-          { title: "Timers", path: "Timers", element: <Timers /> },
-          { title: "Checklist", path: "Checklist", element: <Checklist /> },
+          { path: "*", element: <NoMatch /> },
+          ...pages,
         ],
       },
     ],
   },
-];
-
-const router = createBrowserRouter(routes);
+]);
 
 createRoot(rootElement).render(
   <StrictMode>

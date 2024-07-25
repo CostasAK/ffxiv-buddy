@@ -1,7 +1,8 @@
 import { SimpleIconsDiscord } from "@/assets/icons/discord";
 import { SimpleIconsGithub } from "@/assets/icons/github";
 import { SimpleIconsKofi } from "@/assets/icons/kofi";
-import ButtonLink from "@/components/button-link";
+import { Link } from "@/components/link";
+import { Button } from "@/components/ui/button";
 import { MINUTE } from "@/constants/time";
 import { useSyncedInterval } from "@/hooks/use-synced-interval";
 import { cn } from "@/utils/cn";
@@ -91,19 +92,42 @@ export default function Footer() {
         <LocalTime />
       </SubFooter>
       <SubFooter className="bg-neutral-700">
-        <ButtonLink href="https://costas.kokke.eu">Made by CostasAK</ButtonLink>
-        <ButtonLink href="https://ko-fi.com/costasak">
-          <SimpleIconsKofi />
-          Support me
-        </ButtonLink>
-        <ButtonLink href="https://discord.com/invite/Rs5hdN86wJ">
-          <SimpleIconsDiscord />
-          Discord
-        </ButtonLink>
-        <ButtonLink href="https://github.com/CostasAK/ffxiv-buddy">
-          <SimpleIconsGithub />
-          Source
-        </ButtonLink>
+        {[
+          { label: "Made by CostasAK", href: "https://github.com/CostasAK" },
+          {
+            label: (
+              <>
+                <SimpleIconsKofi className="text-xl leading-6" />
+                Support me
+              </>
+            ),
+            href: "https://ko-fi.com/costasak",
+          },
+          {
+            label: (
+              <>
+                <SimpleIconsDiscord className="text-lg leading-6" />
+                Discord
+              </>
+            ),
+            href: "https://discord.com/invite/Rs5hdN86wJ",
+          },
+          {
+            label: (
+              <>
+                <SimpleIconsGithub />
+                Source
+              </>
+            ),
+            href: "https://github.com/CostasAK/ffxiv-buddy",
+          },
+        ].map((x, i) => (
+          <Button key={i} variant="ghost" asChild>
+            <Link variant="ghost" href={x.href}>
+              {x.label}
+            </Link>
+          </Button>
+        ))}
       </SubFooter>
       <SubFooter className="bg-neutral-725 text-xs text-neutral-400">
         <div>© SQUARE ENIX CO., LTD. All Rights Reserved.</div>

@@ -3,7 +3,7 @@ export function nextTime(
   period?: number,
   now = Date.now() + 1000,
 ) {
-  if (!period) {
+  if (!period || !time) {
     return time;
   }
 
