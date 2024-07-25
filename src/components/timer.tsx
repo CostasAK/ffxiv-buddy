@@ -124,10 +124,10 @@ export function Timer({
     <Dialog>
       <DialogTrigger asChild>
         <article className={cn(timerVariants({ colors, className }))}>
-          <h3 className="flex flex-row items-center gap-1 text-lg font-bold">
+          <h2 className="flex flex-row items-center gap-1 text-lg font-bold">
             <TimerIcon type={type} />
             {title}
-          </h3>
+          </h2>
           <TimerCountdown
             timestamp={nextStart}
             now={now}
