@@ -292,7 +292,7 @@ function Todo({ name, reset, period = 0 }: TodoProps) {
       key={name}
       htmlFor={name}
       className={cn(
-        "flex cursor-pointer flex-row items-center gap-2 border-t border-t-neutral-725 p-4 hover:bg-neutral-750",
+        "flex cursor-pointer flex-row items-center gap-2 border-t border-t-neutral-725 p-4 transition-all hover:bg-neutral-750 active:transition-none",
         completion > 0 && "italic opacity-50",
       )}
       style={{ order: nextReset / MINUTE + (completion > 0 ? 10 * YEAR : 0) }}
