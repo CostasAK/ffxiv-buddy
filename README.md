@@ -13,16 +13,18 @@ Timers, checklists and other helpers for Final Fantasy XIV, in your local time w
 
 ## What it does
 
-- Timers
-  - Shows upcoming events, followed by recurring events such as resets.
-  - Events are sorted by end or start time, depending on whether they are currently ongoing or not, respectively.
-  - Events disappear from the list once they are finished.
-  - Recurring events are sorted in order of occurrence from now.
-  - Recurring events are reset and re-ordered on each occurrence.
-- Checklist
-  - Shows recurring tasks in order of completion, then occurrence.
-  - Shows when tasks are due.
-  - Lets you check tasks you have completed.
-  - Shows when completed tasks become available again.
-  - Completed tasks will automatically be reverted to incomplete when appropriate.
-  - Progress is saved in your browser.
+### [Timers](https://ffxiv.kokke.eu/Timers)
+
+- Shows upcoming events and recurring events such as resets.
+- Events are sorted by end or start time, depending on whether they are currently ongoing or not, respectively.
+- Events disappear from the list once they are finished.
+- Recurring events are reset and re-ordered on each occurrence.
+
+### [Checklist](https://ffxiv.kokke.eu/Checklist)
+
+- Lets you check tasks you have completed.
+- Shows when tasks are due and when they become available again.
+- Completed tasks will automatically be reverted to incomplete when appropriate.
+- Shows when completed tasks become available again.
+- Progress is saved in your browser.
+- Shows recurring tasks in order of completion, then occurrence.
