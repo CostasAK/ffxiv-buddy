@@ -24,4 +24,5 @@ jobs:
       deployments: write
       pages: write
       id-token: write
+      actions: read
     uses: ./.github/workflows/gh-pages.yml
