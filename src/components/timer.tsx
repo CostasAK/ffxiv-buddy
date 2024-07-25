@@ -132,7 +132,7 @@ export function Timer({
             timestamp={nextStart}
             now={now}
             conditions="future"
-            prefix={end ? "Starts" : ""}
+            prefix={end ? (isOngoing ? "Started" : "Starts") : ""}
           />
           <TimerCountdown
             timestamp={nextEnd}
@@ -160,7 +160,7 @@ export function Timer({
             timestamp={nextStart}
             now={now}
             conditions="future"
-            prefix={end ? "Starts" : ""}
+            prefix={end ? (isOngoing ? "Started" : "Starts") : ""}
           />
           <br />
           <TimerCountdown timestamp={nextEnd} now={now} prefix="Ends" />
