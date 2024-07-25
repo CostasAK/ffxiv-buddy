@@ -12,6 +12,7 @@ jobs:
       deployments: write
       pages: write # to deploy to Pages
       id-token: write # to verify the deployment originates from an appropriate source
+      actions: read
     # Deploy to the github-pages environment
     environment:
       name: github-pages
@@ -35,9 +36,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: dist
       - name: Publish (Github Pages)
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
         id: deployment
