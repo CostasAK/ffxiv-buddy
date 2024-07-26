@@ -159,7 +159,6 @@ export function Timer({
           <TimerCountdown
             timestamp={nextStart}
             now={now}
-            conditions="future"
             prefix={end ? (isOngoing ? "Started" : "Starts") : ""}
           />
           <br />
