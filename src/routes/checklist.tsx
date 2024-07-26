@@ -1,10 +1,16 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { DAY, HOUR, MINUTE, WEEK, YEAR } from "@/constants/time";
 import { useSyncedInterval } from "@/hooks/use-synced-interval";
 import Page from "@/layout/page";
 import { cn } from "@/utils/cn";
+import { formatDate } from "@/utils/format-time";
 import { humanizeDuration } from "@/utils/humanize-duration";
 import { nextTime } from "@/utils/next-time";
 import { useLocalStorage } from "@uidotdev/usehooks";
@@ -288,27 +294,39 @@ function Todo({ name, reset, period = 0 }: TodoProps) {
   };
 
   return (
-    <Label
-      key={name}
-      htmlFor={name}
-      className={cn(
-        "flex cursor-pointer flex-row flex-wrap items-center gap-2 border-t border-t-neutral-725 p-4 transition-all hover:bg-neutral-750 active:transition-none",
-        completion > 0 && "italic opacity-50",
-      )}
-      style={{ order: nextReset / MINUTE + (completion > 0 ? 10 * YEAR : 0) }}
-    >
-      <div className="flex flex-row items-center gap-2">
-        <Checkbox
-          id={name}
-          onCheckedChange={handleChange}
-          checked={completion > 0}
-        />
-        <span>{name}</span>
-      </div>
-      <span className="mt-auto grow self-end text-right text-sm font-normal leading-none text-neutral-400">
-        {nextReset - now > 0 ? humanizeDuration(nextReset - now, true) : "now"}
-      </span>
-    </Label>
+    <Tooltip>
+      <TooltipTrigger>
+        <Label
+          key={name}
+          htmlFor={name}
+          className={cn(
+            "flex cursor-pointer flex-row flex-wrap items-center gap-2 border-t border-t-neutral-725 p-4 transition-all hover:bg-neutral-750 active:transition-none",
+            completion > 0 && "italic opacity-50",
+          )}
+          style={{
+            order: nextReset / MINUTE + (completion > 0 ? 10 * YEAR : 0),
+          }}
+        >
+          <div className="flex flex-row items-center gap-2">
+            <Checkbox
+              id={name}
+              onCheckedChange={handleChange}
+              checked={completion > 0}
+            />
+            <span>{name}</span>
+          </div>
+          <span className="mt-auto grow self-end text-right text-sm font-normal leading-none text-neutral-400">
+            {nextReset - now > 0
+              ? humanizeDuration(nextReset - now, true)
+              : "now"}
+          </span>
+        </Label>
+      </TooltipTrigger>
+      <TooltipContent>
+        {completion > 0 && <p>Completed {formatDate(completion)}</p>}
+        <p>Resets {formatDate(nextReset)}</p>
+      </TooltipContent>
+    </Tooltip>
   );
 }
 
