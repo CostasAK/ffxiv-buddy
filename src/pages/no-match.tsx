@@ -7,7 +7,9 @@ export function NoMatch() {
     <Page className="flex w-fit flex-col gap-4">
       <span>Page not found.</span>
       <Button asChild>
-        <Link to="/">Go Home</Link>
+        <Link to="/" reloadDocument>
+          Go Home
+        </Link>
       </Button>
     </Page>
   );
