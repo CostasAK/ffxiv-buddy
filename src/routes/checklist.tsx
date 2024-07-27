@@ -1,3 +1,9 @@
+import chatMessengerIconDutyroulette from "@/assets/chat_messengericon_dutyroulette.png";
+import chatMessengerIconGoldsaucer from "@/assets/chat_messengericon_goldsaucer.png";
+import chatMessengerIconRaids from "@/assets/chat_messengericon_raids.png";
+import chatMessengerIconThehunt from "@/assets/chat_messengericon_thehunt.png";
+import chatMessengerIconTreasurehunt from "@/assets/chat_messengericon_treasurehunt.png";
+import chatMessengerIconWeeklybingo from "@/assets/chat_messengericon_weeklybingo.png";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
@@ -17,13 +23,12 @@ import { useLocalStorage } from "@uidotdev/usehooks";
 import { useEffect, useState } from "react";
 
 const icons = {
-  collectables:
-    "https://xivapi.com/img-misc/chat_messengericon_treasurehunt.png",
-  raid: "https://xivapi.com/img-misc/chat_messengericon_raids.png",
-  roulette: "https://xivapi.com/img-misc/chat_messengericon_dutyroulette.png",
-  hunts: "https://xivapi.com/img-misc/chat_messengericon_thehunt.png",
-  goldsaucer: "https://xivapi.com/img-misc/chat_messengericon_goldsaucer.png",
-  others: "https://xivapi.com/img-misc/chat_messengericon_weeklybingo.png",
+  collectables: chatMessengerIconTreasurehunt,
+  raid: chatMessengerIconRaids,
+  roulette: chatMessengerIconDutyroulette,
+  hunts: chatMessengerIconThehunt,
+  goldsaucer: chatMessengerIconGoldsaucer,
+  others: chatMessengerIconWeeklybingo,
 };
 
 const resets = {

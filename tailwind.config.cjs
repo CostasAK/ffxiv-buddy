@@ -32,11 +32,15 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        "checkbox-checked": "url(/src/assets/checkbox-checked.png)",
-        "checkbox-checked-hover": "url(/src/assets/checkbox-checked_hover.png)",
-        "checkbox-unchecked": "url(/src/assets/checkbox-unchecked.png)",
+        "checkbox-checked": "url(/src/assets/checkbox/checked.png)",
+        "checkbox-checked-hover": "url(/src/assets/checkbox/checked-hover.png)",
+        "checkbox-unchecked": "url(/src/assets/checkbox/unchecked.png)",
         "checkbox-unchecked-hover":
-          "url(/src/assets/checkbox-unchecked_hover.png)",
+          "url(/src/assets/checkbox/unchecked-hover.png)",
+      },
+      listStyleImage: {
+        dot2: "url(/src/assets/dot2_12x12.png)",
+        dot3: "url(/src/assets/dot3_12x12.png)",
       },
       boxShadow: {
         tab: "0px 1px 0px 0px rgba(255,255,255,0.1) inset,1px 0px 0px 0px rgba(255,255,255,0.1) inset,-1px 0px 0px 0px rgba(0,0,0,0.1) inset",
