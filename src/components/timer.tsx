@@ -15,10 +15,14 @@ import { cva } from "class-variance-authority";
 import { ClassValue } from "class-variance-authority/types";
 import { ReactNode } from "react";
 
+import lodestoneMaintenance from "@/assets/lodestone/maintenance.png";
+import lodestoneTopic from "@/assets/lodestone/topic.png";
+import lodestoneUpdates from "@/assets/lodestone/updates.png";
+
 const iconUrls = {
-  maintenance: "https://xivapi.com/img-misc/lodestone/maintenance.png",
-  event: "https://xivapi.com/img-misc/lodestone/topic.png",
-  reset: "https://xivapi.com/img-misc/lodestone/updates.png",
+  maintenance: lodestoneMaintenance,
+  event: lodestoneTopic,
+  reset: lodestoneUpdates,
 };
 
 type TimerIconProps = {

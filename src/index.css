@@ -23,9 +23,15 @@ img[src$=".png"] {
     @apply box-content;
   }
   ul {
-    @apply list-inside list-disc;
+    @apply list-image-dot2 pl-6;
+  }
+  ul > ul {
+    @apply list-image-dot3;
   }
   ol {
     @apply list-inside list-decimal;
+  }
+  li + li {
+    @apply mt-2;
   }
 }
