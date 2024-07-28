@@ -25,8 +25,10 @@ const iconUrls = {
   reset: lodestoneUpdates,
 };
 
+export type TimerType = "maintenance" | "event" | "reset";
+
 type TimerIconProps = {
-  type: "maintenance" | "event" | "reset";
+  type: TimerType;
 };
 
 function TimerIcon({ type }: TimerIconProps) {
@@ -87,7 +89,7 @@ const timerVariants = cva(
 
 export interface TimerProps extends TimerIconProps {
   title: string;
-  description?: string | string[] | ReactNode;
+  description?: ReactNode;
   start: number;
   end?: number;
   period?: number;
@@ -152,7 +154,7 @@ export function Timer({
             <TimerIcon type={type} />
             {title}
           </DialogTitle>
-          {period && (
+          {period > 0 && (
             <DialogDescription>
               {"Every " +
                 humanizeDuration(period)

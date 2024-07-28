@@ -3,16 +3,9 @@ import Page from "@/layout/page";
 import { Timer, TimerProps } from "@/components/timer";
 import { RESETS } from "@/constants/resets";
 import { MINUTE } from "@/constants/time";
+import { useQueryBuddyData } from "@/hooks/use-query-buddy-data";
 import { useSyncedInterval } from "@/hooks/use-synced-interval";
 import { nextTime } from "@/utils/next-time";
-
-// async function load(url: string) {
-//   const obj = await (await fetch(url)).json();
-//   return obj;
-// }
-// const event_promise = load(
-//   "https://raw.githubusercontent.com/CostasAK/ffxiv-timers/events/event.json",
-// );
 
 interface TimerType extends Omit<TimerProps, "now"> {}
 
@@ -40,27 +33,19 @@ function sortTimers(timers: TimerType[], now: number) {
 }
 
 export function Component() {
+  const { data: events } = useQueryBuddyData("Timers");
+
   const now = useSyncedInterval(MINUTE);
 
-  // const [events, setEvents] = useState([]);
-  // event_promise.then((result) =>
-  //   setEvents(
-  //     result.map((event: TimerProps) => {
-  //       if (event?.start) {
-  //         event.start = new Date(event.start).getTime();
-  //       }
-  //       if (event?.end) {
-  //         event.end = new Date(event.end).getTime();
-  //       }
-  //       return event;
-  //     }),
-  //   ),
-  // );
-
-  const timers = sortTimers(RESETS, now);
+  const timers = events
+    ? sortTimers([...events, ...RESETS], now)
+    : sortTimers(RESETS, now);
 
   return (
-    <Page className="flex max-w-screen-lg flex-row flex-wrap items-stretch justify-around overflow-hidden rounded border-b-4 border-sky-700 shadow">
+    <Page
+      title="Timers"
+      className="flex max-w-screen-lg flex-row flex-wrap items-stretch justify-around overflow-hidden rounded border-b-4 border-sky-700 shadow"
+    >
       {timers.map((timer) => (
         <Timer
           key={timer.title}

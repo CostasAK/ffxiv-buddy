@@ -1,6 +1,6 @@
 import "./index.css";
 
-import { NoMatch } from "@/pages/no-match";
+import { NoMatch } from "@/routes/no-match";
 import { pages } from "@/routes/pages";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
@@ -10,7 +10,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { RenderWrapper } from "./components/render-wrapper";
-import ErrorPage from "./pages/error";
+import ErrorPage from "./routes/error";
 import Root from "./routes/root";
 
 const rootElement = document.getElementById("root")!;

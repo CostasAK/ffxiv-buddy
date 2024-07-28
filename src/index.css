@@ -23,10 +23,10 @@ img[src$=".png"] {
     @apply box-content;
   }
   ul {
-    @apply list-image-dot2 pl-6;
+    @apply list-disc list-image-dot2 pl-6;
   }
   ul > ul {
-    @apply list-image-dot3;
+    @apply list-disc list-image-dot3 pl-3;
   }
   ol {
     @apply list-inside list-decimal;

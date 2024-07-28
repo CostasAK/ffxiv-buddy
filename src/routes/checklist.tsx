@@ -374,7 +374,7 @@ export function Component() {
   }, []);
 
   return (
-    <Page className="columns-md gap-8">
+    <Page title="Checklist" className="columns-md gap-8">
       {todos.map((category, i) => (
         <TodoCategory key={i} {...category} className="mb-6" />
       ))}
