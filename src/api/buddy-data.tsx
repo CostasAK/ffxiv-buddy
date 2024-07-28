@@ -28,4 +28,5 @@ export const ensureBuddyData = async (sheet: BuddyDataSheets) =>
   await queryClient.ensureQueryData({
     queryKey: ["buddyData", sheet],
     queryFn: () => queryBuddyData(sheet),
+    retry: false,
   });
