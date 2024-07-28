@@ -19,9 +19,10 @@ export const queryBuddyData = async (sheet: BuddyDataSheets) => {
     url: urlParams(SHEETS[sheet].gid),
   });
 
-  console.log(parse(data, { header: true }).data);
-
-  return SHEETS[sheet].schema.parse(parse(data, { header: true }).data);
+  return parse(data, { header: true })
+    .data.map((row) => SHEETS[sheet].schema.safeParse(row))
+    .filter((row) => row.success)
+    .map((row) => row.data);
 };
 
 export const ensureBuddyData = async (sheet: BuddyDataSheets) =>

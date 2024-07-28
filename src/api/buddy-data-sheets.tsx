@@ -2,13 +2,15 @@ import { Link } from "@/components/link";
 import Markdown from "react-markdown";
 import { z } from "zod";
 
+const nonEmptyString = z.string().trim().min(1);
+
 export const SHEETS = {
   Timers: {
     gid: 0,
-    schema: z.array(
-      z.object({
-        title: z.string(),
-        description: z.string().transform((x) => (
+    schema: z.object({
+      title: nonEmptyString,
+      description: z.optional(
+        nonEmptyString.transform((x) => (
           <Markdown
             components={{
               a(props) {
@@ -20,10 +22,10 @@ export const SHEETS = {
             {x}
           </Markdown>
         )),
-        type: z.enum(["maintenance", "event", "reset"]),
-        start: z.string().transform((x) => new Date(x).getTime()),
-        end: z.string().transform((x) => new Date(x).getTime()),
-      }),
-    ),
+      ),
+      type: z.enum(["maintenance", "event", "reset"]),
+      start: nonEmptyString.transform((x) => new Date(x).getTime()),
+      end: nonEmptyString.transform((x) => new Date(x).getTime()),
+    }),
   },
 };
