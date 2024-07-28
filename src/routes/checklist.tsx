@@ -12,7 +12,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { DAY, HOUR, MINUTE, WEEK, YEAR } from "@/constants/time";
+import { DAY, HOUR, MINUTE, WEEK } from "@/constants/time";
 import { useSyncedInterval } from "@/hooks/use-synced-interval";
 import Page from "@/layout/page";
 import { cn } from "@/utils/cn";
@@ -300,17 +300,14 @@ function Todo({ name, reset, period = 0 }: TodoProps) {
 
   return (
     <Tooltip>
-      <TooltipTrigger>
+      <TooltipTrigger asChild>
         <Label
           key={name}
           htmlFor={name}
           className={cn(
-            "flex cursor-pointer flex-row flex-wrap items-center gap-2 border-t border-t-neutral-725 p-4 transition-all hover:bg-neutral-750 active:transition-none",
+            "flex cursor-pointer flex-row flex-wrap items-center gap-2 border-b border-b-neutral-725 p-4 transition-all last:border-b-0 hover:bg-neutral-750 active:transition-none",
             completion > 0 && "italic opacity-50",
           )}
-          style={{
-            order: nextReset / MINUTE + (completion > 0 ? 10 * YEAR : 0),
-          }}
         >
           <div className="flex flex-row items-center gap-2">
             <Checkbox
