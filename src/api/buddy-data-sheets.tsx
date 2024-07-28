@@ -10,22 +10,30 @@ export const SHEETS = {
     schema: z.object({
       title: nonEmptyString,
       description: z.optional(
-        nonEmptyString.transform((x) => (
-          <Markdown
-            components={{
-              a(props) {
-                const { children, ...rest } = props;
-                return <Link {...rest}>{children}</Link>;
-              },
-            }}
-          >
-            {x}
-          </Markdown>
-        )),
+        z.string().transform((x) =>
+          x.length > 0 ? (
+            <Markdown
+              components={{
+                a(props) {
+                  const { children, ...rest } = props;
+                  return <Link {...rest}>{children}</Link>;
+                },
+              }}
+            >
+              {x}
+            </Markdown>
+          ) : (
+            x
+          ),
+        ),
       ),
       type: z.enum(["maintenance", "event", "reset"]),
-      start: nonEmptyString.transform((x) => new Date(x).getTime()),
-      end: nonEmptyString.transform((x) => new Date(x).getTime()),
+      start: nonEmptyString
+        .transform((x) => new Date(x).getTime())
+        .refine((x) => x > 0),
+      end: nonEmptyString
+        .transform((x) => new Date(x).getTime())
+        .refine((x) => x > 0),
     }),
   },
 };
