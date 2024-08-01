@@ -305,7 +305,7 @@ function Todo({ name, reset, period = 0 }: TodoProps) {
           key={name}
           htmlFor={name}
           className={cn(
-            "flex cursor-pointer flex-row flex-wrap items-center gap-2 border-b border-b-neutral-725 p-4 transition-all last:border-b-0 hover:bg-neutral-750 active:transition-none",
+            "flex cursor-pointer flex-row flex-wrap items-center gap-2 border-t border-t-neutral-725 p-4 transition-all first:border-t-0 hover:bg-neutral-750 active:transition-none",
             completion > 0 && "italic opacity-50",
           )}
         >

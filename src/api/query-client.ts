@@ -20,7 +20,7 @@ export const queryClient = new QueryClient({
               MAX_RETRY_DELAY,
             )
           : MAX_RETRY_DELAY,
-      refetchInterval: MINUTE,
+      refetchInterval: 5 * MINUTE,
     },
   },
 });
