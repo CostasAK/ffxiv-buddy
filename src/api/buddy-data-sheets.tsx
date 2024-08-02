@@ -1,4 +1,4 @@
-import { Link } from "@/components/link";
+import { ExternalLink } from "@/components/external-link";
 import Markdown from "react-markdown";
 import { z } from "zod";
 
@@ -16,7 +16,7 @@ export const SHEETS = {
               components={{
                 a(props) {
                   const { children, ...rest } = props;
-                  return <Link {...rest}>{children}</Link>;
+                  return <ExternalLink {...rest}>{children}</ExternalLink>;
                 },
               }}
             >

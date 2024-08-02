@@ -1,4 +1,4 @@
-import { Link } from "@/components/link";
+import { ExternalLink } from "@/components/external-link";
 import { DiscordIcon } from "@/components/svg/discord";
 import { GithubIcon } from "@/components/svg/github";
 import { KofiIcon } from "@/components/svg/kofi";
@@ -123,9 +123,9 @@ export default function Footer() {
           },
         ].map((x, i) => (
           <Button key={i} variant="ghost" asChild>
-            <Link variant="ghost" href={x.href}>
+            <ExternalLink variant="ghost" href={x.href}>
               {x.label}
-            </Link>
+            </ExternalLink>
           </Button>
         ))}
       </SubFooter>

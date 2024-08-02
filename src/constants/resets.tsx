@@ -1,4 +1,4 @@
-import { Link } from "@/components/link";
+import { ExternalLink } from "@/components/external-link";
 import { DAY, WEEK } from "@/constants/time";
 import { ReactNode } from "react";
 
@@ -141,11 +141,16 @@ export const RESETS: ResetType[] = [
     title: "Fashion Report",
     description: (
       <>
-        During this time you can present yourself for judging at the Gold Saucer
-        for the Fashion Report Challenge.
-        <Link href="https://www.reddit.com/r/ffxiv/search?q=fashion%20report%20week%20full&restrict_sr=1&t=week">
-          Click here for detailed reports.
-        </Link>
+        <p>
+          During this time you can present yourself for judging at the Gold
+          Saucer for the Fashion Report Challenge.
+        </p>
+        <p>
+          <ExternalLink href="https://www.reddit.com/r/ffxiv/search?q=fashion%20report%20week%20full&restrict_sr=1&t=week">
+            Click here
+          </ExternalLink>{" "}
+          for detailed reports.
+        </p>
       </>
     ),
     period: WEEK,
