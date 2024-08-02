@@ -97,7 +97,7 @@ export default function Footer() {
           {
             label: (
               <>
-                <KofiIcon className="text-xl leading-6" />
+                <KofiIcon className="text-2xl" />
                 Support me
               </>
             ),
@@ -106,7 +106,7 @@ export default function Footer() {
           {
             label: (
               <>
-                <DiscordIcon className="text-lg leading-6" />
+                <DiscordIcon className="text-xl" />
                 Discord
               </>
             ),
@@ -115,7 +115,7 @@ export default function Footer() {
           {
             label: (
               <>
-                <GithubIcon />
+                <GithubIcon className="text-lg" />
                 Source
               </>
             ),
