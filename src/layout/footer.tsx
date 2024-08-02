@@ -1,7 +1,7 @@
-import { SimpleIconsDiscord } from "@/assets/icons/discord";
-import { SimpleIconsGithub } from "@/assets/icons/github";
-import { SimpleIconsKofi } from "@/assets/icons/kofi";
 import { Link } from "@/components/link";
+import { DiscordIcon } from "@/components/svg/discord";
+import { GithubIcon } from "@/components/svg/github";
+import { KofiIcon } from "@/components/svg/kofi";
 import { Button } from "@/components/ui/button";
 import { MINUTE } from "@/constants/time";
 import { useSyncedInterval } from "@/hooks/use-synced-interval";
@@ -97,7 +97,7 @@ export default function Footer() {
           {
             label: (
               <>
-                <SimpleIconsKofi className="text-xl leading-6" />
+                <KofiIcon className="text-xl leading-6" />
                 Support me
               </>
             ),
@@ -106,7 +106,7 @@ export default function Footer() {
           {
             label: (
               <>
-                <SimpleIconsDiscord className="text-lg leading-6" />
+                <DiscordIcon className="text-lg leading-6" />
                 Discord
               </>
             ),
@@ -115,7 +115,7 @@ export default function Footer() {
           {
             label: (
               <>
-                <SimpleIconsGithub />
+                <GithubIcon />
                 Source
               </>
             ),

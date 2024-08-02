@@ -1,6 +1,7 @@
 import type { SVGProps } from "react";
 
-export function SimpleIconsKofi(props: SVGProps<SVGSVGElement>) {
+//Iconify: simple-icons kofi
+export function KofiIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

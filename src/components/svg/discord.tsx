@@ -1,6 +1,7 @@
 import type { SVGProps } from "react";
 
-export function SimpleIconsDiscord(props: SVGProps<SVGSVGElement>) {
+// Iconify: simple-icons discord
+export function DiscordIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

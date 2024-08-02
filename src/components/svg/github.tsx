@@ -1,6 +1,7 @@
 import type { SVGProps } from "react";
 
-export function SimpleIconsGithub(props: SVGProps<SVGSVGElement>) {
+//Iconify: simple-icons github
+export function GithubIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
