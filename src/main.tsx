@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       {
         errorElement: <ErrorPage />,
         children: [
-          { index: true, element: <Navigate to="/Timers" /> },
+          { index: true, element: <Navigate to={pages[0].path} /> },
           { path: "*", element: <NoMatch /> },
           ...pages,
         ],
