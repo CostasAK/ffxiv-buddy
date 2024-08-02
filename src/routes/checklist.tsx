@@ -153,22 +153,22 @@ const todos = [
         name: "Unsung Blade of Abyssos",
         reset: "weekly",
       },
-      // {
-      //   name: "Abyssos: The Fifth Circle (Savage)",
-      //   reset: "weekly",
-      // },
-      // {
-      //   name: "Abyssos: The Sixth Circle (Savage)",
-      //   reset: "weekly",
-      // },
-      // {
-      //   name: "Abyssos: The Seventh Circle (Savage)",
-      //   reset: "weekly",
-      // },
-      // {
-      //   name: "Abyssos: The Eighth Circle (Savage)",
-      //   reset: "weekly",
-      // },
+      {
+        name: "AAC Light-heavyweight M1 (Savage)",
+        reset: "weekly",
+      },
+      {
+        name: "AAC Light-heavyweight M2 (Savage)",
+        reset: "weekly",
+      },
+      {
+        name: "AAC Light-heavyweight M3 (Savage)",
+        reset: "weekly",
+      },
+      {
+        name: "AAC Light-heavyweight M4 (Savage)",
+        reset: "weekly",
+      },
       // {
       //   name: "Containment Bay S1T7 (Unreal)",
       //   reset: "weekly",
