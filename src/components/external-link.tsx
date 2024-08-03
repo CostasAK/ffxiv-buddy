@@ -25,7 +25,7 @@ export interface LinkProps
 
 export function ExternalLink({ className, variant, ...props }: LinkProps) {
   return (
-    <Tooltip delayDuration={300}>
+    <Tooltip delayDuration={300} disableHoverableContent>
       <TooltipTrigger asChild>
         <a
           className={cn(linkVariants({ variant, className }))}
@@ -36,9 +36,9 @@ export function ExternalLink({ className, variant, ...props }: LinkProps) {
           {props.children}
         </a>
       </TooltipTrigger>
-      <TooltipContent className="flex flex-row items-center gap-1">
+      <TooltipContent className="flex flex-row items-center gap-1 text-xs">
         {props.href?.replace(/^https?:\/\/(www\.)?/i, "").split("/")[0]}
-        <ExternalLinkIcon />
+        <ExternalLinkIcon className="text-sm leading-4" />
       </TooltipContent>
     </Tooltip>
   );
