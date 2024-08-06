@@ -16,11 +16,6 @@ img[src$=".png"] {
   * {
     @apply max-w-full;
   }
-  *,
-  *::before,
-  *::after {
-    @apply box-content;
-  }
   ul {
     @apply list-disc list-image-dot2 space-y-3 pl-6;
   }
