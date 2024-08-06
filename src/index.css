@@ -5,7 +5,6 @@
 html {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  /* text-shadow: 1px 1px #1717177f; */
 }
 
 img[src$=".gif"],
@@ -23,15 +22,12 @@ img[src$=".png"] {
     @apply box-content;
   }
   ul {
-    @apply list-disc list-image-dot2 pl-6;
+    @apply list-disc list-image-dot2 space-y-3 pl-6;
   }
-  ul > ul {
-    @apply list-disc list-image-dot3 pl-3;
+  ul li ul {
+    @apply list-disc list-image-dot3 py-3 pl-4;
   }
   ol {
     @apply list-inside list-decimal;
-  }
-  li + li {
-    @apply mt-2;
   }
 }
