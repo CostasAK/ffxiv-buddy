@@ -71,10 +71,10 @@ const todos = [
     title: "Collectables",
     icon: icons.collectables,
     todos: [
-      // {
-      //   name: "Allagan Tomestones of Astronomy",
-      //   reset: "weekly",
-      // },
+      {
+        name: "Allagan Tomestones of Heliometry",
+        reset: "weekly",
+      },
       {
         name: "Treasure Map",
         period: 18 * HOUR,
