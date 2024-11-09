@@ -133,22 +133,22 @@ const todos = [
     title: "Raids",
     icon: icons.raid,
     todos: [
-      {
-        name: "AAC Light-heavyweight M1 (Normal)",
-        reset: "weekly",
-      },
-      {
-        name: "AAC Light-heavyweight M2 (Normal)",
-        reset: "weekly",
-      },
-      {
-        name: "AAC Light-heavyweight M3 (Normal)",
-        reset: "weekly",
-      },
-      {
-        name: "AAC Light-heavyweight M4 (Normal)",
-        reset: "weekly",
-      },
+      // {
+      //   name: "AAC Light-heavyweight M1 (Normal)",
+      //   reset: "weekly",
+      // },
+      // {
+      //   name: "AAC Light-heavyweight M2 (Normal)",
+      //   reset: "weekly",
+      // },
+      // {
+      //   name: "AAC Light-heavyweight M3 (Normal)",
+      //   reset: "weekly",
+      // },
+      // {
+      //   name: "AAC Light-heavyweight M4 (Normal)",
+      //   reset: "weekly",
+      // },
       {
         name: "Light-heavy Holoblade",
         reset: "weekly",
@@ -169,14 +169,14 @@ const todos = [
         name: "AAC Light-heavyweight M4 (Savage)",
         reset: "weekly",
       },
-      // {
-      //   name: "Containment Bay S1T7 (Unreal)",
-      //   reset: "weekly",
-      // },
-      // {
-      //   name: "Alliance Raid: Aglaia",
-      //   reset: "weekly",
-      // },
+      {
+        name: "The Jade Stoa (Unreal)",
+        reset: "weekly",
+      },
+      {
+        name: "Jeuno: The First Walk",
+        reset: "weekly",
+      },
     ],
   },
   {
