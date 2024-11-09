@@ -150,7 +150,7 @@ const todos = [
         reset: "weekly",
       },
       {
-        name: "Unsung Blade of Abyssos",
+        name: "Light-heavy Holoblade",
         reset: "weekly",
       },
       {
