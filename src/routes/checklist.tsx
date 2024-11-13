@@ -177,6 +177,10 @@ const todos = [
         name: "Jeuno: The First Walk",
         reset: "weekly",
       },
+      {
+        name: "Ordelle Coin",
+        reset: "weekly",
+      },
     ],
   },
   {
