@@ -6,6 +6,7 @@ const Configuration: UserConfig = {
   parserPreset: "conventional-changelog-conventionalcommits",
   rules: {
     "body-max-line-length": [RuleConfigSeverity.Warning, "always", 100],
+    "footer-max-line-length": [RuleConfigSeverity.Warning, "always", 100],
   },
   prompt: {
     settings: { enableMultipleScopes: true, scopeEnumSeparator: "/" },
