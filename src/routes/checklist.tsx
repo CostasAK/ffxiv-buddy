@@ -149,26 +149,26 @@ const todos = [
       //   name: "AAC Light-heavyweight M4 (Normal)",
       //   reset: "weekly",
       // },
-      {
-        name: "Light-heavy Holoblade",
-        reset: "weekly",
-      },
-      {
-        name: "AAC Light-heavyweight M1 (Savage)",
-        reset: "weekly",
-      },
-      {
-        name: "AAC Light-heavyweight M2 (Savage)",
-        reset: "weekly",
-      },
-      {
-        name: "AAC Light-heavyweight M3 (Savage)",
-        reset: "weekly",
-      },
-      {
-        name: "AAC Light-heavyweight M4 (Savage)",
-        reset: "weekly",
-      },
+      // {
+      //   name: "Light-heavy Holoblade",
+      //   reset: "weekly",
+      // },
+      // {
+      //   name: "AAC Light-heavyweight M1 (Savage)",
+      //   reset: "weekly",
+      // },
+      // {
+      //   name: "AAC Light-heavyweight M2 (Savage)",
+      //   reset: "weekly",
+      // },
+      // {
+      //   name: "AAC Light-heavyweight M3 (Savage)",
+      //   reset: "weekly",
+      // },
+      // {
+      //   name: "AAC Light-heavyweight M4 (Savage)",
+      //   reset: "weekly",
+      // },
       {
         name: "The Jade Stoa (Unreal)",
         reset: "weekly",
