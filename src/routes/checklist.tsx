@@ -149,26 +149,26 @@ const todos = [
         name: "AAC Cruiserweight M4 (Normal)",
         reset: "weekly",
       },
-      // {
-      //   name: "Cruiser Holoblade",
-      //   reset: "weekly",
-      // },
-      // {
-      //   name: "AAC Cruiserweight M1 (Savage)",
-      //   reset: "weekly",
-      // },
-      // {
-      //   name: "AAC Cruiserweight M2 (Savage)",
-      //   reset: "weekly",
-      // },
-      // {
-      //   name: "AAC Cruiserweight M3 (Savage)",
-      //   reset: "weekly",
-      // },
-      // {
-      //   name: "AAC Cruiserweight M4 (Savage)",
-      //   reset: "weekly",
-      // },
+      {
+        name: "Cruiser Holosaber",
+        reset: "weekly",
+      },
+      {
+        name: "AAC Cruiserweight M1 (Savage)",
+        reset: "weekly",
+      },
+      {
+        name: "AAC Cruiserweight M2 (Savage)",
+        reset: "weekly",
+      },
+      {
+        name: "AAC Cruiserweight M3 (Savage)",
+        reset: "weekly",
+      },
+      {
+        name: "AAC Cruiserweight M4 (Savage)",
+        reset: "weekly",
+      },
       {
         name: "Hells' Kier (Unreal)",
         reset: "weekly",
