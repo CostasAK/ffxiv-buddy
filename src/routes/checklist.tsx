@@ -149,10 +149,10 @@ const todos = [
         name: "AAC Cruiserweight M4 (Normal)",
         reset: "weekly",
       },
-      // {
-      //   name: "Cruiser Holoblade",
-      //   reset: "weekly",
-      // },
+      {
+        name: "Cruiser Holosaber",
+        reset: "weekly",
+      },
       // {
       //   name: "AAC Cruiserweight M1 (Savage)",
       //   reset: "weekly",
