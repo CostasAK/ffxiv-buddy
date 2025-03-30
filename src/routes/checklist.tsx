@@ -72,7 +72,7 @@ const todos = [
     icon: icons.collectables,
     todos: [
       {
-        name: "Allagan Tomestones of Heliometry",
+        name: "Allagan Tomestones of Mathematics",
         reset: "weekly",
       },
       {
@@ -133,44 +133,44 @@ const todos = [
     title: "Raids",
     icon: icons.raid,
     todos: [
+      {
+        name: "AAC Cruiserweight M1 (Normal)",
+        reset: "weekly",
+      },
+      {
+        name: "AAC Cruiserweight M2 (Normal)",
+        reset: "weekly",
+      },
+      {
+        name: "AAC Cruiserweight M3 (Normal)",
+        reset: "weekly",
+      },
+      {
+        name: "AAC Cruiserweight M4 (Normal)",
+        reset: "weekly",
+      },
       // {
-      //   name: "AAC Light-heavyweight M1 (Normal)",
+      //   name: "Cruiser Holoblade",
       //   reset: "weekly",
       // },
       // {
-      //   name: "AAC Light-heavyweight M2 (Normal)",
+      //   name: "AAC Cruiserweight M1 (Savage)",
       //   reset: "weekly",
       // },
       // {
-      //   name: "AAC Light-heavyweight M3 (Normal)",
+      //   name: "AAC Cruiserweight M2 (Savage)",
       //   reset: "weekly",
       // },
       // {
-      //   name: "AAC Light-heavyweight M4 (Normal)",
+      //   name: "AAC Cruiserweight M3 (Savage)",
       //   reset: "weekly",
       // },
       // {
-      //   name: "Light-heavy Holoblade",
-      //   reset: "weekly",
-      // },
-      // {
-      //   name: "AAC Light-heavyweight M1 (Savage)",
-      //   reset: "weekly",
-      // },
-      // {
-      //   name: "AAC Light-heavyweight M2 (Savage)",
-      //   reset: "weekly",
-      // },
-      // {
-      //   name: "AAC Light-heavyweight M3 (Savage)",
-      //   reset: "weekly",
-      // },
-      // {
-      //   name: "AAC Light-heavyweight M4 (Savage)",
+      //   name: "AAC Cruiserweight M4 (Savage)",
       //   reset: "weekly",
       // },
       {
-        name: "The Jade Stoa (Unreal)",
+        name: "Hells' Kier (Unreal)",
         reset: "weekly",
       },
       {
