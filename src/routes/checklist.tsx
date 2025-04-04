@@ -173,14 +173,14 @@ const todos = [
         name: "Hells' Kier (Unreal)",
         reset: "weekly",
       },
-      {
-        name: "Jeuno: The First Walk",
-        reset: "weekly",
-      },
-      {
-        name: "Ordelle Coin",
-        reset: "weekly",
-      },
+      // {
+      //   name: "Jeuno: The First Walk",
+      //   reset: "weekly",
+      // },
+      // {
+      //   name: "Ordelle Coin",
+      //   reset: "weekly",
+      // },
     ],
   },
   {
