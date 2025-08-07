@@ -133,22 +133,22 @@ const todos = [
     title: "Raids",
     icon: icons.raid,
     todos: [
-      {
-        name: "AAC Cruiserweight M1 (Normal)",
-        reset: "weekly",
-      },
-      {
-        name: "AAC Cruiserweight M2 (Normal)",
-        reset: "weekly",
-      },
-      {
-        name: "AAC Cruiserweight M3 (Normal)",
-        reset: "weekly",
-      },
-      {
-        name: "AAC Cruiserweight M4 (Normal)",
-        reset: "weekly",
-      },
+      // {
+      //   name: "AAC Cruiserweight M1 (Normal)",
+      //   reset: "weekly",
+      // },
+      // {
+      //   name: "AAC Cruiserweight M2 (Normal)",
+      //   reset: "weekly",
+      // },
+      // {
+      //   name: "AAC Cruiserweight M3 (Normal)",
+      //   reset: "weekly",
+      // },
+      // {
+      //   name: "AAC Cruiserweight M4 (Normal)",
+      //   reset: "weekly",
+      // },
       {
         name: "Cruiser Holosaber",
         reset: "weekly",
@@ -170,17 +170,17 @@ const todos = [
         reset: "weekly",
       },
       {
-        name: "Hells' Kier (Unreal)",
+        name: "The Wreath of Snakes (Unreal)",
         reset: "weekly",
       },
-      // {
-      //   name: "Jeuno: The First Walk",
-      //   reset: "weekly",
-      // },
-      // {
-      //   name: "Ordelle Coin",
-      //   reset: "weekly",
-      // },
+      {
+        name: "San d'Oria: The Second Walk",
+        reset: "weekly",
+      },
+      {
+        name: "Montiont Coin",
+        reset: "weekly",
+      },
     ],
   },
   {
@@ -189,6 +189,10 @@ const todos = [
     todos: [
       {
         name: "Expert",
+        reset: "daily",
+      },
+      {
+        name: "Level Cap Dungeons",
         reset: "daily",
       },
       {
